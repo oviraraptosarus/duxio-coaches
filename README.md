@@ -1,14 +1,14 @@
 <div align="center">
   <img src="public/logo-icon.png" alt="Duxio Logo" width="120" />
-  
-  # Duxio Acquisition Engine 🚀
-  
-  **A High-Converting, Apple-Inspired Funnel Architecture for High-Ticket Coaches.**
-  
-  [![React](https://img.shields.io/badge/React-18-blue.svg?style=for-the-badge&logo=react)](https://reactjs.org/)
-  [![Vite](https://img.shields.io/badge/Vite-5-purple.svg?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-  [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38B2AC.svg?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-  [![TanStack Router](https://img.shields.io/badge/TanStack_Router-Black.svg?style=for-the-badge&logo=reactrouter)](https://tanstack.com/router)
+
+# Duxio Acquisition Engine 🚀
+
+**A High-Converting, Apple-Inspired Funnel Architecture for High-Ticket Coaches.**
+
+[![React](https://img.shields.io/badge/React-18-blue.svg?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5-purple.svg?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38B2AC.svg?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![TanStack Router](https://img.shields.io/badge/TanStack_Router-Black.svg?style=for-the-badge&logo=reactrouter)](https://tanstack.com/router)
 </div>
 
 ---
@@ -30,6 +30,7 @@ Built with performance and conversion rate optimization (CRO) in mind, this engi
 ## 🛠️ The 7-Part System
 
 This architecture natively integrates the **Duxio 7-Part Client Acquisition System**:
+
 1. 🧲 **Attract**: Audience building mechanisms.
 2. 👤 **Capture**: Irresistible lead magnets.
 3. 🌪️ **Qualify**: Automated filtering.
@@ -41,6 +42,7 @@ This architecture natively integrates the **Duxio 7-Part Client Acquisition Syst
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js `v18+`
 - npm `v9+`
 
@@ -74,6 +76,7 @@ npm run preview
 - **Icons**: Powered by `lucide-react`.
 
 ---
+
 <div align="center">
   <i>Engineered for conversion. Built for scale.</i>
 </div>

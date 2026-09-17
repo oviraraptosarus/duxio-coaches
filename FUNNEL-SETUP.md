@@ -63,19 +63,19 @@ Create a pipeline named **Coach Audit Leads** with these stages, in order:
 
 Every audit submission should create/update a contact and store:
 
-| Field | Notes |
-|---|---|
-| First Name | required |
-| Email | required |
-| Website | URL |
-| Instagram / Social Profile | text |
-| Coaching Niche | text |
-| Main Offer | text |
-| Offer Price | text/currency |
-| Approximate Monthly Leads | text/number |
-| Approximate Monthly Booked Calls | text/number |
-| Primary Lead Source | dropdown: Instagram, LinkedIn, Referrals, Organic content, Cold outreach, Paid ads, Other |
-| Biggest Challenge | dropdown: Getting enough qualified leads, Turning leads into conversations, Getting people to book calls, Follow-up, No-shows, Sales conversion, I don't know where the problem is |
+| Field                            | Notes                                                                                                                                                                              |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| First Name                       | required                                                                                                                                                                           |
+| Email                            | required                                                                                                                                                                           |
+| Website                          | URL                                                                                                                                                                                |
+| Instagram / Social Profile       | text                                                                                                                                                                               |
+| Coaching Niche                   | text                                                                                                                                                                               |
+| Main Offer                       | text                                                                                                                                                                               |
+| Offer Price                      | text/currency                                                                                                                                                                      |
+| Approximate Monthly Leads        | text/number                                                                                                                                                                        |
+| Approximate Monthly Booked Calls | text/number                                                                                                                                                                        |
+| Primary Lead Source              | dropdown: Instagram, LinkedIn, Referrals, Organic content, Cold outreach, Paid ads, Other                                                                                          |
+| Biggest Challenge                | dropdown: Getting enough qualified leads, Turning leads into conversations, Getting people to book calls, Follow-up, No-shows, Sales conversion, I don't know where the problem is |
 
 These fields mirror the audit form in `src/lib/audit-schema.ts` so the data
 maps 1:1 into the CRM.
@@ -87,13 +87,13 @@ maps 1:1 into the CRM.
 Trigger: **when a contact submits the audit form** (i.e. enters the
 "Audit Requested" stage).
 
-| Day | Action |
-|---|---|
-| **Day 0** | Send audit confirmation / delivery email. |
+| Day       | Action                                                                        |
+| --------- | ----------------------------------------------------------------------------- |
+| **Day 0** | Send audit confirmation / delivery email.                                     |
 | **Day 1** | Send educational content: why coaches lose leads after the first interaction. |
-| **Day 3** | Send an example showing how a client acquisition journey can be improved. |
-| **Day 5** | Teach the value of systematic follow-up. |
-| **Day 7** | Invite them to book a strategy call. |
+| **Day 3** | Send an example showing how a client acquisition journey can be improved.     |
+| **Day 5** | Teach the value of systematic follow-up.                                      |
+| **Day 7** | Invite them to book a strategy call.                                          |
 
 ### Branching logic
 

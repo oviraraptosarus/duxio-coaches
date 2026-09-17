@@ -1,13 +1,13 @@
 import { r as __toESM } from "../_runtime.mjs";
-import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter, h as Link, k as redirect, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
+import { A as redirect, _ as useRouter, c as HeadContent, d as Outlet, f as lazyRouteComponent, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { r as require_react } from "../_libs/@hookform/resolvers+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-CmaD0reL.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-DpEQJ47S.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-CtIrZbST.css";
+var styles_default = "/assets/styles-BTOPHQ9b.css";
 function reportVibeError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__vibeEvents?.captureException?.(error, {
@@ -95,7 +95,7 @@ function ErrorComponent({ error, reset }) {
 		})
 	});
 }
-var Route$2 = createRootRouteWithContext()({
+var Route$4 = createRootRouteWithContext()({
 	head: () => ({
 		meta: [
 			{ charSet: "utf-8" },
@@ -153,7 +153,7 @@ function RootShell({ children }) {
 	});
 }
 function RootComponent() {
-	const { queryClient } = Route$2.useRouteContext();
+	const { queryClient } = Route$4.useRouteContext();
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(QueryClientProvider, {
 		client: queryClient,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
@@ -164,18 +164,18 @@ function RootComponent() {
 * SEO slug). The root path "/" redirects there so any legacy/home traffic lands
 * on the correct page.
 */
-var Route$1 = createFileRoute("/")({ beforeLoad: () => {
+var Route$3 = createFileRoute("/")({ beforeLoad: () => {
 	throw redirect({ to: "/coach-client-acquisition" });
 } });
-var $$splitComponentImporter = () => import("./coach-client-acquisition-C2eH-vEE.mjs");
+var $$splitComponentImporter$2 = () => import("./coach-client-acquisition-BLltX95K.mjs");
 var PAGE_URL = "https://duxio.com/coach-client-acquisition";
-var Route = createFileRoute("/coach-client-acquisition")({
+var Route$2 = createFileRoute("/coach-client-acquisition")({
 	head: () => ({
 		meta: [
-			{ title: "Duxio | Client Acquisition Systems for Coaches" },
+			{ title: "Duxio | The Client Acquisition Operating System for Coaches" },
 			{
 				name: "description",
-				content: "Duxio helps coaches turn existing attention and leads into qualified conversations, booked calls, and clients through client acquisition systems, funnels, automation, nurturing, and follow-up."
+				content: "Duxio helps established coaches turn existing attention and inquiries into qualified conversations, booked discovery calls, and premium client revenue."
 			},
 			{
 				property: "og:title",
@@ -183,7 +183,7 @@ var Route = createFileRoute("/coach-client-acquisition")({
 			},
 			{
 				property: "og:description",
-				content: "Turn your existing attention and leads into more conversations, qualified appointments, and clients. Get your free coach funnel audit."
+				content: "Transform your existing attention and inquiries into predictable client revenue. Request your free coach funnel audit."
 			},
 			{
 				property: "og:type",
@@ -210,7 +210,7 @@ var Route = createFileRoute("/coach-client-acquisition")({
 					"@type": "Organization",
 					name: "Duxio",
 					url: "https://duxio.com",
-					description: "Duxio helps coaches turn existing attention and leads into qualified conversations, booked calls, and clients through client acquisition systems.",
+					description: "Duxio helps coaches turn existing attention and inquiries into qualified conversations and booked clients.",
 					slogan: "We build the system around the business."
 				})
 			},
@@ -219,8 +219,8 @@ var Route = createFileRoute("/coach-client-acquisition")({
 				children: JSON.stringify({
 					"@context": "https://schema.org",
 					"@type": "VideoObject",
-					name: "The 5-Part Client Acquisition System for Coaches",
-					description: "Free training: learn the 5 places coaches lose potential clients and how to build a simple system that turns attention and leads into qualified conversations and booked calls.",
+					name: "The Client Acquisition Operating System for Coaches",
+					description: "Strategic training: discover the 5 places coaches lose potential clients and how to build a system that turns attention into predictable client revenue.",
 					thumbnailUrl: `${PAGE_URL}/vsl-thumbnail.jpg`,
 					uploadDate: "2026-01-01",
 					duration: "PT8M",
@@ -235,50 +235,50 @@ var Route = createFileRoute("/coach-client-acquisition")({
 					mainEntity: [
 						{
 							"@type": "Question",
-							name: "Do I need a massive audience for this to work?",
+							name: "Do I need a larger audience before this infrastructure functions?",
 							acceptedAnswer: {
 								"@type": "Answer",
-								text: "No. This system is designed to monetize the attention you already have, turning passive lurkers into booked calls without spending a dime on ads."
+								text: "No. The system is engineered to help established practices capitalize on their current audience attention and inquiries."
 							}
 						},
 						{
 							"@type": "Question",
-							name: "Do I need a complicated funnel?",
+							name: "Will I need to manage complicated technical software?",
 							acceptedAnswer: {
 								"@type": "Answer",
-								text: "No. Complexity kills conversions. We build lean, high-performing architectures tailored specifically to patch the exact revenue leaks in your current client journey."
+								text: "No. We architect the connected backend so you can focus entirely on coaching and client delivery."
 							}
 						},
 						{
 							"@type": "Question",
-							name: "Is this just a website or landing page?",
+							name: "Is this merely a website or simple lead capture page?",
 							acceptedAnswer: {
 								"@type": "Answer",
-								text: "No. A standalone website won't save your business. We engineer the complete end-to-end acquisition ecosystem—from lead capture to calendar injection."
+								text: "No. Duxio builds the entire client acquisition journey across Attraction, Capture, Nurture, Qualification, and Automated Follow Up."
 							}
 						},
 						{
 							"@type": "Question",
-							name: "What happens after the free audit?",
+							name: "What occurs after submitting the diagnostic request?",
 							acceptedAnswer: {
 								"@type": "Answer",
-								text: "We'll map out your exact acquisition flow and pinpoint where high-ticket clients are dropping off. If there's a fit, we'll show you the exact architecture needed to fix it."
+								text: "You receive an analysis of your operational gaps. If there is strong alignment, we review the recommended system with you."
 							}
 						},
 						{
 							"@type": "Question",
-							name: "Is the audit really free?",
+							name: "What are the acceptance criteria for a Diagnostic Evaluation?",
 							acceptedAnswer: {
 								"@type": "Answer",
-								text: "Yes. We lead with value. The audit provides you with an actionable breakdown of your funnel leaks before you ever commit to a sales conversation."
+								text: "We evaluate practices with active coaching programs priced at $1,000 or more that receive regular audience engagement and inquiries."
 							}
 						},
 						{
 							"@type": "Question",
-							name: "Do you guarantee clients or revenue?",
+							name: "Do you promise specific revenue guarantees?",
 							acceptedAnswer: {
 								"@type": "Answer",
-								text: "No. We guarantee a world-class acquisition ecosystem designed for high-ticket conversion. Your offer and sales ability ultimately close the deal."
+								text: "No. We demonstrate mathematical pipeline leverage and economic value without making exaggerated claims."
 							}
 						}
 					]
@@ -286,21 +286,47 @@ var Route = createFileRoute("/coach-client-acquisition")({
 			}
 		]
 	}),
+	component: lazyRouteComponent($$splitComponentImporter$2, "component")
+});
+var $$splitComponentImporter$1 = () => import("./onboarding-CmTLS_mD.mjs");
+var Route$1 = createFileRoute("/onboarding")({
+	head: () => ({ meta: [{ title: "DUXIO | Client Onboarding Portal" }, {
+		name: "description",
+		content: "Client acquisition operating system deployment intake for established coaching practices."
+	}] }),
+	component: lazyRouteComponent($$splitComponentImporter$1, "component")
+});
+var $$splitComponentImporter = () => import("./audits._token-C32cKNUA.mjs");
+var Route = createFileRoute("/audits/$token")({
+	head: () => ({ meta: [{ title: "DUXIO | Pipeline Diagnostic Report" }, {
+		name: "description",
+		content: "Your personalized client acquisition system diagnostic and revenue recovery blueprint."
+	}] }),
 	component: lazyRouteComponent($$splitComponentImporter, "component")
 });
 var rootRouteChildren = {
-	IndexRoute: Route$1.update({
+	IndexRoute: Route$3.update({
 		id: "/",
 		path: "/",
-		getParentRoute: () => Route$2
+		getParentRoute: () => Route$4
 	}),
-	CoachClientAcquisitionRoute: Route.update({
+	CoachClientAcquisitionRoute: Route$2.update({
 		id: "/coach-client-acquisition",
 		path: "/coach-client-acquisition",
-		getParentRoute: () => Route$2
+		getParentRoute: () => Route$4
+	}),
+	OnboardingRoute: Route$1.update({
+		id: "/onboarding",
+		path: "/onboarding",
+		getParentRoute: () => Route$4
+	}),
+	AuditsTokenRoute: Route.update({
+		id: "/audits/$token",
+		path: "/audits/$token",
+		getParentRoute: () => Route$4
 	})
 };
-var routeTree = Route$2._addFileChildren(rootRouteChildren)._addFileTypes();
+var routeTree = Route$4._addFileChildren(rootRouteChildren)._addFileTypes();
 var getRouter = () => {
 	const queryClient = new QueryClient();
 	return createRouter({
