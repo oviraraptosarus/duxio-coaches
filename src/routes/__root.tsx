@@ -23,7 +23,7 @@ function NotFoundComponent() {
         </p>
         <div className="mt-6">
           <Link
-            to="/coach-client-acquisition"
+            to="/"
             className="inline-flex items-center justify-center rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-medium text-white transition-colors hover:opacity-90 hover:scale-[1.02]"
           >
             Go home
@@ -61,7 +61,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             Try again
           </button>
           <Link
-            to="/coach-client-acquisition"
+            to="/"
             className="inline-flex items-center justify-center rounded-full border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-surface"
           >
             Go home

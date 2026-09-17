@@ -65,8 +65,8 @@ function ClientOnboardingPage() {
               </p>
               <div className="mt-8 pt-6 border-t border-line">
                 <a
-                  href="/coach-client-acquisition"
-                  className="inline-flex items-center gap-2 rounded-full bg-brand-gradient px-6 py-3 text-xs font-bold text-white shadow-md transition-all hover:scale-[1.02]"
+                  href="/"
+                  className="inline-flex h-11 items-center justify-center rounded-xl bg-accent px-8 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 >
                   <span>Return to Practice Dashboard</span>
                   <ArrowRight className="h-3.5 w-3.5" />

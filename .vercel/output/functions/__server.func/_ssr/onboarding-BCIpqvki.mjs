@@ -2,8 +2,8 @@ import { r as __toESM } from "../_runtime.mjs";
 import { r as require_react } from "../_libs/@hookform/resolvers+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { M as CircleCheck, V as ArrowRight, b as LoaderCircle, d as ShieldCheck, u as Sparkles } from "../_libs/lucide-react.mjs";
-import { c as SiteHeader, s as SiteFooter } from "./site-footer-BdWkVFfZ.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/onboarding-BPcSs8Gq.js
+import { c as SiteHeader, s as SiteFooter } from "./site-footer-DYKy7FpA.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/onboarding-BCIpqvki.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function ClientOnboardingPage() {

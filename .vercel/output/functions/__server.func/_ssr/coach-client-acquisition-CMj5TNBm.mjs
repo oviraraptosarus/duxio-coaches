@@ -2,8 +2,8 @@ import { r as __toESM } from "../_runtime.mjs";
 import { r as require_react } from "../_libs/@hookform/resolvers+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { A as CircleX, B as Calculator, C as Funnel, D as CreditCard, E as Download, F as ChevronDown, I as Check, L as ChartLine, M as CircleCheck, P as ChevronUp, R as Calendar, S as Info, V as ArrowRight, c as Star, d as ShieldCheck, g as MessageSquare, h as MonitorPlay, i as UserPlus, k as Clock, l as Sprout, m as Play, o as TrendingUp, p as RotateCcw, r as Video, s as Target, t as Zap, v as Megaphone, w as Eye, y as Mail, z as CalendarCheck } from "../_libs/lucide-react.mjs";
-import { a as DialogTitle, c as SiteHeader, i as DialogDescription, n as Dialog, o as DialogTrigger, r as DialogContent, s as SiteFooter, t as AuditForm } from "./site-footer-BdWkVFfZ.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/coach-client-acquisition-BCD562G_.js
+import { a as DialogTitle, c as SiteHeader, i as DialogDescription, n as Dialog, o as DialogTrigger, r as DialogContent, s as SiteFooter, t as AuditForm } from "./site-footer-DYKy7FpA.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/coach-client-acquisition-CMj5TNBm.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var vslTakeaways = [

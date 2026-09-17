@@ -271,7 +271,7 @@ function SuccessCard({ reportUrl }: { reportUrl: string | null }) {
 
       <div className="mt-6">
         <a
-          href={reportUrl || "/coach-client-acquisition"}
+          href={reportUrl || "/"}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-brand-gradient px-6 py-3 text-xs font-bold text-white shadow-md transition-all hover:scale-[1.02]"

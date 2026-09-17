@@ -1,10 +1,10 @@
 import { r as __toESM } from "../_runtime.mjs";
-import { g as useParams } from "../_libs/@tanstack/react-router+[...].mjs";
+import { _ as useParams } from "../_libs/@tanstack/react-router+[...].mjs";
 import { r as require_react } from "../_libs/@hookform/resolvers+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { A as CircleX, I as Check, M as CircleCheck, O as Copy, R as Calendar, V as ArrowRight, a as TriangleAlert, d as ShieldCheck, o as TrendingUp, t as Zap, u as Sparkles } from "../_libs/lucide-react.mjs";
-import { c as SiteHeader, s as SiteFooter } from "./site-footer-BdWkVFfZ.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audits._token-Z6y3DGVt.js
+import { c as SiteHeader, s as SiteFooter } from "./site-footer-DYKy7FpA.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/audits._token-gcxnIN7t.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function useAuditData(token) {

@@ -1,7 +1,6 @@
 import { c as createServerFn, i as TSS_SERVER_FUNCTION } from "./createServerFn-CIHAFgYl.mjs";
 import { t as auditSchema } from "./audit-schema-D09ad8Nm.mjs";
-import crypto from "crypto";
-//#region node_modules/.nitro/vite/services/ssr/assets/audit.functions-DkVc--1b.js
+//#region node_modules/.nitro/vite/services/ssr/assets/audit.functions-D-STW7xE.js
 var createServerRpc = (serverFnMeta, splitImportFn) => {
 	const url = "/_serverFn/" + serverFnMeta.id;
 	return Object.assign(splitImportFn, {
@@ -15,19 +14,24 @@ var submitAudit_createServerFn_handler = createServerRpc({
 	name: "submitAudit",
 	filename: "src/lib/audit.functions.ts"
 }, (opts) => submitAudit.__executeServer(opts));
-var submitAudit = createServerFn({ method: "POST" }).validator((data) => auditSchema.parse(data)).handler(submitAudit_createServerFn_handler, async ({ data }) => {
-	const secureToken = `dx_${crypto.randomBytes(8).toString("hex")}`;
+var submitAudit = createServerFn({ method: "POST" }).validator(auditSchema).handler(submitAudit_createServerFn_handler, async ({ data }) => {
+	const secureToken = `dx_${globalThis.crypto.randomUUID().replace(/-/g, "").slice(0, 16)}`;
+	console.log("[Duxio Server] Received Audit Submission:", data);
 	const record = {
-		...data,
-		receivedAt: (/* @__PURE__ */ new Date()).toISOString(),
-		id: secureToken
-	};
-	console.log("[Duxio Lead Intake] Secure lead captured:", {
 		id: secureToken,
+		timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+		biggestChallenge: data.biggestChallenge,
 		firstName: data.firstName,
-		niche: data.coachingNiche,
+		email: data.email,
+		websiteUrl: data.websiteUrl,
+		socialMediaLink: data.socialMediaLink,
+		coachingNiche: data.coachingNiche,
+		offerDescription: data.offerDescription,
+		monthlyInquiries: data.monthlyInquiries,
+		monthlyBookedCalls: data.monthlyBookedCalls,
+		primaryLeadSource: data.primaryLeadSource,
 		offerPrice: data.offerPrice
-	});
+	};
 	const webhookUrl = process.env.WEBHOOK_URL;
 	if (webhookUrl) try {
 		await fetch(webhookUrl, {

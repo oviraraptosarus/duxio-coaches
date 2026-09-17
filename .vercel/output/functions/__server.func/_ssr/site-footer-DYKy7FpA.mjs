@@ -1,15 +1,15 @@
 import { r as __toESM } from "../_runtime.mjs";
-import { D as isRedirect, _ as useRouter, h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { O as isRedirect, h as Link, v as useRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { c as createServerFn, i as TSS_SERVER_FUNCTION } from "./createServerFn-CIHAFgYl.mjs";
 import { n as biggestChallenges, t as auditSchema } from "./audit-schema-D09ad8Nm.mjs";
-import { t as getServerFnById } from "../__23tanstack-start-server-fn-resolver-DWMjWvan.mjs";
+import { t as getServerFnById } from "../__23tanstack-start-server-fn-resolver-DfQhrvvQ.mjs";
 import { n as useForm, r as require_react, t as u } from "../_libs/@hookform/resolvers+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { a as DialogOverlay$1, c as DialogTrigger$1, i as DialogDescription$1, n as DialogClose, o as DialogPortal$1, r as DialogContent$1, s as DialogTitle$1, t as Dialog$1 } from "../_libs/@radix-ui/react-dialog+[...].mjs";
 import { B as Calculator, M as CircleCheck, N as CircleAlert, T as ExternalLink, V as ArrowRight, _ as Menu, b as LoaderCircle, d as ShieldCheck, f as ShieldAlert, j as CircleQuestionMark, m as Play, n as X, x as Layers } from "../_libs/lucide-react.mjs";
 import { t as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/site-footer-BdWkVFfZ.js
+//#region node_modules/.nitro/vite/services/ssr/assets/site-footer-DYKy7FpA.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function useServerFn(serverFn) {
@@ -87,7 +87,7 @@ var createSsrRpc = (functionId) => {
 		[TSS_SERVER_FUNCTION]: true
 	});
 };
-var submitAudit = createServerFn({ method: "POST" }).validator((data) => auditSchema.parse(data)).handler(createSsrRpc("52a5396c5d2944e5c1fe128fd1674a451fc86a9329305a259a54a82f8004b8d9"));
+var submitAudit = createServerFn({ method: "POST" }).validator(auditSchema).handler(createSsrRpc("52a5396c5d2944e5c1fe128fd1674a451fc86a9329305a259a54a82f8004b8d9"));
 function AuditForm() {
 	const submit = useServerFn(submitAudit);
 	const [step, setStep] = (0, import_react.useState)(1);
