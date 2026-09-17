@@ -24,5 +24,21 @@ export const submitAudit = createServerFn({ method: "POST" })
       offerPrice: data.offerPrice
     });
 
+    // 🚀 Automation Webhook (Make.com / Zapier)
+    // If you set a WEBHOOK_URL in Vercel, it will automatically blast this lead data to your automation flow.
+    const webhookUrl = process.env.WEBHOOK_URL;
+    if (webhookUrl) {
+      try {
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(record),
+        });
+        console.log("[Duxio Lead Intake] Successfully routed to automation webhook.");
+      } catch (error) {
+        console.error("[Duxio Lead Intake] Webhook automation failed:", error);
+      }
+    }
+
     return { ok: true, id: secureToken };
   });
