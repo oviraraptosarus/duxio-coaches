@@ -19,38 +19,34 @@ export function FloatingDock() {
   return (
     <>
       <header className={`fixed top-3 inset-x-0 z-50 flex justify-center px-4 transition-all duration-300 ${scrolled ? "translate-y-0" : "translate-y-0"}`}>
-        <div className="liquid-glass flex h-14 max-w-4xl w-full items-center justify-between gap-2 sm:gap-6 rounded-full px-4 sm:px-6 shadow-xl border border-white/60">
+        <div className="liquid-glass flex h-[72px] max-w-5xl w-full items-center justify-between gap-4 rounded-[36px] px-6 sm:px-8 shadow-xl border border-white/60">
           
-          <Link to="/" className="flex items-center gap-2 text-base font-extrabold tracking-tight text-foreground pl-1">
-            <img src="/duxio-logo.png" alt="Duxio" className="h-6 w-auto" />
-            DUXIO <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+          <Link to="/" className="flex items-center gap-3 text-lg font-extrabold tracking-tight text-foreground -ml-2">
+            <img src="/duxio-logo.png" alt="Duxio" className="h-10 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden md:flex items-center gap-6 text-xs font-semibold text-muted-foreground">
-            <a href="#vsl" className="hover:text-foreground transition flex items-center gap-1.5">
-              <Play className="h-3 w-3 text-accent fill-current" /> Executive Briefing
+          <nav className="hidden md:flex items-center gap-10 text-[13px] font-semibold text-muted-foreground/80 tracking-wide uppercase">
+            <a href="#vsl" className="hover:text-foreground transition flex items-center gap-2">
+              Briefing
             </a>
-            <a href="#calculator" className="hover:text-foreground transition flex items-center gap-1.5">
-              <Calculator className="h-3 w-3 text-accent" /> Leak Calculator
+            <a href="#calculator" className="hover:text-foreground transition flex items-center gap-2">
+              Calculator
             </a>
-            <a href="#leaks" className="hover:text-foreground transition flex items-center gap-1.5">
-              <ShieldAlert className="h-3 w-3 text-accent" /> The 5 Leaks
+            <a href="#leaks" className="hover:text-foreground transition flex items-center gap-2">
+              5 Leaks
             </a>
-            <a href="#system" className="hover:text-foreground transition flex items-center gap-1.5">
-              <Layers className="h-3 w-3 text-accent" /> The Architecture
-            </a>
-            <a href="#faq" className="hover:text-foreground transition flex items-center gap-1.5">
-              <HelpCircle className="h-3 w-3 text-accent" /> Questions
+            <a href="#system" className="hover:text-foreground transition flex items-center gap-2">
+              Architecture
             </a>
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <Dialog>
               <DialogTrigger asChild>
-                <button className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-brand-gradient px-4 py-2 text-xs font-bold text-white shadow-[0_0_15px_rgba(var(--accent),0.3)] transition-all hover:scale-[1.02] hover:opacity-95">
-                  <span>Request Diagnostic</span>
-                  <ArrowRight className="h-3 w-3" />
+                <button className="hidden sm:inline-flex items-center gap-2 rounded-full bg-brand-gradient px-6 py-3 text-[13px] font-bold text-white shadow-[0_0_20px_rgba(10,25,47,0.25)] transition-all hover:scale-[1.02] hover:opacity-95 tracking-wide uppercase">
+                  <span>Diagnostic</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
                 </button>
               </DialogTrigger>
               <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">
