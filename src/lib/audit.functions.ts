@@ -1,28 +1,30 @@
 import { createServerFn } from "@tanstack/react-start";
 import { auditSchema, type AuditSubmission } from "./audit-schema.server";
-import crypto from "crypto";
 
 export const submitAudit = createServerFn({ method: "POST" })
-  .validator((data) => auditSchema.parse(data))
+  .validator(auditSchema)
   .handler(async ({ data }) => {
     // Generate 128-bit cryptographically secure token (NanoID style)
-    const secureToken = `dx_${crypto.randomBytes(8).toString("hex")}`;
+    const secureToken = `dx_${globalThis.crypto.randomUUID().replace(/-/g, "").slice(0, 16)}`;
     
-    const record: AuditSubmission & {
-      receivedAt: string;
-      id: string;
-    } = {
-      ...data,
-      receivedAt: new Date().toISOString(),
+    // Server-only mock logic (in a real app, this would write to a DB)
+    console.log("[Duxio Server] Received Audit Submission:", data);
+    
+    const record: AuditSubmission = {
       id: secureToken,
-    };
-
-    console.log("[Duxio Lead Intake] Secure lead captured:", {
-      id: secureToken,
+      timestamp: new Date().toISOString(),
+      biggestChallenge: data.biggestChallenge,
       firstName: data.firstName,
-      niche: data.coachingNiche,
+      email: data.email,
+      websiteUrl: data.websiteUrl,
+      socialMediaLink: data.socialMediaLink,
+      coachingNiche: data.coachingNiche,
+      offerDescription: data.offerDescription,
+      monthlyInquiries: data.monthlyInquiries,
+      monthlyBookedCalls: data.monthlyBookedCalls,
+      primaryLeadSource: data.primaryLeadSource,
       offerPrice: data.offerPrice
-    });
+    };
 
     // 🚀 Automation Webhook (Make.com / Zapier)
     // If you set a WEBHOOK_URL in Vercel, it will automatically blast this lead data to your automation flow.

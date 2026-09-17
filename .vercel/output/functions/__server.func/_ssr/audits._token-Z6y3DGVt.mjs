@@ -2,9 +2,9 @@ import { r as __toESM } from "../_runtime.mjs";
 import { g as useParams } from "../_libs/@tanstack/react-router+[...].mjs";
 import { r as require_react } from "../_libs/@hookform/resolvers+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
-import { D as CircleCheck, F as ArrowRight, M as Calendar, S as Copy, T as CircleX, a as TriangleAlert, d as ShieldCheck, j as Check, o as TrendingUp, t as Zap, u as Sparkles } from "../_libs/lucide-react.mjs";
-import { c as SiteHeader, s as SiteFooter } from "./site-footer-D5BAqun-.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audits._token-C32cKNUA.js
+import { A as CircleX, I as Check, M as CircleCheck, O as Copy, R as Calendar, V as ArrowRight, a as TriangleAlert, d as ShieldCheck, o as TrendingUp, t as Zap, u as Sparkles } from "../_libs/lucide-react.mjs";
+import { c as SiteHeader, s as SiteFooter } from "./site-footer-BdWkVFfZ.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/audits._token-Z6y3DGVt.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function useAuditData(token) {
@@ -146,13 +146,13 @@ function AuditReportPage() {
 	};
 	const statusIcon = (s) => s === "ok" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "h-4 w-4 text-emerald-500" }) : s === "critical" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleX, { className: "h-4 w-4 text-rose-500" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, { className: "h-4 w-4 text-amber-500" });
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "flex min-h-screen flex-col bg-[#FBFBFD] text-[#1D1D1F] font-sans antialiased selection:bg-[#0071E3]/15 selection:text-[#0071E3]",
+		className: "flex min-h-screen flex-col bg-background text-foreground font-sans antialiased selection:bg-accent/15 selection:text-accent",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SiteHeader, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "sticky top-4 z-50 mx-auto mt-24 w-[calc(100%-2rem)] max-w-5xl",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex items-center justify-between rounded-2xl border border-white/80 bg-white/75 px-5 py-3.5 shadow-[0_4px_24px_rgba(0,0,0,0.04)] backdrop-blur-xl",
+					className: "flex items-center justify-between rounded-2xl border border-line bg-surface/75 px-5 py-3.5 shadow-[0_4px_24px_rgba(0,0,0,0.04)] backdrop-blur-xl",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex items-center gap-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -165,11 +165,11 @@ function AuditReportPage() {
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex items-center gap-2",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "hidden sm:inline rounded-full border border-[#E5E5EA] bg-[#F5F5F7] px-3 py-1 font-mono text-[10px] tracking-wide text-[#86868B]",
+							className: "hidden sm:inline rounded-full border border-line bg-surface-2 px-3 py-1 font-mono text-[10px] tracking-wide text-muted-foreground",
 							children: token
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 							onClick: copyToken,
-							className: "rounded-lg border border-[#E5E5EA] bg-white p-1.5 text-[#86868B] transition hover:bg-[#F5F5F7]",
+							className: "rounded-lg border border-line bg-card p-1.5 text-muted-foreground transition hover:bg-surface-2",
 							title: "Copy token",
 							children: copied ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "h-3.5 w-3.5 text-emerald-500" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Copy, { className: "h-3.5 w-3.5" })
 						})]
@@ -180,14 +180,14 @@ function AuditReportPage() {
 				className: "mx-auto w-full max-w-5xl space-y-10 px-4 pt-8 pb-20 sm:px-6",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-						className: "relative overflow-hidden rounded-3xl border border-[#E5E5EA] bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.02),0_12px_32px_-8px_rgba(0,0,0,0.05)] sm:p-12",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,113,227,0.05),transparent_60%)]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative overflow-hidden rounded-3xl border border-line bg-card p-8 shadow-[0_1px_3px_rgba(0,0,0,0.02),0_12px_32px_-8px_rgba(0,0,0,0.05)] sm:p-12",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,85,0,0.05),transparent_60%)]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "relative z-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "max-w-xl",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-										className: "mb-2 inline-flex items-center gap-1.5 rounded-full border border-[#0071E3]/20 bg-[#0071E3]/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#0071E3]",
+										className: "mb-2 inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-accent",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "h-3 w-3" }), "Pipeline Diagnostic Report"]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
@@ -204,14 +204,14 @@ function AuditReportPage() {
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-										className: "mt-3 text-sm leading-relaxed text-[#86868B]",
+										className: "mt-3 text-sm leading-relaxed text-muted-foreground",
 										children: [
 											"Based on your submitted parameters, we identified critical infrastructure gaps across your ",
 											data.niche,
 											" practice pipeline. Your current system is estimated to leave",
 											" ",
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("strong", {
-												className: "text-[#1D1D1F]",
+												className: "text-foreground",
 												children: [
 													"$",
 													totalLeak.toLocaleString(),
@@ -235,14 +235,15 @@ function AuditReportPage() {
 											cy: "60",
 											r: "50",
 											fill: "none",
-											stroke: "#F5F5F7",
+											stroke: "currentColor",
+											opacity: "0.1",
 											strokeWidth: "10"
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
 											cx: "60",
 											cy: "60",
 											r: "50",
 											fill: "none",
-											stroke: data.healthScore < 50 ? "#EF4444" : "#0071E3",
+											stroke: data.healthScore < 50 ? "#EF4444" : "#FF5500",
 											strokeWidth: "10",
 											strokeLinecap: "round",
 											strokeDasharray: `${data.healthScore / 100 * 314} 314`,
@@ -254,7 +255,7 @@ function AuditReportPage() {
 											className: "text-3xl font-extrabold",
 											children: data.healthScore
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "text-[10px] font-semibold text-[#86868B]",
+											className: "text-[10px] font-semibold text-muted-foreground",
 											children: "of 100"
 										})]
 									})]
@@ -271,7 +272,7 @@ function AuditReportPage() {
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "grid grid-cols-1 gap-3 sm:grid-cols-5",
 						children: stages.map((stage) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: `rounded-2xl border p-4 text-xs ${stage.status === "critical" ? "border-rose-200 bg-rose-50/60" : stage.status === "warning" ? "border-amber-200 bg-amber-50/50" : "border-[#E5E5EA] bg-white"}`,
+							className: `rounded-2xl border p-4 text-xs ${stage.status === "critical" ? "border-destructive/30 bg-destructive/10" : stage.status === "warning" ? "border-amber-500/30 bg-amber-500/10" : "border-line bg-card"}`,
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "mb-2 flex items-center gap-1.5",
@@ -281,7 +282,7 @@ function AuditReportPage() {
 									})]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-[11px] leading-relaxed text-[#86868B]",
+									className: "text-[11px] leading-relaxed text-muted-foreground",
 									children: stage.summary
 								}),
 								stage.leak > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -300,7 +301,7 @@ function AuditReportPage() {
 					})] }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 						className: "relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#12141A] to-[#1D1D1F] p-8 text-white shadow-2xl backdrop-blur-2xl sm:p-10",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(0,113,227,0.12),transparent_60%)]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,85,0,0.12),transparent_60%)]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "relative z-10",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
@@ -322,7 +323,7 @@ function AuditReportPage() {
 										max: 200,
 										value: inquirySlider,
 										onChange: (e) => setInquirySlider(+e.target.value),
-										className: "w-full accent-[#0071E3]"
+										className: "w-full accent-accent"
 									})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
 										className: "mb-1 block text-[10px] font-semibold uppercase tracking-wider text-white/60",
 										children: ["Offer Price: $", priceSlider.toLocaleString()]
@@ -333,7 +334,7 @@ function AuditReportPage() {
 										step: 250,
 										value: priceSlider,
 										onChange: (e) => setPriceSlider(+e.target.value),
-										className: "w-full accent-[#0071E3]"
+										className: "w-full accent-accent"
 									})] })]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -342,9 +343,9 @@ function AuditReportPage() {
 										const active = activeRepairs.has(r.id);
 										return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 											onClick: () => toggleRepair(r.id),
-											className: `flex items-start gap-3 rounded-2xl border p-4 text-left transition-all ${active ? "border-[#0071E3]/40 bg-[#0071E3]/10" : "border-white/10 bg-white/5 hover:bg-white/8"}`,
+											className: `flex items-start gap-3 rounded-2xl border p-4 text-left transition-all ${active ? "border-accent/40 bg-accent/10" : "border-white/10 bg-card/5 hover:bg-card/8"}`,
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: `mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ${active ? "border-[#0071E3] bg-[#0071E3]" : "border-white/20 bg-white/5"}`,
+												className: `mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ${active ? "border-accent bg-accent" : "border-white/20 bg-card/5"}`,
 												children: active && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "h-3 w-3 text-white" })
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 												className: "block text-xs font-bold",
@@ -357,14 +358,14 @@ function AuditReportPage() {
 									})
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "mt-6 rounded-2xl border border-[#0071E3]/20 bg-[#0071E3]/5 p-6 text-center",
+									className: "mt-6 rounded-2xl border border-accent/20 bg-accent/5 p-6 text-center",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "block text-[10px] font-semibold uppercase tracking-wider text-[#0071E3]/80",
+											className: "block text-[10px] font-semibold uppercase tracking-wider text-accent/80",
 											children: "Estimated Recovered Annual Revenue"
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "mt-1 block text-4xl font-extrabold tracking-[-0.04em] text-[#0071E3]",
+											className: "mt-1 block text-4xl font-extrabold tracking-[-0.04em] text-accent",
 											children: [
 												"$",
 												recoveredRevenue.toLocaleString(),
@@ -384,7 +385,7 @@ function AuditReportPage() {
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-						className: "rounded-3xl border border-[#E5E5EA] bg-white p-8 shadow-sm sm:p-10",
+						className: "rounded-3xl border border-line bg-card p-8 shadow-sm sm:p-10",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "mb-6 text-lg font-bold tracking-[-0.03em]",
 							children: "System Architecture Comparison"
@@ -409,9 +410,9 @@ function AuditReportPage() {
 									}, item))
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "rounded-2xl border border-[#0071E3]/20 bg-[#0071E3]/5 p-5",
+								className: "rounded-2xl border border-accent/20 bg-accent/5 p-5",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
-									className: "mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0071E3]",
+									className: "mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Zap, { className: "h-4 w-4" }), "DUXIO Client Acquisition OS"]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "space-y-2",
@@ -422,7 +423,7 @@ function AuditReportPage() {
 										"Pre-call framing and show-up assets",
 										"Qualified high-ticket conversion pipeline"
 									].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex items-center gap-2 text-[11px] text-[#0071E3]",
+										className: "flex items-center gap-2 text-[11px] text-accent",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "h-3 w-3 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: item })]
 									}, item))
 								})]
@@ -430,22 +431,22 @@ function AuditReportPage() {
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-						className: "rounded-3xl border border-[#E5E5EA] bg-[#FBFBFD] p-6 sm:p-8",
+						className: "rounded-3xl border border-line bg-background p-6 sm:p-8",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "mb-5 text-lg font-bold tracking-[-0.03em]",
 							children: "Implementation Roadmap"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							className: "space-y-4",
 							children: roadmap.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "rounded-2xl border border-[#E5E5EA] bg-white p-5",
+								className: "rounded-2xl border border-line bg-card p-5",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "mb-2 flex items-center gap-2",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "rounded-full border border-[#0071E3]/20 bg-[#0071E3]/10 px-2.5 py-0.5 text-[10px] font-bold text-[#0071E3]",
+											className: "rounded-full border border-accent/20 bg-accent/10 px-2.5 py-0.5 text-[10px] font-bold text-accent",
 											children: p.phase
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "text-[10px] font-semibold text-[#86868B]",
+											className: "text-[10px] font-semibold text-muted-foreground",
 											children: p.timeline
 										})]
 									}),
@@ -456,7 +457,7 @@ function AuditReportPage() {
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 										className: "space-y-1",
 										children: p.deliverables.map((d) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-											className: "flex items-start gap-2 text-[11px] text-[#86868B]",
+											className: "flex items-start gap-2 text-[11px] text-muted-foreground",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "mt-0.5 h-3 w-3 shrink-0 text-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: d })]
 										}, d))
 									})
@@ -465,18 +466,18 @@ function AuditReportPage() {
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-						className: "mx-auto max-w-3xl rounded-3xl border border-white/90 bg-white/85 p-8 text-center shadow-[0_20px_50px_rgba(0,113,227,0.12)] ring-1 ring-[#0071E3]/20 backdrop-blur-2xl sm:p-12",
+						className: "mx-auto max-w-3xl rounded-3xl border border-white/90 bg-card/85 p-8 text-center shadow-[0_20px_50px_rgba(255,85,0,0.12)] ring-1 ring-accent/20 backdrop-blur-2xl sm:p-12",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0071E3]/10",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calendar, { className: "h-6 w-6 text-[#0071E3]" })
+								className: "mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calendar, { className: "h-6 w-6 text-accent" })
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 								className: "text-2xl font-extrabold tracking-[-0.04em]",
 								children: "Schedule Your System Architecture Strategy Review"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mx-auto mt-2 max-w-md text-xs text-[#86868B] leading-relaxed",
+								className: "mx-auto mt-2 max-w-md text-xs text-muted-foreground leading-relaxed",
 								children: "In a focused ten minute walkthrough, our solutions team will present your custom implementation blueprint and deployment timeline based on the diagnostic findings above."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -484,11 +485,11 @@ function AuditReportPage() {
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingUp, { className: "h-3.5 w-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "2 Consultations Available for Current Sprint" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-								className: "mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#0071E3] to-[#00C2FF] px-8 py-4 text-xs font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl",
+								className: "mt-6 inline-flex items-center gap-2 rounded-full bg-brand-gradient px-8 py-4 text-xs font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "BOOK MY STRATEGY REVIEW" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5" })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "mt-4 flex items-center justify-center gap-1.5 text-[10px] text-[#86868B]",
+								className: "mt-4 flex items-center justify-center gap-1.5 text-[10px] text-muted-foreground",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "h-3 w-3 text-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Confidential. Your diagnostic data is encrypted end to end." })]
 							})
 						]

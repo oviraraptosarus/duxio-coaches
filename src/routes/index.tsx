@@ -1,4 +1,4 @@
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute, Navigate } from "@tanstack/react-router";
 
 /**
  * The Duxio VSL landing page lives at /coach-client-acquisition (the canonical
@@ -6,7 +6,5 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
  * on the correct page.
  */
 export const Route = createFileRoute("/")({
-  beforeLoad: () => {
-    throw redirect({ to: "/coach-client-acquisition" });
-  },
+  component: () => <Navigate to="/coach-client-acquisition" />,
 });

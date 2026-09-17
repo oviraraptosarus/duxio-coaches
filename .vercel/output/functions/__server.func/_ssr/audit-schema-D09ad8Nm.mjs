@@ -1,6 +1,7 @@
 import { n as objectType, r as stringType, t as literalType } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audit-schema-Uzv4UpUZ.js
+//#region node_modules/.nitro/vite/services/ssr/assets/audit-schema-D09ad8Nm.js
 var biggestChallenges = [
+	"No free funnel or lead magnet to capture leads",
 	"Converting inquiries into conversations",
 	"Prospects ghosting direct message booking links",
 	"Unqualified callers who cannot afford the offer",

@@ -4,7 +4,7 @@ import { C as getStylesheetHref, D as isRedirect, E as executeRewriteInput, M as
 import { n as createMemoryHistory } from "../_libs/tanstack__history.mjs";
 import { a as defaultSerovalPlugins, c as makeSerovalPlugin, d as toCrossJSONStream, i as mergeHeaders, l as fromJSON, n as getNormalizedURL, o as createRawStreamRPCPlugin, r as getOrigin, s as createSerializationAdapter, t as attachRouterServerSsrUtils, u as toCrossJSONAsync } from "../_libs/@tanstack/router-core+[...].mjs";
 import { a as X_TSS_RAW_RESPONSE, d as getStartOptions, f as runWithStartContext, i as TSS_SERVER_FUNCTION, l as flattenMiddlewares, n as TSS_CONTENT_TYPE_FRAMED_VERSIONED, o as X_TSS_SERIALIZED, p as safeObjectMerge, r as TSS_FORMDATA_CONTEXT, s as createNullProtoObject, t as FrameType, u as getStartContext } from "./createServerFn-CIHAFgYl.mjs";
-import { t as getServerFnById } from "../__23tanstack-start-server-fn-resolver-D4-OheSC.mjs";
+import { t as getServerFnById } from "../__23tanstack-start-server-fn-resolver-DWMjWvan.mjs";
 import { r as require_react } from "../_libs/@hookform/resolvers+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { t as createCsrfMiddleware } from "./createCsrfMiddleware-B2To0gPJ.mjs";
@@ -84,7 +84,7 @@ var HEADERS = { TSS_SHELL: "X-TSS_SHELL" };
 * the dev styles URL for route-scoped CSS collection.
 */
 async function getStartManifest(matchedRoutes) {
-	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-DC4l6Lnt.mjs");
+	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-DLP8b4H8.mjs");
 	const startManifest = tsrStartManifest();
 	let routes = startManifest.routes;
 	routes[rootRouteId];
@@ -1027,7 +1027,7 @@ var getBaseManifest = getProdBaseManifest;
 var createEarlyHintsForRequest = createEarlyHintsCollector;
 async function loadEntries() {
 	const [routerEntry, startEntry, pluginAdapters] = await Promise.all([
-		import("./router-DpEQJ47S.mjs"),
+		import("./router-4vdHXmMp.mjs"),
 		import("./start-RKGGYzjZ.mjs"),
 		import("./empty-plugin-adapters-D9UWiqvJ.mjs")
 	]);

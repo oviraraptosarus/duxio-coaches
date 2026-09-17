@@ -4,10 +4,10 @@ import { r as require_react } from "../_libs/@hookform/resolvers+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-DpEQJ47S.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-4vdHXmMp.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-BTOPHQ9b.css";
+var styles_default = "/assets/styles-BQmI6hpo.css";
 function reportVibeError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__vibeEvents?.captureException?.(error, {
@@ -167,7 +167,7 @@ function RootComponent() {
 var Route$3 = createFileRoute("/")({ beforeLoad: () => {
 	throw redirect({ to: "/coach-client-acquisition" });
 } });
-var $$splitComponentImporter$2 = () => import("./coach-client-acquisition-BLltX95K.mjs");
+var $$splitComponentImporter$2 = () => import("./coach-client-acquisition-BCD562G_.mjs");
 var PAGE_URL = "https://duxio.com/coach-client-acquisition";
 var Route$2 = createFileRoute("/coach-client-acquisition")({
 	head: () => ({
@@ -288,7 +288,7 @@ var Route$2 = createFileRoute("/coach-client-acquisition")({
 	}),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./onboarding-CmTLS_mD.mjs");
+var $$splitComponentImporter$1 = () => import("./onboarding-BPcSs8Gq.mjs");
 var Route$1 = createFileRoute("/onboarding")({
 	head: () => ({ meta: [{ title: "DUXIO | Client Onboarding Portal" }, {
 		name: "description",
@@ -296,7 +296,7 @@ var Route$1 = createFileRoute("/onboarding")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./audits._token-C32cKNUA.mjs");
+var $$splitComponentImporter = () => import("./audits._token-Z6y3DGVt.mjs");
 var Route = createFileRoute("/audits/$token")({
 	head: () => ({ meta: [{ title: "DUXIO | Pipeline Diagnostic Report" }, {
 		name: "description",
