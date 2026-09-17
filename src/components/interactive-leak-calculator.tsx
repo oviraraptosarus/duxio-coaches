@@ -8,14 +8,15 @@ export function InteractiveLeakCalculator() {
   const [price, setPrice] = useState(3000);
   const [showMethodology, setShowMethodology] = useState(false);
 
-  // Clamped Mathematical Pipeline Calculations
+  // Illustrative Additional Revenue Calculations
   const clampedLeads = Math.min(Math.max(leads, 10), 250);
   const clampedPrice = Math.min(Math.max(price, 1000), 15000);
 
-  const uncapturedLeads = clampedLeads * 0.40;
-  const lostDeals = uncapturedLeads * 0.15;
-  const lostRevenueMonthly = Math.round(lostDeals * clampedPrice);
-  const lostRevenueAnnual = lostRevenueMonthly * 12;
+  // We model a conservative scenario where fixing the leaks results in 2-5 additional clients depending on lead volume.
+  // E.g. 50 leads * 0.06 conversion improvement = 3 additional clients.
+  const additionalClients = Math.max(1, Math.round(clampedLeads * 0.06));
+  const potentialRevenueMonthly = additionalClients * clampedPrice;
+  const potentialRevenueAnnual = potentialRevenueMonthly * 12;
 
   return (
     <section id="calculator" className="scroll-mt-24 px-5 py-12 sm:px-8">
@@ -27,10 +28,10 @@ export function InteractiveLeakCalculator() {
             Interactive Diagnostic
           </span>
           <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground mt-2">
-            Calculate Your Monthly Lost Pipeline Value
+            See What Your Existing Pipeline Could Be Worth
           </h2>
           <p className="mt-1 text-xs text-muted-foreground">
-            Adjust your current inquiry volume below to estimate how much revenue evaporates through unbuilt nurture and manual direct message conversations.
+            Adjust your current inquiry volume below to estimate how much additional revenue you could generate by simply plugging the leaks in your system.
           </p>
         </div>
 
@@ -70,11 +71,11 @@ export function InteractiveLeakCalculator() {
 
             <div>
               <div className="flex justify-between text-xs font-bold mb-1.5">
-                <span className="text-muted-foreground">Estimated Uncaptured Inquiries</span>
-                <span className="font-mono text-xs font-bold text-rose-600">40% Pipeline Evaporation</span>
+                <span className="text-muted-foreground">Example: Additional Clients Captured</span>
+                <span className="font-mono text-xs font-bold text-accent">+{additionalClients} Clients/mo</span>
               </div>
               <div className="w-full bg-surface-2 h-2 rounded-full overflow-hidden">
-                <div className="bg-rose-500 h-full w-[40%] rounded-full"></div>
+                <div className="bg-accent h-full w-[40%] rounded-full"></div>
               </div>
             </div>
           </div>
@@ -85,16 +86,16 @@ export function InteractiveLeakCalculator() {
             
             <div>
               <div className="text-[10px] font-mono uppercase tracking-widest text-slate-400 mb-1">
-                Estimated Monthly Lost Pipeline
+                Potential Additional Revenue
               </div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-rose-400 tracking-tight mb-1">
-                ${lostRevenueMonthly.toLocaleString()} monthly
+              <div className="text-3xl sm:text-4xl font-extrabold text-emerald-400 tracking-tight mb-1">
+                +${potentialRevenueMonthly.toLocaleString()} monthly
               </div>
               <div className="text-xs text-slate-400 font-medium mb-3">
-                Annualized Impact: <span className="text-rose-300 font-bold">${lostRevenueAnnual.toLocaleString()}</span> / year
+                Annualized Impact: <span className="text-emerald-300 font-bold">+${potentialRevenueAnnual.toLocaleString()}</span> / year
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Based on manual message drop offs, ghosted calendar links, and lack of systematic 30 to 90 day educational nurture.
+              <p className="text-[10px] text-slate-400 leading-relaxed italic opacity-80">
+                Illustrative example only. Actual results depend on your offer, traffic, conversion rates, sales process and execution.
               </p>
             </div>
 
@@ -131,13 +132,10 @@ export function InteractiveLeakCalculator() {
           {showMethodology && (
             <div className="mt-3 p-4 rounded-2xl bg-surface text-xs leading-relaxed text-muted-foreground space-y-2 animate-in fade-in duration-200">
               <p>
-                <strong>Uncaptured Ratio (40%):</strong> Represents inquiries lost when conversations stall in direct messaging without an automated next step or lead capture bridge.
+                <strong>Conversion Improvement (6%):</strong> Represents a conservative bump in overall conversion when an automated, reliable qualification and follow-up system is installed.
               </p>
               <p>
-                <strong>Conservative Close Rate (15%):</strong> Models standard sales conversion on qualified discovery calls for coaching offers priced between $1,000 and $10,000.
-              </p>
-              <p>
-                <strong>Formula:</strong> <code>Lost Pipeline = (Monthly Inquiries × 0.40) × 0.15 × Offer Price</code>.
+                <strong>Formula:</strong> <code>Additional Clients = Inquiries × 0.06</code>.
               </p>
             </div>
           )}

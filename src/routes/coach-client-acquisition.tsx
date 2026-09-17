@@ -8,7 +8,11 @@ import { SystemSection } from "@/components/sections/system-section";
 import { AuditCtaSection } from "@/components/sections/audit-cta-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { TestimonialSection } from "@/components/sections/testimonial-section";
+import { BeforeAfterSection } from "@/components/sections/before-after-section";
 import { ExitIntentPopup } from "@/components/exit-intent-popup";
+import { SocialProofMarquee } from "@/components/ui/social-proof-marquee";
+import { ClientAcquisitionJourney } from "@/components/sections/client-acquisition-journey";
+import { WhatWeBuildSection } from "@/components/sections/what-we-build";
 
 const PAGE_URL = "https://duxio.com/coach-client-acquisition";
 
@@ -123,12 +127,16 @@ export const Route = createFileRoute("/coach-client-acquisition")({
 
 function CoachClientAcquisition() {
   return (
-    <div className="flex min-h-screen flex-col bg-background selection:bg-[#0071E3] selection:text-white">
+    <div className="flex min-h-screen flex-col bg-background selection:bg-accent/20 selection:text-accent">
       <SiteHeader />
       <main className="flex-1">
         <HeroSection />
-        <InteractiveLeakCalculator />
+        <SocialProofMarquee />
         <ReframeSection />
+        <InteractiveLeakCalculator />
+        <ClientAcquisitionJourney />
+        <WhatWeBuildSection />
+        <BeforeAfterSection />
         <SystemSection />
         <TestimonialSection />
         <AuditCtaSection />

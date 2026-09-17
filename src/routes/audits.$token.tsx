@@ -192,12 +192,12 @@ function AuditReportPage() {
     );
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#FBFBFD] text-[#1D1D1F] font-sans antialiased selection:bg-[#0071E3]/15 selection:text-[#0071E3]">
+    <div className="flex min-h-screen flex-col bg-background text-foreground font-sans antialiased selection:bg-accent/15 selection:text-accent">
       <SiteHeader />
 
       {/* ── STICKY REPORT HEADER ── */}
       <div className="sticky top-4 z-50 mx-auto mt-24 w-[calc(100%-2rem)] max-w-5xl">
-        <div className="flex items-center justify-between rounded-2xl border border-white/80 bg-white/75 px-5 py-3.5 shadow-[0_4px_24px_rgba(0,0,0,0.04)] backdrop-blur-xl">
+        <div className="flex items-center justify-between rounded-2xl border border-line bg-surface/75 px-5 py-3.5 shadow-[0_4px_24px_rgba(0,0,0,0.04)] backdrop-blur-xl">
           <div className="flex items-center gap-3">
             <span className="text-sm font-extrabold tracking-[-0.03em]">DUXIO</span>
             <span className="rounded-full bg-emerald-100 px-2.5 py-0.5 text-[10px] font-bold text-emerald-700">
@@ -205,12 +205,12 @@ function AuditReportPage() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="hidden sm:inline rounded-full border border-[#E5E5EA] bg-[#F5F5F7] px-3 py-1 font-mono text-[10px] tracking-wide text-[#86868B]">
+            <span className="hidden sm:inline rounded-full border border-line bg-surface-2 px-3 py-1 font-mono text-[10px] tracking-wide text-muted-foreground">
               {token}
             </span>
             <button
               onClick={copyToken}
-              className="rounded-lg border border-[#E5E5EA] bg-white p-1.5 text-[#86868B] transition hover:bg-[#F5F5F7]"
+              className="rounded-lg border border-line bg-card p-1.5 text-muted-foreground transition hover:bg-surface-2"
               title="Copy token"
             >
               {copied ? <Check className="h-3.5 w-3.5 text-emerald-500" /> : <Copy className="h-3.5 w-3.5" />}
@@ -222,11 +222,11 @@ function AuditReportPage() {
       <main className="mx-auto w-full max-w-5xl space-y-10 px-4 pt-8 pb-20 sm:px-6">
 
         {/* ── 1. HERO SCORECARD ── */}
-        <section className="relative overflow-hidden rounded-3xl border border-[#E5E5EA] bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.02),0_12px_32px_-8px_rgba(0,0,0,0.05)] sm:p-12">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,113,227,0.05),transparent_60%)]" />
+        <section className="relative overflow-hidden rounded-3xl border border-line bg-card p-8 shadow-[0_1px_3px_rgba(0,0,0,0.02),0_12px_32px_-8px_rgba(0,0,0,0.05)] sm:p-12">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,85,0,0.05),transparent_60%)]" />
           <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-xl">
-              <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-[#0071E3]/20 bg-[#0071E3]/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#0071E3]">
+              <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-accent">
                 <Sparkles className="h-3 w-3" />
                 Pipeline Diagnostic Report
               </span>
@@ -234,10 +234,10 @@ function AuditReportPage() {
                 {data.firstName}, your acquisition system is operating at{" "}
                 <span className="text-rose-500">{data.healthScore}%</span> capacity.
               </h1>
-              <p className="mt-3 text-sm leading-relaxed text-[#86868B]">
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Based on your submitted parameters, we identified critical infrastructure gaps across
                 your {data.niche} practice pipeline. Your current system is estimated to leave{" "}
-                <strong className="text-[#1D1D1F]">
+                <strong className="text-foreground">
                   ${totalLeak.toLocaleString()} per year
                 </strong>{" "}
                 in unrealized revenue on the table.
@@ -248,13 +248,13 @@ function AuditReportPage() {
             <div className="flex flex-col items-center gap-2">
               <div className="relative h-36 w-36">
                 <svg viewBox="0 0 120 120" className="h-full w-full -rotate-90">
-                  <circle cx="60" cy="60" r="50" fill="none" stroke="#F5F5F7" strokeWidth="10" />
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="currentColor" opacity="0.1" strokeWidth="10" />
                   <circle
                     cx="60"
                     cy="60"
                     r="50"
                     fill="none"
-                    stroke={data.healthScore < 50 ? "#EF4444" : "#0071E3"}
+                    stroke={data.healthScore < 50 ? "#EF4444" : "#FF5500"}
                     strokeWidth="10"
                     strokeLinecap="round"
                     strokeDasharray={`${(data.healthScore / 100) * 314} 314`}
@@ -263,7 +263,7 @@ function AuditReportPage() {
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <span className="text-3xl font-extrabold">{data.healthScore}</span>
-                  <span className="text-[10px] font-semibold text-[#86868B]">of 100</span>
+                  <span className="text-[10px] font-semibold text-muted-foreground">of 100</span>
                 </div>
               </div>
               <span className="text-[10px] font-bold uppercase tracking-wider text-rose-500">
@@ -284,10 +284,10 @@ function AuditReportPage() {
                 key={stage.name}
                 className={`rounded-2xl border p-4 text-xs ${
                   stage.status === "critical"
-                    ? "border-rose-200 bg-rose-50/60"
+                    ? "border-destructive/30 bg-destructive/10"
                     : stage.status === "warning"
-                      ? "border-amber-200 bg-amber-50/50"
-                      : "border-[#E5E5EA] bg-white"
+                      ? "border-amber-500/30 bg-amber-500/10"
+                      : "border-line bg-card"
                 }`}
               >
                 <div className="mb-2 flex items-center gap-1.5">
@@ -296,7 +296,7 @@ function AuditReportPage() {
                     {stage.name}
                   </span>
                 </div>
-                <p className="text-[11px] leading-relaxed text-[#86868B]">{stage.summary}</p>
+                <p className="text-[11px] leading-relaxed text-muted-foreground">{stage.summary}</p>
                 {stage.leak > 0 && (
                   <div className="mt-2 rounded-lg bg-rose-100/60 px-2 py-1 text-center">
                     <span className="text-[10px] font-bold text-rose-600">
@@ -311,7 +311,7 @@ function AuditReportPage() {
 
         {/* ── 3. INTERACTIVE PIPELINE REPAIR SANDBOX ── */}
         <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#12141A] to-[#1D1D1F] p-8 text-white shadow-2xl backdrop-blur-2xl sm:p-10">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(0,113,227,0.12),transparent_60%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,85,0,0.12),transparent_60%)]" />
           <div className="relative z-10">
             <h2 className="mb-1 text-lg font-bold tracking-[-0.03em]">
               Interactive Pipeline Repair Sandbox
@@ -332,7 +332,7 @@ function AuditReportPage() {
                   max={200}
                   value={inquirySlider}
                   onChange={(e) => setInquirySlider(+e.target.value)}
-                  className="w-full accent-[#0071E3]"
+                  className="w-full accent-accent"
                 />
               </div>
               <div>
@@ -346,7 +346,7 @@ function AuditReportPage() {
                   step={250}
                   value={priceSlider}
                   onChange={(e) => setPriceSlider(+e.target.value)}
-                  className="w-full accent-[#0071E3]"
+                  className="w-full accent-accent"
                 />
               </div>
             </div>
@@ -361,15 +361,15 @@ function AuditReportPage() {
                     onClick={() => toggleRepair(r.id)}
                     className={`flex items-start gap-3 rounded-2xl border p-4 text-left transition-all ${
                       active
-                        ? "border-[#0071E3]/40 bg-[#0071E3]/10"
-                        : "border-white/10 bg-white/5 hover:bg-white/8"
+                        ? "border-accent/40 bg-accent/10"
+                        : "border-white/10 bg-card/5 hover:bg-card/8"
                     }`}
                   >
                     <div
                       className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ${
                         active
-                          ? "border-[#0071E3] bg-[#0071E3]"
-                          : "border-white/20 bg-white/5"
+                          ? "border-accent bg-accent"
+                          : "border-white/20 bg-card/5"
                       }`}
                     >
                       {active && <Check className="h-3 w-3 text-white" />}
@@ -384,11 +384,11 @@ function AuditReportPage() {
             </div>
 
             {/* Recovery Result */}
-            <div className="mt-6 rounded-2xl border border-[#0071E3]/20 bg-[#0071E3]/5 p-6 text-center">
-              <span className="block text-[10px] font-semibold uppercase tracking-wider text-[#0071E3]/80">
+            <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/5 p-6 text-center">
+              <span className="block text-[10px] font-semibold uppercase tracking-wider text-accent/80">
                 Estimated Recovered Annual Revenue
               </span>
-              <span className="mt-1 block text-4xl font-extrabold tracking-[-0.04em] text-[#0071E3]">
+              <span className="mt-1 block text-4xl font-extrabold tracking-[-0.04em] text-accent">
                 ${recoveredRevenue.toLocaleString()}
                 <span className="text-lg text-white/40">/yr</span>
               </span>
@@ -402,7 +402,7 @@ function AuditReportPage() {
         </section>
 
         {/* ── 4. ARCHITECTURE COMPARE ── */}
-        <section className="rounded-3xl border border-[#E5E5EA] bg-white p-8 shadow-sm sm:p-10">
+        <section className="rounded-3xl border border-line bg-card p-8 shadow-sm sm:p-10">
           <h2 className="mb-6 text-lg font-bold tracking-[-0.03em]">
             System Architecture Comparison
           </h2>
@@ -429,8 +429,8 @@ function AuditReportPage() {
               </div>
             </div>
             {/* DUXIO */}
-            <div className="rounded-2xl border border-[#0071E3]/20 bg-[#0071E3]/5 p-5">
-              <h3 className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0071E3]">
+            <div className="rounded-2xl border border-accent/20 bg-accent/5 p-5">
+              <h3 className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
                 <Zap className="h-4 w-4" />
                 DUXIO Client Acquisition OS
               </h3>
@@ -442,7 +442,7 @@ function AuditReportPage() {
                   "Pre-call framing and show-up assets",
                   "Qualified high-ticket conversion pipeline",
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-[11px] text-[#0071E3]">
+                  <div key={item} className="flex items-center gap-2 text-[11px] text-accent">
                     <CheckCircle2 className="h-3 w-3 shrink-0" />
                     <span>{item}</span>
                   </div>
@@ -453,23 +453,23 @@ function AuditReportPage() {
         </section>
 
         {/* ── 5. IMPLEMENTATION ROADMAP ── */}
-        <section className="rounded-3xl border border-[#E5E5EA] bg-[#FBFBFD] p-6 sm:p-8">
+        <section className="rounded-3xl border border-line bg-background p-6 sm:p-8">
           <h2 className="mb-5 text-lg font-bold tracking-[-0.03em]">
             Implementation Roadmap
           </h2>
           <div className="space-y-4">
             {roadmap.map((p) => (
-              <div key={p.phase} className="rounded-2xl border border-[#E5E5EA] bg-white p-5">
+              <div key={p.phase} className="rounded-2xl border border-line bg-card p-5">
                 <div className="mb-2 flex items-center gap-2">
-                  <span className="rounded-full border border-[#0071E3]/20 bg-[#0071E3]/10 px-2.5 py-0.5 text-[10px] font-bold text-[#0071E3]">
+                  <span className="rounded-full border border-accent/20 bg-accent/10 px-2.5 py-0.5 text-[10px] font-bold text-accent">
                     {p.phase}
                   </span>
-                  <span className="text-[10px] font-semibold text-[#86868B]">{p.timeline}</span>
+                  <span className="text-[10px] font-semibold text-muted-foreground">{p.timeline}</span>
                 </div>
                 <h3 className="mb-2 text-sm font-bold tracking-[-0.02em]">{p.title}</h3>
                 <ul className="space-y-1">
                   {p.deliverables.map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-[11px] text-[#86868B]">
+                    <li key={d} className="flex items-start gap-2 text-[11px] text-muted-foreground">
                       <CheckCircle2 className="mt-0.5 h-3 w-3 shrink-0 text-emerald-500" />
                       <span>{d}</span>
                     </li>
@@ -481,14 +481,14 @@ function AuditReportPage() {
         </section>
 
         {/* ── 6. BOOKING CTA ── */}
-        <section className="mx-auto max-w-3xl rounded-3xl border border-white/90 bg-white/85 p-8 text-center shadow-[0_20px_50px_rgba(0,113,227,0.12)] ring-1 ring-[#0071E3]/20 backdrop-blur-2xl sm:p-12">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0071E3]/10">
-            <Calendar className="h-6 w-6 text-[#0071E3]" />
+        <section className="mx-auto max-w-3xl rounded-3xl border border-white/90 bg-card/85 p-8 text-center shadow-[0_20px_50px_rgba(255,85,0,0.12)] ring-1 ring-accent/20 backdrop-blur-2xl sm:p-12">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent/10">
+            <Calendar className="h-6 w-6 text-accent" />
           </div>
           <h2 className="text-2xl font-extrabold tracking-[-0.04em]">
             Schedule Your System Architecture Strategy Review
           </h2>
-          <p className="mx-auto mt-2 max-w-md text-xs text-[#86868B] leading-relaxed">
+          <p className="mx-auto mt-2 max-w-md text-xs text-muted-foreground leading-relaxed">
             In a focused ten minute walkthrough, our solutions team will present your custom
             implementation blueprint and deployment timeline based on the diagnostic findings above.
           </p>
@@ -496,11 +496,11 @@ function AuditReportPage() {
             <TrendingUp className="h-3.5 w-3.5" />
             <span>2 Consultations Available for Current Sprint</span>
           </div>
-          <button className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#0071E3] to-[#00C2FF] px-8 py-4 text-xs font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl">
+          <button className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-gradient px-8 py-4 text-xs font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl">
             <span>BOOK MY STRATEGY REVIEW</span>
             <ArrowRight className="h-3.5 w-3.5" />
           </button>
-          <div className="mt-4 flex items-center justify-center gap-1.5 text-[10px] text-[#86868B]">
+          <div className="mt-4 flex items-center justify-center gap-1.5 text-[10px] text-muted-foreground">
             <ShieldCheck className="h-3 w-3 text-emerald-500" />
             <span>Confidential. Your diagnostic data is encrypted end to end.</span>
           </div>

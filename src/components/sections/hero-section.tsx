@@ -20,12 +20,12 @@ export function HeroSection() {
           </span>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight text-foreground">
-            You do not have a traffic problem.<br className="hidden sm:block" />
-            <span className="text-muted-foreground">You have an operating gap between attention and revenue.</span>
+            Turn Your Coaching Expertise Into a <br className="hidden sm:block" />
+            <span className="text-muted-foreground">Predictable Client Acquisition System.</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-muted-foreground">
-            You post content, get DMs, and have people asking about your offer. But you spend half your day typing replies manually, dropping booking links, and watching interested buyers disappear before they get on a call. We build the client acquisition system behind your practice so inquiries actually turn into clients.
+            Turn the attention and leads you're already generating into more qualified conversations, booked calls, and potential clients — with a system that captures, nurtures, qualifies, books, and follows up automatically.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3.5 sm:flex-row sm:justify-center">
@@ -34,14 +34,14 @@ export function HeroSection() {
               className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gradient px-8 py-3.5 text-xs font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:opacity-95 sm:w-auto"
             >
               <Play className="h-3.5 w-3.5 fill-current" />
-              Watch 8 Minute Breakdown
+              See How The System Works
             </a>
             <Dialog>
               <DialogTrigger asChild>
                 <button
-                  className="group inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-line bg-white px-8 py-3.5 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-surface sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-line bg-surface-2 px-8 py-3.5 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-surface sm:w-auto"
                 >
-                  Request Pipeline Diagnostic
+                  Find My Acquisition Leaks
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </button>
               </DialogTrigger>
@@ -65,7 +65,7 @@ export function HeroSection() {
         </div>
 
         {/* VSL Stage */}
-        <div id="vsl" className="scroll-mt-24 mt-12">
+        <div id="vsl" className="scroll-mt-32 mt-12">
           <div className="card-elevated p-6 sm:p-8">
             <div className="mb-4 text-left">
               <span className="section-label">Strategic Walkthrough</span>

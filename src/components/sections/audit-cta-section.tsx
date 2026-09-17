@@ -27,13 +27,13 @@ export function AuditCtaSection() {
           {/* Left Column */}
           <div className="lg:col-span-2">
             <span className="section-label block mb-3">
-              Free Checkup
+              Free Coach Funnel / Client Acquisition Audit
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
-              Find Out Exactly Where You Are Losing Money
+              Find The Leaks In Your Client Acquisition System
             </h2>
             <p className="mt-4 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-              Tell us a bit about your business. We will show you exactly where you are losing clients and how to fix it.
+              Get a breakdown of where you're losing leads, bookings and sales across Traffic, Lead Capture, Nurturing, Booking and Follow-Up.
             </p>
 
             <div className="mt-10 space-y-6">

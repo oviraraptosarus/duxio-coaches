@@ -27,7 +27,7 @@ export function ExitIntentPopup() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="w-[calc(100%-2rem)] sm:w-full max-w-md border-none bg-transparent p-0 shadow-none">
         <DialogTitle className="sr-only">Exit Intent Offer</DialogTitle>
-        <DialogDescription className="sr-only">Download the One Page Acquisition Architecture Checklist.</DialogDescription>
+        <DialogDescription className="sr-only">Download the Automated Intake Google Sheet Template.</DialogDescription>
         
         <div className="relative z-10 w-full overflow-hidden card-elevated p-6 sm:p-8">
           <div className="text-center">
@@ -38,7 +38,7 @@ export function ExitIntentPopup() {
               Leaving so soon?
             </h2>
             <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-              Before you depart, download the <strong>One Page Client Acquisition Checklist</strong>. It reveals the exact framework we use to patch operational revenue leaks in coaching practices.
+              Before you depart, download the <strong>Automated Client Intake Google Sheet Template</strong>. It reveals the exact framework we use to qualify high-ticket leads before you ever get on a discovery call.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export function ExitIntentPopup() {
               type="submit"
               className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gradient px-4 py-3.5 text-xs font-bold text-white transition-all shadow-md hover:opacity-95"
             >
-              <span>Access The Architecture Checklist</span>
+              <span>Access The Intake Template</span>
               <ArrowRight className="h-4 w-4" />
             </button>
           </form>

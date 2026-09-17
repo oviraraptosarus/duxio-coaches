@@ -3,28 +3,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "Do I need a massive audience for this to work?",
-    a: "No. We help you make way more money from the audience you already have.",
+    q: "Are you just another agency selling generic 'AI Hype'?",
+    a: "Absolutely not. The market is flooded with 'AI Gurus' spamming your inbox with fake promises. We don't sell hype. We sell cold, hard operational outcomes: recovering your missed revenue, slashing your discovery time, and filtering out tire-kickers.",
   },
   {
-    q: "Is this going to be a tech nightmare?",
-    a: "No. We handle all the complicated tech for you so you can just focus on coaching.",
+    q: "My coaching is human-to-human. Will this make me look like a bot?",
+    a: "No. We automate the boring admin work, not the coaching. We use automation to handle the tedious follow-ups and lead qualification. When you finally get on a call, it is 100% human-to-human, and they are fully pre-sold.",
   },
   {
-    q: "Is this just a website?",
-    a: "No. It's a complete machine that gets you clients on autopilot.",
+    q: "Can AI really replace my judgment and empathy?",
+    a: "Never. AI cannot replace human empathy or strategic judgment. We do not use AI to coach. We use it to protect your time, so you only apply your expert judgment to clients who actually have the budget to pay you.",
   },
   {
-    q: "What happens after I request a checkup?",
-    a: "You receive an objective analysis of where you are losing money. If we're a good fit, we'll show you exactly how to fix it.",
+    q: "Is this going to be a tech nightmare for me to maintain?",
+    a: "You won't touch a single piece of software. You are a coach, not a mechanic. We build the entire infrastructure, we monitor it to make sure it never breaks, and we improve it over time. You just focus on closing the qualified calls.",
   },
   {
-    q: "Who qualifies for this?",
-    a: "We only work with coaches who have an active program priced at $1,000 or more, and who are already getting some attention online.",
+    q: "How do I know this will actually make me money?",
+    a: "Because we track hard math, not vanity metrics. We don't care about 'likes' or 'engagement.' We measure exactly how much time you save and exactly how much dead pipeline revenue we recover. Clients still want to see the numbers, and we deliver them.",
   },
   {
-    q: "Do you promise specific revenue guarantees?",
-    a: "No. We show you exactly how to fix the math in your business without making fake promises.",
+    q: "What happens after I request a diagnostic?",
+    a: "You get a bespoke, interactive breakdown of exactly where your specific pipeline is leaking money. If the math makes sense for both of us, we'll show you how to fix it.",
   },
 ];
 

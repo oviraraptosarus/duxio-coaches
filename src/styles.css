@@ -53,41 +53,48 @@
   --font-sans:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", "Plus Jakarta Sans", "Helvetica Neue",
     Helvetica, Arial, sans-serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
 }
 
 :root {
   --radius: 1rem;
 
-  /* Apple-style neutrals */
-  --background: oklch(0.99 0.002 264);
-  --foreground: oklch(0.21 0.004 264);
-  --surface: oklch(0.968 0.001 264);
-  --surface-2: oklch(0.955 0.001 264);
-  --line: oklch(0.918 0.002 264);
+  /* Premium Obsidian / Charcoal Dark Mode */
+  --background: oklch(0.15 0 0); /* #09090B zinc-950 */
+  --foreground: oklch(0.985 0 0); /* #FAFAFA zinc-50 */
+  --surface: oklch(0.2 0 0); /* #18181B zinc-900 */
+  --surface-2: oklch(0.27 0 0); /* #27272A zinc-800 */
+  --line: oklch(0.27 0 0); /* #27272A */
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.21 0.004 264);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.21 0.004 264);
+  --card: oklch(0.2 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.985 0 0);
 
-  /* Primary = graphite ink (Apple's near-black buttons) */
-  --primary: oklch(0.21 0.004 264);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.968 0.001 264);
-  --secondary-foreground: oklch(0.21 0.004 264);
-  --muted: oklch(0.968 0.001 264);
-  --muted-foreground: oklch(0.5 0.004 264);
+  /* Primary = White */
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.15 0 0);
+  --secondary: oklch(0.27 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.27 0 0);
+  --muted-foreground: oklch(0.7 0 0); /* zinc-400 */
   
-  /* Accent = refined Apple electric blue */
-  --accent: oklch(0.547 0.196 256);
-  --accent-foreground: oklch(1 0 0);
-  --accent-soft: oklch(0.953 0.022 256);
+  /* Accent = Vibrant Action Orange */
+  --accent: oklch(0.65 0.22 35); /* #FF5500 approx */
+  --accent-foreground: oklch(0.985 0 0);
+  --accent-soft: oklch(0.2 0.05 35); /* Deep dark orange tint */
 
   --destructive: oklch(0.58 0.22 27);
-  --destructive-foreground: oklch(0.985 0.004 85);
-  --border: oklch(0.918 0.002 264);
-  --input: oklch(0.918 0.002 264);
-  --ring: oklch(0.547 0.196 256);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.27 0 0);
+  --input: oklch(0.27 0 0);
+  --ring: oklch(0.65 0.22 35);
 }
 
 @layer base {
@@ -156,22 +163,22 @@
 }
 
 @utility bg-brand-gradient {
-  background: linear-gradient(135deg, #0A192F, #1E3A8A);
+  background: linear-gradient(135deg, #FF3300, #FF8C00);
 }
 
 @utility text-brand-gradient {
-  background-image: linear-gradient(135deg, #0A192F, #1E3A8A);
+  background-image: linear-gradient(135deg, #FF3300, #FF8C00);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 @utility liquid-glass {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(40px) saturate(200%);
-  -webkit-backdrop-filter: blur(40px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: rgba(18, 20, 26, 0.72);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 @utility liquid-glass-dark {
@@ -184,7 +191,7 @@
 
 @utility mesh-hero-glow {
   background: 
-    radial-gradient(ellipse 80% 50% at 50% -10%, oklch(0.547 0.196 256 / 0.10) 0%, transparent 60%),
-    radial-gradient(circle at 85% 30%, oklch(0.6 0.18 270 / 0.04) 0%, transparent 40%),
-    radial-gradient(circle at 15% 40%, oklch(0.65 0.15 240 / 0.04) 0%, transparent 40%);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 85, 0, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 85% 30%, rgba(255, 60, 0, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 15% 40%, rgba(255, 140, 0, 0.06) 0%, transparent 40%);
 }
