@@ -21,7 +21,8 @@ export function FloatingDock() {
       <header className={`fixed top-3 inset-x-0 z-50 flex justify-center px-4 transition-all duration-300 ${scrolled ? "translate-y-0" : "translate-y-0"}`}>
         <div className="liquid-glass flex h-14 max-w-4xl w-full items-center justify-between gap-2 sm:gap-6 rounded-full px-4 sm:px-6 shadow-xl border border-white/60">
           
-          <Link to="/" className="flex items-center gap-1.5 text-base font-extrabold tracking-tight text-foreground pl-1">
+          <Link to="/" className="flex items-center gap-2 text-base font-extrabold tracking-tight text-foreground pl-1">
+            <img src="/duxio-logo.png" alt="Duxio" className="h-6 w-auto" />
             DUXIO <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
           </Link>
 
