@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CoachClientAcquisitionRouteImport } from './routes/coach-client-acquisition'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as AuditsTokenRouteImport } from './routes/audits.$token'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +24,55 @@ const CoachClientAcquisitionRoute = CoachClientAcquisitionRouteImport.update({
   path: '/coach-client-acquisition',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuditsTokenRoute = AuditsTokenRouteImport.update({
+  id: '/audits/$token',
+  path: '/audits/$token',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/coach-client-acquisition': typeof CoachClientAcquisitionRoute
+  '/onboarding': typeof OnboardingRoute
+  '/audits/$token': typeof AuditsTokenRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/coach-client-acquisition': typeof CoachClientAcquisitionRoute
+  '/onboarding': typeof OnboardingRoute
+  '/audits/$token': typeof AuditsTokenRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/coach-client-acquisition': typeof CoachClientAcquisitionRoute
+  '/onboarding': typeof OnboardingRoute
+  '/audits/$token': typeof AuditsTokenRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/coach-client-acquisition'
+  fullPaths:
+    '/' | '/coach-client-acquisition' | '/onboarding' | '/audits/$token'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/coach-client-acquisition'
-  id: '__root__' | '/' | '/coach-client-acquisition'
+  to: '/' | '/coach-client-acquisition' | '/onboarding' | '/audits/$token'
+  id:
+    | '__root__'
+    | '/'
+    | '/coach-client-acquisition'
+    | '/onboarding'
+    | '/audits/$token'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CoachClientAcquisitionRoute: typeof CoachClientAcquisitionRoute
+  OnboardingRoute: typeof OnboardingRoute
+  AuditsTokenRoute: typeof AuditsTokenRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +91,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CoachClientAcquisitionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/audits/$token': {
+      id: '/audits/$token'
+      path: '/audits/$token'
+      fullPath: '/audits/$token'
+      preLoaderRoute: typeof AuditsTokenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CoachClientAcquisitionRoute: CoachClientAcquisitionRoute,
+  OnboardingRoute: OnboardingRoute,
+  AuditsTokenRoute: AuditsTokenRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
