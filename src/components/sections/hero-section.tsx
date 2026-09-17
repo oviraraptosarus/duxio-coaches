@@ -3,9 +3,9 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { AuditForm } from "@/components/audit-form";
 
 const vslTakeaways = [
-  "Why sending booking links in direct messages destroys conversion",
-  "How to capture interested buyers without manual messaging fatigue",
-  "The automated qualification filter that eliminates bad fit Zoom calls",
+  "Why sending booking links directly in DMs burns 80% of serious buyers",
+  "How to stop spending three hours every day manually messaging cold prospects",
+  "The intake filter that stops unqualified calls from hitting your calendar",
 ];
 
 export function HeroSection() {
@@ -20,12 +20,12 @@ export function HeroSection() {
           </span>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight text-foreground">
-            You Do Not Have a Traffic Shortage.<br className="hidden sm:block" />
-            <span className="text-muted-foreground">You Possess an Operational Void Between Attention and Cash.</span>
+            You do not have a traffic problem.<br className="hidden sm:block" />
+            <span className="text-muted-foreground">You have an operating gap between attention and revenue.</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-muted-foreground">
-            You maintain active social channels, daily inquiries, and regular audience engagement. Yet you lose hours typing manual replies while qualified prospects vanish before booking. Discover the proprietary architecture that transforms existing attention into predictable client revenue.
+            You post content, get DMs, and have people asking about your offer. But you spend half your day typing replies manually, dropping booking links, and watching interested buyers disappear before they get on a call. We build the client acquisition system behind your practice so inquiries actually turn into clients.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3.5 sm:flex-row sm:justify-center">
@@ -34,14 +34,14 @@ export function HeroSection() {
               className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gradient px-8 py-3.5 text-xs font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:opacity-95 sm:w-auto"
             >
               <Play className="h-3.5 w-3.5 fill-current" />
-              Watch Strategic Executive Briefing
+              Watch 8 Minute Breakdown
             </a>
             <Dialog>
               <DialogTrigger asChild>
                 <button
                   className="group inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-line bg-white px-8 py-3.5 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-surface sm:w-auto"
                 >
-                  Request Pipeline Diagnostic Evaluation
+                  Request Pipeline Diagnostic
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </button>
               </DialogTrigger>
@@ -53,18 +53,13 @@ export function HeroSection() {
             </Dialog>
           </div>
 
-          <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-4 text-xs text-muted-foreground">
-            <p className="inline-flex items-center gap-1.5">
-              <ShieldCheck className="h-3.5 w-3.5 text-accent" />
-              Rigorous diagnostic analysis. We isolate your exact operational leaks.
-            </p>
-            <span className="hidden h-3 w-px bg-line sm:block" aria-hidden />
-            <p className="inline-flex items-center gap-1.5 font-medium">
+          <div className="mt-6 flex justify-center text-xs text-muted-foreground">
+            <p className="inline-flex items-center gap-2 font-medium">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
               </span>
-              Engineered exclusively for coaching programs priced $1,000 to $10,000 or more
+              Built specifically for coaching programs priced $1,000 to $10,000+
             </p>
           </div>
         </div>
@@ -73,12 +68,12 @@ export function HeroSection() {
         <div id="vsl" className="scroll-mt-24 mt-12">
           <div className="card-elevated p-6 sm:p-8">
             <div className="mb-4 text-left">
-              <span className="section-label">Executive Briefing</span>
+              <span className="section-label">Strategic Walkthrough</span>
               <h2 className="mt-1 text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-                Where Are You Losing Potential Clients?
+                Where your acquisition pipeline is leaking revenue
               </h2>
               <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
-                Watch this eight minute breakdown to discover why manual direct messaging destroys your conversion velocity.
+                An eight minute breakdown showing why manual DMing and raw calendar links destroy your conversion rate.
               </p>
             </div>
 
@@ -90,7 +85,7 @@ export function HeroSection() {
                 </div>
               </div>
               <div className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-[11px] font-medium text-white/80 backdrop-blur-md">
-                Strategic Briefing · 8 Minutes
+                Video Walkthrough · 8 Minutes
               </div>
             </div>
 
@@ -107,8 +102,8 @@ export function HeroSection() {
             {/* Sub-VSL Diagnostic Callout */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-accent/20 bg-accent-soft p-5">
               <div className="text-left">
-                <h4 className="text-sm font-bold text-foreground">After reviewing, request your private Pipeline Diagnostic.</h4>
-                <p className="text-xs text-muted-foreground">We will map your complete client journey and reveal your biggest revenue opportunities.</p>
+                <h4 className="text-sm font-bold text-foreground">Want to see where your specific pipeline is leaking?</h4>
+                <p className="text-xs text-muted-foreground">Submit your business metrics and we will map your exact customer journey.</p>
               </div>
               <Dialog>
                 <DialogTrigger asChild>
@@ -130,7 +125,7 @@ export function HeroSection() {
         {/* Social Proof */}
         <div className="mt-16 border-t border-line pt-8 text-center">
           <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-            Trusted by established practices scaling premium programs
+            Trusted by established coaches scaling high ticket programs
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-8 opacity-50 grayscale sm:gap-14">
             <div className="flex items-center gap-2 text-base font-bold text-foreground">

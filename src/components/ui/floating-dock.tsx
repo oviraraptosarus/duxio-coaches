@@ -19,10 +19,22 @@ export function FloatingDock() {
   return (
     <>
       <header className={`fixed top-3 inset-x-0 z-50 flex justify-center px-4 transition-all duration-300 ${scrolled ? "translate-y-0" : "translate-y-0"}`}>
-        <div className="liquid-glass flex h-[72px] max-w-5xl w-full items-center justify-between gap-4 rounded-[36px] px-6 sm:px-8 shadow-xl border border-white/60">
+        <div className="flex h-[72px] max-w-5xl w-full items-center justify-between gap-4 rounded-[36px] px-6 sm:px-8 shadow-xl border border-white/40 bg-white/65 backdrop-blur-xl backdrop-saturate-150">
           
-          <Link to="/" className="flex items-center gap-3 text-lg font-extrabold tracking-tight text-foreground -ml-2">
-            <img src="/duxio-logo.png" alt="Duxio" className="h-10 w-auto object-contain" />
+          <Link to="/" className="flex items-center -ml-1" aria-label="Duxio">
+            <div 
+              className="h-11 w-32 bg-brand-gradient" 
+              style={{ 
+                WebkitMaskImage: "url('/duxio-logo.png')", 
+                WebkitMaskSize: "contain", 
+                WebkitMaskRepeat: "no-repeat", 
+                WebkitMaskPosition: "left center",
+                maskImage: "url('/duxio-logo.png')",
+                maskSize: "contain",
+                maskRepeat: "no-repeat",
+                maskPosition: "left center"
+              }} 
+            />
           </Link>
 
           {/* Desktop Nav Items */}
@@ -70,7 +82,7 @@ export function FloatingDock() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-x-4 top-20 z-40 rounded-3xl liquid-glass p-6 shadow-2xl border border-white/60 md:hidden animate-in fade-in slide-in-from-top-3 duration-200">
+        <div className="fixed inset-x-4 top-24 z-40 rounded-3xl bg-white/65 backdrop-blur-xl backdrop-saturate-150 p-6 shadow-2xl border border-white/40 md:hidden animate-in fade-in slide-in-from-top-3 duration-200">
           <nav className="flex flex-col gap-4 text-xs font-bold text-foreground">
             <a href="#vsl" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 p-2 rounded-xl hover:bg-surface">
               <Play className="h-3.5 w-3.5 text-accent fill-current" /> Executive Briefing
