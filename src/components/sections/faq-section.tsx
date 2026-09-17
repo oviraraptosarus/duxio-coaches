@@ -3,28 +3,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "Do I need a larger audience before this infrastructure functions?",
-    a: "No. The system is engineered to help established practices capitalize on their existing audience attention and inquiry volume.",
+    q: "Do I need a massive audience for this to work?",
+    a: "No. We help you make way more money from the audience you already have.",
   },
   {
-    q: "Will I need to manage complicated technical software?",
-    a: "No. We architect the entire connected backend so you can focus exclusively on coaching and client delivery.",
+    q: "Is this going to be a tech nightmare?",
+    a: "No. We handle all the complicated tech for you so you can just focus on coaching.",
   },
   {
-    q: "Is this merely a website or simple lead capture page?",
-    a: "No. DUXIO builds the entire client acquisition journey across Attraction, Capture, Nurture, Qualification, and Automated Follow Up.",
+    q: "Is this just a website?",
+    a: "No. It's a complete machine that gets you clients on autopilot.",
   },
   {
-    q: "What occurs after submitting the diagnostic request?",
-    a: "You receive an objective analysis of your operational gaps. If there is strong strategic alignment, we review the recommended system blueprint with you.",
+    q: "What happens after I request a checkup?",
+    a: "You receive an objective analysis of where you are losing money. If we're a good fit, we'll show you exactly how to fix it.",
   },
   {
-    q: "What are the criteria for receiving a Diagnostic Evaluation?",
-    a: "We evaluate practices with active coaching programs priced at $1,000 or more that receive regular audience engagement and inquiries.",
+    q: "Who qualifies for this?",
+    a: "We only work with coaches who have an active program priced at $1,000 or more, and who are already getting some attention online.",
   },
   {
     q: "Do you promise specific revenue guarantees?",
-    a: "No. We demonstrate mathematical pipeline leverage and economic value without making exaggerated claims.",
+    a: "No. We show you exactly how to fix the math in your business without making fake promises.",
   },
 ];
 

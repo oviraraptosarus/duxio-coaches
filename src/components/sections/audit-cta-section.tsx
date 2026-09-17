@@ -27,18 +27,18 @@ export function AuditCtaSection() {
           {/* Left Column */}
           <div className="lg:col-span-2">
             <span className="section-label block mb-3">
-              Diagnostic Intake
+              Free Checkup
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
-              Identify Where Your Client Acquisition Journey Is Leaking
+              Find Out Exactly Where You Are Losing Money
             </h2>
             <p className="mt-4 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-              Submit your practice metrics. We will map your complete acquisition flow, pinpoint where qualified inquiries evaporate, and show you the exact infrastructure required to fix it.
+              Tell us a bit about your business. We will show you exactly where you are losing clients and how to fix it.
             </p>
 
             <div className="mt-10 space-y-6">
               <h3 className="text-xs font-bold uppercase tracking-wider text-foreground">
-                Diagnostic Review Process
+                How It Works
               </h3>
               <div className="space-y-5">
                 {steps.map((s) => (

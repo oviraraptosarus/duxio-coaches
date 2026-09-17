@@ -3,12 +3,14 @@ import { ArrowRight, ShieldCheck, Download } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 export function ExitIntentPopup() {
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
-        if (!sessionStorage.getItem("exit_intent_shown")) {
+        if (typeof window !== "undefined" && !sessionStorage.getItem("exit_intent_shown")) {
           setOpen(true);
           sessionStorage.setItem("exit_intent_shown", "true");
         }
@@ -18,6 +20,8 @@ export function ExitIntentPopup() {
     document.addEventListener("mouseleave", handleMouseLeave);
     return () => document.removeEventListener("mouseleave", handleMouseLeave);
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

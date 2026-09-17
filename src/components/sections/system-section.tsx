@@ -4,31 +4,31 @@ const steps = [
   {
     n: "01",
     title: "ATTRACT",
-    body: "Transform organic content, referrals, and outreach into qualified buyer attention.",
+    body: "Turn your views and followers into people who actually want to buy.",
     icon: Magnet,
   },
   {
     n: "02",
     title: "CAPTURE",
-    body: "Provide interested prospects an asset based next step instead of relying on manual direct messaging.",
+    body: "Stop DMing manually. We build a simple trap to capture real leads.",
     icon: UserPlus,
   },
   {
     n: "03",
     title: "NURTURE",
-    body: "Automatically educate and follow up with prospective clients who are not ready to purchase on day one.",
+    body: "Automatically follow up with people until they are ready to buy.",
     icon: Sprout,
   },
   {
     n: "04",
     title: "QUALIFY AND BOOK",
-    body: "Filter out tire kickers before they reach your calendar and ensure high show up rates.",
+    body: "Block the tire kickers and only get on calls with people who have money.",
     icon: CalendarCheck,
   },
   {
     n: "05",
     title: "FOLLOW UP AND CONVERT",
-    body: "Deploy an automated re-engagement engine for prospects who miss calls or need extended evaluation.",
+    body: "Automatically chase down the ones who ghosted you and close the deal.",
     icon: Clock,
   },
 ];
@@ -63,10 +63,10 @@ export function SystemSection() {
         <div className="mx-auto max-w-2xl text-center mb-14">
           <span className="section-label">The Solution</span>
           <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground">
-            The Duxio Acquisition Architecture
+            The Duxio Sales Machine
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-muted-foreground">
-            A unified infrastructure from the initial moment of discovery to the closed high ticket enrollment.
+            A simple, automated system that takes total strangers and turns them into paying clients.
           </p>
         </div>
 

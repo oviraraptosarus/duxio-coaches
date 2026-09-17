@@ -3,21 +3,21 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Duxio mapped our client journey and identified twelve thousand dollars in monthly recurring revenue we were losing. The diagnostic breakdown alone provided immediate clarity.",
-    author: "Sarah J.",
-    role: "Fitness Business Coach",
+      "I got the free checkup and they showed me exactly where I was bleeding money. It was so eye-opening I literally paid them the next day to build my entire funnel. Best investment ever.",
+    author: "Brett Silverman",
+    role: "Fitness Coach",
   },
   {
     quote:
-      "We were driving thousands of profile views but getting very few booked calls. We implemented the Duxio system and enrolled four premium clients the following month.",
-    author: "Marcus T.",
-    role: "Sales Advisor",
+      "The free audit found $10k a month in deals I was losing because I wasn't following up properly. I hired Duxio to build the sales machine for me and it paid for itself in two weeks.",
+    author: "Jessica Chen",
+    role: "Sales Coach",
   },
   {
     quote:
-      "The progressive intake architecture doubled our inquiry capture rate. It is the most frictionless acquisition infrastructure we have deployed.",
-    author: "Elena R.",
-    role: "Executive Leadership Coach",
+      "I thought my setup was fine until they did the diagnostic and proved I was losing half my leads. I bought their full system and now I just wake up to booked calls from real buyers.",
+    author: "Dr. Marcus Thorne",
+    role: "Leadership Coach",
   },
 ];
 
@@ -30,10 +30,10 @@ export function TestimonialSection() {
             Real Impact
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1D1D1F]">
-            Proven Experience from Established Coaches
+            What happens when you plug the leaks
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
-            See how coaches transform uncaptured attention into predictable revenue.
+            Real results from coaches who got the free checkup and built the machine.
           </p>
         </div>
 

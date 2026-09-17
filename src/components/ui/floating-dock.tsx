@@ -21,9 +21,9 @@ export function FloatingDock() {
       <header className={`fixed top-3 inset-x-0 z-50 flex justify-center px-4 transition-all duration-300 ${scrolled ? "translate-y-0" : "translate-y-0"}`}>
         <div className="flex h-[72px] max-w-5xl w-full items-center justify-between gap-4 rounded-[36px] px-6 sm:px-8 shadow-xl border border-white/40 bg-white/65 backdrop-blur-xl backdrop-saturate-150">
           
-          <Link to="/" className="flex items-center -ml-1" aria-label="Duxio">
+          <Link to="/" className="flex items-center -ml-1 sm:-ml-2" aria-label="Duxio">
             <div 
-              className="h-11 w-32 bg-brand-gradient" 
+              className="h-14 w-40 sm:h-14 sm:w-44 bg-brand-gradient" 
               style={{ 
                 WebkitMaskImage: "url('/duxio-logo.png')", 
                 WebkitMaskSize: "contain", 

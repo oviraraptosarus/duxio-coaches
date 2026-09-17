@@ -3,9 +3,9 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { AuditForm } from "@/components/audit-form";
 
 const vslTakeaways = [
-  "Why sending booking links directly in DMs burns 80% of serious buyers",
-  "How to stop spending three hours every day manually messaging cold prospects",
-  "The intake filter that stops unqualified calls from hitting your calendar",
+  "Why dropping links in DMs kills your sales",
+  "How to stop wasting hours messaging cold leads",
+  "The simple filter that keeps broke people off your calendar",
 ];
 
 export function HeroSection() {
@@ -14,9 +14,9 @@ export function HeroSection() {
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           
-          <span className="eyebrow-chip mb-6">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" aria-hidden />
-            Private Strategic Briefing for Established Practices
+          <span className="eyebrow-chip mb-6 uppercase tracking-wider font-bold">
+            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" aria-hidden />
+            Only For Top Coaches Ready To Win
           </span>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight text-foreground">
@@ -70,10 +70,10 @@ export function HeroSection() {
             <div className="mb-4 text-left">
               <span className="section-label">Strategic Walkthrough</span>
               <h2 className="mt-1 text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-                Where your acquisition pipeline is leaking revenue
+                Where you are losing money right now
               </h2>
               <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
-                An eight minute breakdown showing why manual DMing and raw calendar links destroy your conversion rate.
+                A short video showing exactly why your current setup is costing you clients.
               </p>
             </div>
 
@@ -122,26 +122,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Social Proof */}
-        <div className="mt-16 border-t border-line pt-8 text-center">
-          <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-            Trusted by established coaches scaling high ticket programs
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-8 opacity-50 grayscale sm:gap-14">
-            <div className="flex items-center gap-2 text-base font-bold text-foreground">
-              <Triangle className="h-5 w-5 fill-current" /> VERTEX
-            </div>
-            <div className="flex items-center gap-2 text-base font-bold text-foreground">
-              <Hexagon className="h-5 w-5 fill-current" /> NEXUS
-            </div>
-            <div className="flex items-center gap-2 text-base font-bold text-foreground">
-              <Circle className="h-5 w-5 fill-current" /> LUMEN
-            </div>
-            <div className="flex items-center gap-2 text-base font-bold text-foreground">
-              <Square className="h-5 w-5 fill-current" /> QUARTZ
-            </div>
-          </div>
-        </div>
+
 
       </div>
     </section>

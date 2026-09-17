@@ -15,32 +15,32 @@ const leakCards = [
   {
     step: "01",
     title: "Traffic Leak",
-    question: "Are qualified buyers reaching you?",
-    description: "Attention is only profitable when it originates from prospects who can afford your premium offer.",
+    question: "Are real buyers actually seeing your stuff?",
+    description: "Likes don't pay bills. You need people who can actually afford your coaching.",
   },
   {
     step: "02",
     title: "Capture Leak",
     question: "What happens after someone asks a question?",
-    description: "Without an asset based conversion bridge, interested buyers disappear the moment you drop a calendar link.",
+    description: "Without a smart system, interested buyers just ghost you the second you send a link.",
   },
   {
     step: "03",
     title: "Nurture Leak",
     question: "What happens to people not buying today?",
-    description: "Over eighty percent of premium clients purchase between day 30 and 90. Unnurtured inquiries vanish forever.",
+    description: "Most big clients buy after 30 to 90 days. If you don't follow up automatically, they are gone forever.",
   },
   {
     step: "04",
     title: "Booking Leak",
     question: "How easily do they transition to a call?",
-    description: "Friction between initial interest and booking filters out serious buyers while letting unqualified callers waste your time.",
+    description: "A bad booking process scares away real buyers and lets broke people waste your time.",
   },
   {
     step: "05",
     title: "Follow Up Leak",
     question: "What happens when someone goes silent?",
-    description: "Without an automated re-engagement mechanism, recoverable high ticket deals simply evaporate from your pipeline.",
+    description: "If you don't automatically follow up, you are leaving massive amounts of money on the table.",
   },
 ];
 
@@ -52,8 +52,8 @@ export function ReframeSection() {
         <div className="mx-auto max-w-2xl text-center mb-10">
           <span className="section-label">The Core Problem</span>
           <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground">
-            You Might Not Have a Lead Shortage.<br />
-            You Have 5 Broken Handshakes in Your Client Journey.
+            You Don't Need More Leads.<br />
+            You Just Have Huge Leaks In Your Funnel.
           </h2>
         </div>
 
@@ -70,7 +70,7 @@ export function ReframeSection() {
         </div>
 
         <p className="mx-auto mb-12 max-w-xl text-center text-xs text-muted-foreground">
-          An established coach can possess all of these assets and still lose dozens of high ticket clients because there is no connected operating system behind the attention.
+          You can have all the followers in the world and still lose high-ticket clients if your system is broken.
         </p>
 
         {/* 5 Leak Cards */}
