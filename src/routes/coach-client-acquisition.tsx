@@ -13,6 +13,7 @@ import { ExitIntentPopup } from "@/components/exit-intent-popup";
 import { SocialProofMarquee } from "@/components/ui/social-proof-marquee";
 import { ClientAcquisitionJourney } from "@/components/sections/client-acquisition-journey";
 import { WhatWeBuildSection } from "@/components/sections/what-we-build";
+import { IntegrationLogos } from "@/components/sections/integration-logos";
 
 const PAGE_URL = "https://duxio.com/coach-client-acquisition";
 
@@ -131,6 +132,7 @@ function CoachClientAcquisition() {
       <SiteHeader />
       <main className="flex-1">
         <HeroSection />
+        <IntegrationLogos />
         <SocialProofMarquee />
         <ReframeSection />
         <InteractiveLeakCalculator />

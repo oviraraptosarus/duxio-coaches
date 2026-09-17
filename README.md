@@ -69,6 +69,16 @@ npm run build
 npm run preview
 ```
 
+### 🚀 Deploying to Vercel
+
+This project is perfectly optimized for one-click deployment on **Vercel**.
+
+1. Create a new project on [Vercel](https://vercel.com).
+2. Connect your GitHub repository.
+3. Vercel will automatically detect the **Vite** framework.
+4. Leave the default build command (`npm run build`) and output directory (`dist`).
+5. Click **Deploy**.
+
 ## 📐 Architecture & Styling
 
 - **Tailwind CSS v4**: Utilizes inline theme tokens and `@utility` rules for custom components.

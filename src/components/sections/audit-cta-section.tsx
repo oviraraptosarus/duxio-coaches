@@ -1,4 +1,5 @@
 import { AuditForm } from "@/components/audit-form";
+import { ShieldCheck } from "lucide-react";
 
 const steps = [
   {
@@ -55,9 +56,31 @@ export function AuditCtaSection() {
               </div>
             </div>
             
-            <p className="mt-10 text-[11px] leading-relaxed text-muted-foreground border-t border-line pt-4">
-              We do not make exaggerated revenue guarantees. The diagnostic provides objective strategic clarity prior to any advisory engagement.
-            </p>
+            <div className="mt-10 space-y-6 border-t border-line pt-8">
+              {/* Scarcity */}
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-accent/5 border border-accent/10">
+                <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/20 text-accent mt-0.5">
+                  <span className="text-[10px] font-bold">2</span>
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold text-foreground">Capacity Limit: 2 Spots Remaining</h4>
+                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
+                    Due to the bespoke nature of this architecture review, we only onboard 5 coaches per week for deep-dive diagnostics.
+                  </p>
+                </div>
+              </div>
+
+              {/* Risk Reversal */}
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-surface-2 border border-line">
+                <ShieldCheck className="h-5 w-5 shrink-0 text-emerald-500 mt-0.5" />
+                <div>
+                  <h4 className="text-xs font-bold text-foreground">Zero Sales Pressure Guarantee</h4>
+                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
+                    This is a diagnostic architecture review, not a pitch fest. If we aren't a mutual fit, you walk away with the exact blueprint to fix your leaks yourself. No obligations.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right Column: Form */}

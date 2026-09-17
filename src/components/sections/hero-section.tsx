@@ -25,7 +25,7 @@ export function HeroSection() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-muted-foreground">
-            Turn the attention and leads you're already generating into more qualified conversations, booked calls, and potential clients — with a system that captures, nurtures, qualifies, books, and follows up automatically.
+            Turn the attention and leads you're already generating into more qualified conversations, booked calls, and potential clients with a system that captures, nurtures, qualifies, books, and follows up automatically.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3.5 sm:flex-row sm:justify-center">
@@ -41,7 +41,7 @@ export function HeroSection() {
                 <button
                   className="group inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-line bg-surface-2 px-8 py-3.5 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-surface sm:w-auto"
                 >
-                  Find My Acquisition Leaks
+                  Claim My Diagnostic
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </button>
               </DialogTrigger>
@@ -108,7 +108,7 @@ export function HeroSection() {
               <Dialog>
                 <DialogTrigger asChild>
                   <button className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 rounded-full bg-brand-gradient px-6 py-3 text-xs font-bold text-white shadow-sm transition-all hover:opacity-95 whitespace-nowrap">
-                    Request Diagnostic
+                    Claim My Diagnostic
                     <ArrowRight className="h-3.5 w-3.5" />
                   </button>
                 </DialogTrigger>

@@ -75,7 +75,10 @@ export function InteractiveLeakCalculator() {
                 <span className="font-mono text-xs font-bold text-accent">+{additionalClients} Clients/mo</span>
               </div>
               <div className="w-full bg-surface-2 h-2 rounded-full overflow-hidden">
-                <div className="bg-accent h-full w-[40%] rounded-full"></div>
+                <div 
+                  className="bg-accent h-full rounded-full transition-all duration-300" 
+                  style={{ width: `${(additionalClients / 15) * 100}%` }}
+                ></div>
               </div>
             </div>
           </div>
@@ -103,9 +106,9 @@ export function InteractiveLeakCalculator() {
               <span className="text-xs text-slate-300 font-medium">Ready to plug this leak?</span>
               <Dialog>
                 <DialogTrigger asChild>
-                  <button className="bg-brand-gradient text-white text-xs font-bold px-4 py-2 rounded-full transition-all hover:scale-[1.02] shadow-sm flex items-center gap-1">
-                    <span>Request Diagnostic</span>
-                    <ArrowRight className="h-3 w-3" />
+                  <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-gradient px-5 py-3 text-xs font-bold text-white shadow-md transition-all hover:scale-105 hover:opacity-95">
+                    <span>Claim My Diagnostic</span>
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </button>
                 </DialogTrigger>
                 <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">

@@ -43,10 +43,15 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-medium text-muted-foreground/60">
-          <p>© {new Date().getFullYear()} Duxio. All rights reserved.</p>
-          <div className="flex gap-6">
+        {/* Copyright & Legal */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6 text-[11px] font-medium text-muted-foreground/60">
+          <div className="flex flex-col gap-2 text-center sm:text-left max-w-xl">
+            <p>© {new Date().getFullYear()} Duxio. All rights reserved.</p>
+            <p className="opacity-70 leading-relaxed">
+              All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement. Duxio is an independent service provider.
+            </p>
+          </div>
+          <div className="flex gap-6 whitespace-nowrap">
             <a href="#" className="hover:text-muted-foreground transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-muted-foreground transition-colors">Terms of Service</a>
           </div>

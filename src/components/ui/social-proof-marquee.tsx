@@ -21,7 +21,7 @@ export function SocialProofMarquee() {
           return (
             <div key={idx} className="flex shrink-0 items-center gap-2">
               <Icon className="h-4 w-4 text-accent" />
-              <span className="text-xs font-bold tracking-wide text-muted-foreground uppercase">
+              <span className="whitespace-nowrap text-xs font-bold tracking-wide text-muted-foreground uppercase">
                 {metric.text}
               </span>
             </div>
@@ -34,7 +34,7 @@ export function SocialProofMarquee() {
           return (
             <div key={idx} className="flex shrink-0 items-center gap-2">
               <Icon className="h-4 w-4 text-accent" />
-              <span className="text-xs font-bold tracking-wide text-muted-foreground uppercase">
+              <span className="whitespace-nowrap text-xs font-bold tracking-wide text-muted-foreground uppercase">
                 {metric.text}
               </span>
             </div>

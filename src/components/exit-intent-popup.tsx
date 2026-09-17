@@ -35,30 +35,31 @@ export function ExitIntentPopup() {
               <Download className="h-6 w-6 sm:h-7 sm:w-7" />
             </div>
             <h2 className="mt-4 sm:mt-5 text-xl sm:text-2xl font-bold tracking-tight text-foreground">
-              Leaving so soon?
+              Leaving without your blueprint?
             </h2>
             <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-              Before you depart, download the <strong>Automated Client Intake Google Sheet Template</strong>. It reveals the exact framework we use to qualify high-ticket leads before you ever get on a discovery call.
+              Before you depart, <strong>Claim Your Free Client Acquisition Audit</strong>. We will map your entire funnel and show you exactly where you are losing revenue.
             </p>
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-[10px] font-bold text-accent uppercase tracking-wider">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              </span>
+              Capacity Limit: 2 Spots Remaining
+            </div>
           </div>
 
           <form className="mt-6 sm:mt-8 space-y-3 sm:space-y-4" onSubmit={(e) => {
              e.preventDefault();
              setOpen(false); 
+             // Scroll to audit section
+             document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
           }}>
-            <div>
-              <input
-                type="email"
-                required
-                placeholder="Enter your corporate email address..."
-                className="w-full rounded-xl border border-line bg-surface px-3.5 py-3 text-xs text-foreground outline-none transition focus:border-accent focus:bg-white"
-              />
-            </div>
             <button
               type="submit"
               className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gradient px-4 py-3.5 text-xs font-bold text-white transition-all shadow-md hover:opacity-95"
             >
-              <span>Access The Intake Template</span>
+              <span>Claim My Diagnostic Audit</span>
               <ArrowRight className="h-4 w-4" />
             </button>
           </form>

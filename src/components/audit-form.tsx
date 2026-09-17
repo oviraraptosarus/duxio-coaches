@@ -63,6 +63,14 @@ export function AuditForm() {
         </div>
       </div>
 
+      {/* Progress Bar (Zeigarnik Effect) */}
+      <div className="mb-8 h-1.5 w-full rounded-full bg-surface-2 overflow-hidden">
+        <div 
+          className="h-full bg-accent transition-all duration-500 ease-in-out"
+          style={{ width: step === 1 ? '50%' : '100%' }}
+        />
+      </div>
+
       {step === 1 ? (
         <div className="space-y-5">
           <Field
@@ -75,11 +83,11 @@ export function AuditForm() {
               defaultValue=""
               {...register("biggestChallenge")}
             >
-              <option value="" disabled>
+              <option value="" disabled className="bg-surface text-muted-foreground">
                 Select your primary challenge
               </option>
               {biggestChallenges.map((c) => (
-                <option key={c} value={c}>
+                <option key={c} value={c} className="bg-surface text-foreground py-2">
                   {c}
                 </option>
               ))}
@@ -236,7 +244,7 @@ export function AuditForm() {
                 </>
               ) : (
                 <>
-                  <span>REQUEST PIPELINE DIAGNOSTIC EVALUATION</span>
+                  <span>CLAIM MY PIPELINE DIAGNOSTIC</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </>
               )}
@@ -299,7 +307,7 @@ function Field({
 }
 
 function inputCls(hasError: boolean) {
-  return `w-full rounded-xl border bg-surface px-3.5 py-2.5 text-xs text-foreground outline-none transition focus:border-accent focus:bg-white ${
+  return `w-full rounded-xl border bg-surface px-3.5 py-2.5 text-xs text-foreground outline-none transition focus:border-accent focus:bg-surface-2 ${
     hasError ? "border-destructive focus:border-destructive" : "border-line"
   }`;
 }
