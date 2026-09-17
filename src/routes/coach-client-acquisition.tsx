@@ -70,7 +70,7 @@ export const Route = createFileRoute("/coach-client-acquisition")({
               name: "Do I need a larger audience before this infrastructure functions?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "No. The system is engineered to help established coaches capitalize on their current audience attention and inquiries.",
+                text: "No. The system is engineered to help established practices capitalize on their current audience attention and inquiries.",
               },
             },
             {
@@ -91,7 +91,7 @@ export const Route = createFileRoute("/coach-client-acquisition")({
             },
             {
               "@type": "Question",
-              name: "What occurs after submitting the audit request?",
+              name: "What occurs after submitting the diagnostic request?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "You receive an analysis of your operational gaps. If there is strong alignment, we review the recommended system with you.",
@@ -99,10 +99,10 @@ export const Route = createFileRoute("/coach-client-acquisition")({
             },
             {
               "@type": "Question",
-              name: "Is the funnel audit completely complimentary?",
+              name: "What are the acceptance criteria for a Diagnostic Evaluation?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. The audit provides clear strategic diagnostic insight prior to any advisory discussion.",
+                text: "We evaluate practices with active coaching programs priced at $1,000 or more that receive regular audience engagement and inquiries.",
               },
             },
             {

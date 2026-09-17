@@ -232,11 +232,11 @@ export function AuditForm() {
               {isSubmitting ? (
                 <>
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  Generating Audit...
+                  Analyzing Architecture...
                 </>
               ) : (
                 <>
-                  <span>REQUEST MY FREE COACH FUNNEL AUDIT</span>
+                  <span>REQUEST PIPELINE DIAGNOSTIC EVALUATION</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </>
               )}

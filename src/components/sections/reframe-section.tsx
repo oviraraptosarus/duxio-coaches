@@ -102,8 +102,8 @@ export function ReframeSection() {
               </button>
             </DialogTrigger>
             <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">
-              <DialogTitle className="sr-only">Free Coach Funnel Audit</DialogTitle>
-              <DialogDescription className="sr-only">Submit your details to get a free funnel audit.</DialogDescription>
+              <DialogTitle className="sr-only">Pipeline Diagnostic Evaluation</DialogTitle>
+              <DialogDescription className="sr-only">Submit your details to request an architecture evaluation.</DialogDescription>
               <AuditForm />
             </DialogContent>
           </Dialog>

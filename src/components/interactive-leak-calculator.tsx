@@ -103,13 +103,13 @@ export function InteractiveLeakCalculator() {
               <Dialog>
                 <DialogTrigger asChild>
                   <button className="bg-brand-gradient text-white text-xs font-bold px-4 py-2 rounded-full transition-all hover:scale-[1.02] shadow-sm flex items-center gap-1">
-                    <span>Get Free Audit</span>
+                    <span>Request Diagnostic</span>
                     <ArrowRight className="h-3 w-3" />
                   </button>
                 </DialogTrigger>
                 <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">
-                  <DialogTitle className="sr-only">Free Coach Funnel Audit</DialogTitle>
-                  <DialogDescription className="sr-only">Submit your details to get a free funnel audit.</DialogDescription>
+                  <DialogTitle className="sr-only">Pipeline Diagnostic Evaluation</DialogTitle>
+                  <DialogDescription className="sr-only">Submit your details to request an architecture evaluation.</DialogDescription>
                   <AuditForm />
                 </DialogContent>
               </Dialog>
