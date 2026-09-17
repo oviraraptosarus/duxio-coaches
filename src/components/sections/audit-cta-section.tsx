@@ -3,58 +3,67 @@ import { AuditForm } from "@/components/audit-form";
 const steps = [
   {
     n: "1",
-    title: "Tell us about your business",
-    body: "Share your offer, audience, and current numbers through the form.",
+    title: "Share your business details",
+    body: "Provide your coaching offer, price point, and monthly inquiry volume in the form.",
   },
   {
     n: "2",
-    title: "We analyze your client journey",
-    body: "We identify potential leaks across traffic, capture, nurturing, and booking.",
+    title: "We analyze your acquisition journey",
+    body: "We diagnose specific revenue leaks across traffic, capture, nurture, and booking.",
   },
   {
     n: "3",
-    title: "Receive your key opportunities",
-    body: "Get a clear breakdown. If there's a fit, we can review the recommended system together.",
+    title: "Receive your diagnostic opportunities",
+    body: "Receive an actionable breakdown. If there is strong alignment, we review the system together.",
   },
 ];
 
 export function AuditCtaSection() {
   return (
-    <section id="audit" className="scroll-mt-20 border-t border-line bg-surface">
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
-        <div className="grid gap-16 lg:grid-cols-5 lg:gap-12">
-          {/* Left Column: Why & How It Works */}
+    <section
+      id="audit"
+      className="scroll-mt-20 border-t border-black/[0.06] bg-surface py-20 px-5 sm:px-8"
+    >
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-14 lg:grid-cols-5 lg:gap-12 items-start">
+          {/* Left Column */}
           <div className="lg:col-span-2">
-            <span className="section-label">Free Coach Funnel Audit</span>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-              Stop Guessing. Let Us Find Your Revenue Leaks.
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#0071E3]/20 bg-[#0071E3]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#0071E3] mb-4">
+              Diagnostic Intake
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1D1D1F] leading-tight">
+              Identify Where Your Client Acquisition Journey Is Leaking
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Submit your current funnel details below. We will map out your exact acquisition flow, pinpoint where high-ticket clients are dropping off, and show you exactly how to fix it—zero obligations.
+            <p className="mt-4 text-xs sm:text-sm leading-relaxed text-muted-foreground">
+              Submit your coaching details. We will map your complete acquisition flow, pinpoint
+              where qualified inquiries evaporate, and show you the exact infrastructure required to
+              fix it.
             </p>
 
             <div className="mt-10 space-y-6">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-                How It Works
+              <h3 className="text-xs font-bold uppercase tracking-wider text-[#1D1D1F]">
+                Diagnostic Review Process
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {steps.map((s) => (
-                  <div key={s.n} className="flex gap-4">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-xs font-bold text-white">
+                  <div key={s.n} className="flex gap-3.5 items-start">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0071E3] text-xs font-bold text-white shadow-sm">
                       {s.n}
                     </span>
                     <div>
-                      <h4 className="text-base font-semibold text-foreground">{s.title}</h4>
-                      <p className="mt-1 text-sm text-muted-foreground">{s.body}</p>
+                      <h4 className="text-xs font-bold text-[#1D1D1F]">{s.title}</h4>
+                      <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
+                        {s.body}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            
-            <p className="mt-10 text-xs leading-relaxed text-muted-foreground">
-              We do not promise guaranteed revenue or guaranteed client results. The audit is designed
-              to give you useful, honest insight before any sales conversation.
+
+            <p className="mt-10 text-[11px] leading-relaxed text-muted-foreground border-t border-black/[0.05] pt-4">
+              We do not make exaggerated or guaranteed revenue promises. The diagnostic provides
+              clear strategic clarity prior to any advisory conversation.
             </p>
           </div>
 

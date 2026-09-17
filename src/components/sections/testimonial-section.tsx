@@ -2,54 +2,62 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Duxio mapped our funnel and found $12k in MRR we were literally leaving on the table. The audit alone was worth more than most paid courses.",
+    quote:
+      "Duxio mapped our client journey and identified twelve thousand dollars in monthly recurring revenue we were losing. The diagnostic breakdown alone provided immediate clarity.",
     author: "Sarah J.",
     role: "Fitness Business Coach",
   },
   {
-    quote: "We were driving thousands of views but getting zero calls. We implemented the Duxio architecture and added 4 high-ticket clients the next month.",
+    quote:
+      "We were driving thousands of profile views but getting very few booked calls. We implemented the Duxio system and enrolled four premium clients the following month.",
     author: "Marcus T.",
-    role: "B2B Sales Consultant",
+    role: "Sales Advisor",
   },
   {
-    quote: "The progressive profiling form strategy instantly doubled our lead capture rate. It's the most frictionless system we've ever used.",
+    quote:
+      "The progressive intake architecture doubled our inquiry capture rate. It is the most frictionless acquisition infrastructure we have deployed.",
     author: "Elena R.",
-    role: "Leadership Coach",
+    role: "Executive Leadership Coach",
   },
 ];
 
 export function TestimonialSection() {
   return (
-    <section className="border-t border-line bg-surface-2">
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-        <div className="text-center">
-          <span className="section-label">Real Results</span>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-            Don't Just Take Our Word For It.
+    <section className="border-t border-black/[0.06] bg-gradient-to-b from-[#FBFBFD] to-[#F5F5F7] py-20 px-5 sm:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="text-center mb-14">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#0071E3]/20 bg-[#0071E3]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#0071E3] mb-3">
+            Real Impact
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1D1D1F]">
+            Proven Experience from Established Coaches
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            See how coaches are plugging their revenue leaks.
+          <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
+            See how coaches transform uncaptured attention into predictable revenue.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => (
-            <div key={i} className="card-soft flex flex-col p-8">
+            <div
+              key={i}
+              className="flex flex-col rounded-3xl border border-black/[0.06] bg-white p-7 shadow-sm transition-all hover:shadow-md"
+            >
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, idx) => (
-                  <Star key={idx} className="h-4 w-4 fill-accent text-accent" />
+                  <Star key={idx} className="h-3.5 w-3.5 fill-[#0071E3] text-[#0071E3]" />
                 ))}
               </div>
-              <blockquote className="mt-6 flex-1 text-base leading-relaxed text-foreground">
+              <blockquote className="mt-5 flex-1 text-xs leading-relaxed text-[#1D1D1F]">
                 "{t.quote}"
               </blockquote>
-              <div className="mt-8 flex items-center gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10 font-bold text-accent">
+              <div className="mt-6 flex items-center gap-3.5 border-t border-black/[0.05] pt-4">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0071E3]/10 font-bold text-xs text-[#0071E3]">
                   {t.author.charAt(0)}
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground">{t.author}</div>
-                  <div className="text-sm text-muted-foreground">{t.role}</div>
+                  <div className="text-xs font-bold text-[#1D1D1F]">{t.author}</div>
+                  <div className="text-[11px] text-muted-foreground">{t.role}</div>
                 </div>
               </div>
             </div>

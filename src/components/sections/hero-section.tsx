@@ -2,55 +2,47 @@ import { Play, ArrowRight, ShieldCheck, Triangle, Hexagon, Circle, Square } from
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { AuditForm } from "@/components/audit-form";
 
-const vslTeasers = [
-  "The 5 hidden revenue leaks in your coaching funnel",
-  "How to ethically capture \"lurking\" prospects",
-  "The exact follow-up sequence that doubles show-up rates",
+const vslTakeaways = [
+  "Why sending booking links in direct messages destroys conversion",
+  "How to capture interested buyers without manual messaging fatigue",
+  "The automated qualification filter that eliminates bad fit Zoom calls",
 ];
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
-      {/* soft ambient backdrop */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
-      >
-        <div className="absolute left-1/2 top-0 -z-10 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/20 blur-[120px]" />
-        <div className="absolute left-[20%] top-[10%] -z-10 h-[600px] w-[600px] rounded-full bg-primary/5 blur-[100px]" />
-        <div className="absolute right-[20%] top-[20%] -z-10 h-[500px] w-[500px] rounded-full bg-accent/10 blur-[120px]" />
-      </div>
-
-      <div className="mx-auto max-w-4xl px-5 pb-12 pt-16 sm:px-8 sm:pt-20">
+    <section className="relative overflow-hidden mesh-hero-glow pt-24 pb-12 sm:pt-28 sm:pb-16">
+      <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="eyebrow-chip">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
-            Free Training for Coaches
+          
+          <span className="eyebrow-chip mb-6">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" aria-hidden />
+            Strategic Training for High Ticket Coaching Practices
           </span>
 
-          <h1 className="mt-7 text-4xl leading-[1.05] font-semibold tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem]">
-            Add 3-5 High-Ticket Coaching Clients This Month (Without Buying Generic Leads).
+          <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight text-foreground">
+            You Do Not Have a Traffic Shortage.<br className="hidden sm:block" />
+            <span className="text-muted-foreground">You Possess an Operational Void Between Attention and Cash.</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            90% of your audience is consuming your content but never booking a call. Discover the 7-part architecture that captures lost traffic and turns passive followers into pre-sold calendar appointments.
+          <p className="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-muted-foreground">
+            You maintain active social channels, daily inquiries, and regular content downloads. Yet you lose hours typing manual replies while almost nobody schedules a qualified call. Discover how to transform existing attention into predictable client revenue.
           </p>
 
-          <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <div className="mt-8 flex flex-col items-center gap-3.5 sm:flex-row sm:justify-center">
             <a
               href="#vsl"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gradient px-7 py-3.5 text-sm font-semibold text-white transition-all hover:opacity-90 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(var(--accent),0.5)] sm:w-auto"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gradient px-8 py-3.5 text-xs font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:opacity-95 sm:w-auto"
             >
-              <Play className="h-4 w-4 fill-current" />
-              Watch the Free Training
+              <Play className="h-3.5 w-3.5 fill-current" />
+              Watch Free Strategic Breakdown
             </a>
             <Dialog>
               <DialogTrigger asChild>
                 <button
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-surface px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-foreground/30 sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-line bg-white px-8 py-3.5 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-surface sm:w-auto"
                 >
-                  Map My Revenue Leaks
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  Request Pipeline Diagnostic Audit
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </button>
               </DialogTrigger>
               <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">
@@ -61,140 +53,102 @@ export function HeroSection() {
             </Dialog>
           </div>
 
-          <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-4">
-            <p className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+          <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-4 text-xs text-muted-foreground">
+            <p className="inline-flex items-center gap-1.5">
               <ShieldCheck className="h-3.5 w-3.5 text-accent" />
-              No hard pitch. We just find the leaks.
+              Zero aggressive sales pitch. We first identify your exact revenue leaks.
             </p>
             <span className="hidden h-3 w-px bg-line sm:block" aria-hidden />
-            <p className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+            <p className="inline-flex items-center gap-1.5 font-medium">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
               </span>
-              The exact framework used to scale high-ticket programs
+              Engineered for coaching programs priced $1,000 to $10,000 or more
             </p>
           </div>
         </div>
 
-        <VslPlayer />
+        {/* VSL Stage */}
+        <div id="vsl" className="scroll-mt-24 mt-12">
+          <div className="card-elevated p-6 sm:p-8">
+            <div className="mb-4 text-left">
+              <span className="section-label">Strategic Training</span>
+              <h2 className="mt-1 text-xl font-bold tracking-tight text-foreground sm:text-2xl">
+                Where Are You Losing Potential Clients?
+              </h2>
+              <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
+                Watch this eight minute breakdown to discover why manual direct messaging destroys your conversion velocity.
+              </p>
+            </div>
 
-        {/* Social Proof Banner */}
-        <div className="mt-24 border-t border-line/50 pt-10 text-center">
-          <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
-            Trusted by coaches scaling past $50k/mo
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-8 opacity-60 grayscale sm:gap-16">
-            <div className="flex items-center gap-2 text-xl font-bold text-foreground">
-              <Triangle className="h-6 w-6 fill-foreground" />
-              VERTEX
+            {/* Obsidian Theater */}
+            <div className="group relative aspect-video cursor-pointer overflow-hidden rounded-2xl liquid-glass-dark flex flex-col items-center justify-center text-center p-6 shadow-2xl">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-2xl transition-transform duration-300 group-hover:scale-105 sm:h-20 sm:w-20">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gradient pl-1 shadow-lg text-white">
+                  <Play className="h-5 w-5 fill-current" />
+                </div>
+              </div>
+              <div className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-[11px] font-medium text-white/80 backdrop-blur-md">
+                Strategic Training · 8 Minutes
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-xl font-bold text-foreground">
-              <Hexagon className="h-6 w-6 fill-foreground" />
-              NEXUS
+
+            {/* Takeaway Chips */}
+            <div className="my-6 grid grid-cols-1 gap-3 text-xs font-medium text-foreground sm:grid-cols-3">
+              {vslTakeaways.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-2 rounded-xl border border-line bg-surface p-3.5 text-left">
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
-            <div className="flex items-center gap-2 text-xl font-bold text-foreground">
-              <Circle className="h-6 w-6 fill-foreground" />
-              LUMEN
-            </div>
-            <div className="flex items-center gap-2 text-xl font-bold text-foreground">
-              <Square className="h-6 w-6 fill-foreground" />
-              QUARTZ
+
+            {/* Sub-VSL Diagnostic Callout */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-accent/20 bg-accent-soft p-5">
+              <div className="text-left">
+                <h4 className="text-sm font-bold text-foreground">After watching, request your free Coach Funnel Audit.</h4>
+                <p className="text-xs text-muted-foreground">We will map your complete client journey and reveal your biggest revenue opportunities.</p>
+              </div>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 rounded-full bg-brand-gradient px-6 py-3 text-xs font-bold text-white shadow-sm transition-all hover:opacity-95 whitespace-nowrap">
+                    Get My Free Audit
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">
+                  <DialogTitle className="sr-only">Free Coach Funnel Audit</DialogTitle>
+                  <DialogDescription className="sr-only">Submit your details to get a free funnel audit.</DialogDescription>
+                  <AuditForm />
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
+
+        {/* Social Proof */}
+        <div className="mt-16 border-t border-line pt-8 text-center">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+            Trusted by established coaches scaling premium programs
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-8 opacity-50 grayscale sm:gap-14">
+            <div className="flex items-center gap-2 text-base font-bold text-foreground">
+              <Triangle className="h-5 w-5 fill-current" /> VERTEX
+            </div>
+            <div className="flex items-center gap-2 text-base font-bold text-foreground">
+              <Hexagon className="h-5 w-5 fill-current" /> NEXUS
+            </div>
+            <div className="flex items-center gap-2 text-base font-bold text-foreground">
+              <Circle className="h-5 w-5 fill-current" /> LUMEN
+            </div>
+            <div className="flex items-center gap-2 text-base font-bold text-foreground">
+              <Square className="h-5 w-5 fill-current" /> QUARTZ
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
-  );
-}
-
-function VslPlayer() {
-  return (
-    <div id="vsl" className="mt-14 scroll-mt-20 sm:mt-16">
-      <div className="mx-auto mb-5 max-w-2xl text-center">
-        <span className="section-label">Free Training</span>
-        <h2 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-          Where Are You Losing Potential Clients?
-        </h2>
-        <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-          Watch this free 8-minute training to discover the 5 biggest leaks in a coach's client
-          acquisition journey.
-        </p>
-      </div>
-
-      <div className="card-elevated group relative mx-auto max-w-4xl overflow-hidden p-2">
-        <div
-          className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl"
-          style={{
-            background:
-              "linear-gradient(150deg, oklch(0.18 0.004 264) 0%, oklch(0.14 0.004 264) 60%, oklch(0.24 0.03 256) 130%)",
-          }}
-        >
-          {/* subtle grid texture */}
-          <div
-            aria-hidden
-            className="absolute inset-0 opacity-[0.08]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-              backgroundSize: "48px 48px",
-            }}
-          />
-
-          <button
-            aria-label="Play free training"
-            className="group/play relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-white/95 shadow-2xl transition-transform hover:scale-105"
-          >
-            <span
-              className="absolute inset-0 -z-10 rounded-full"
-              style={{
-                background:
-                  "radial-gradient(circle, color-mix(in oklab, var(--accent) 50%, transparent), transparent 70%)",
-              }}
-            />
-            <Play className="h-8 w-8 translate-x-0.5 fill-foreground text-foreground" />
-          </button>
-
-          <div className="absolute bottom-3 left-3 rounded-md bg-black/55 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
-            Free Training · 7–10 min
-          </div>
-        </div>
-      </div>
-
-      {/* VSL teaser strip — entices the watch, sits right under the video */}
-      <div className="mx-auto mt-5 grid max-w-2xl gap-2.5 sm:grid-cols-3">
-        {vslTeasers.map((t) => (
-          <div
-            key={t}
-            className="flex items-center gap-2 rounded-lg border border-line bg-surface px-3.5 py-2.5 text-xs font-medium text-foreground"
-          >
-            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
-            {t}
-          </div>
-        ))}
-      </div>
-
-      {/* post-video CTA — moves the watch toward the audit */}
-      <div className="mx-auto mt-8 max-w-2xl rounded-2xl border border-line bg-surface px-5 py-5 text-center sm:px-7">
-        <p className="text-sm font-medium text-foreground sm:text-base">
-          After watching, get your free Coach Funnel Audit.
-        </p>
-        <Dialog>
-          <DialogTrigger asChild>
-            <button
-              className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-brand-gradient px-6 py-3 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:opacity-90 hover:shadow-[0_0_30px_rgba(var(--accent),0.5)]"
-            >
-              Map My Revenue Leaks
-              <ArrowRight className="h-4 w-4" />
-            </button>
-          </DialogTrigger>
-          <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">
-            <DialogTitle className="sr-only">Free Coach Funnel Audit</DialogTitle>
-            <DialogDescription className="sr-only">Submit your details to get a free funnel audit.</DialogDescription>
-            <AuditForm />
-          </DialogContent>
-        </Dialog>
-      </div>
-    </div>
   );
 }

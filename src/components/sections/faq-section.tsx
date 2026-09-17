@@ -3,28 +3,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "Do I need a massive audience for this to work?",
-    a: "No. This system is designed to monetize the attention you already have, turning passive lurkers into booked calls without spending a dime on ads.",
+    q: "Do I need a larger audience before this infrastructure functions?",
+    a: "No. The system is engineered to help established coaches capitalize on their current audience attention and inquiries.",
   },
   {
-    q: "Do I need a complicated funnel?",
-    a: "No. Complexity kills conversions. We build lean, high-performing architectures tailored specifically to patch the exact revenue leaks in your current client journey.",
+    q: "Will I need to manage complicated technical software?",
+    a: "No. We architect the connected backend so you can focus entirely on coaching and client delivery.",
   },
   {
-    q: "Is this just a website or landing page?",
-    a: "No. A standalone website won't save your business. We engineer the complete end-to-end acquisition ecosystem—from lead capture to calendar injection.",
+    q: "Is this merely a website or simple lead capture page?",
+    a: "No. Duxio builds the entire client acquisition journey across Attraction, Capture, Nurture, Qualification, and Automated Follow Up.",
   },
   {
-    q: "What happens after the free audit?",
-    a: "We'll map out your exact acquisition flow and pinpoint where high-ticket clients are dropping off. If there's a fit, we'll show you the exact architecture needed to fix it.",
+    q: "What occurs after submitting the audit request?",
+    a: "You receive an analysis of your operational gaps. If there is strong alignment, we review the recommended system with you.",
   },
   {
-    q: "Is the audit really free?",
-    a: "Yes. We lead with value. The audit provides you with an actionable breakdown of your funnel leaks before you ever commit to a sales conversation.",
+    q: "Is the funnel audit completely complimentary?",
+    a: "Yes. The audit provides clear strategic diagnostic insight prior to any advisory discussion.",
   },
   {
-    q: "Do you guarantee clients or revenue?",
-    a: "No. We guarantee a world-class acquisition ecosystem designed for high-ticket conversion. Your offer and sales ability ultimately close the deal.",
+    q: "Do you promise specific revenue guarantees?",
+    a: "No. We demonstrate mathematical pipeline leverage and economic value without making exaggerated claims.",
   },
 ];
 
@@ -32,29 +32,34 @@ export function FaqSection() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-20">
-      <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-20">
-        <div className="text-center">
-          <span className="section-label">FAQ</span>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem]">
+    <section id="faq" className="scroll-mt-20 border-t border-black/[0.06] py-20 px-5 sm:px-8">
+      <div className="mx-auto max-w-3xl">
+        <div className="text-center mb-12">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#0071E3]/20 bg-[#0071E3]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#0071E3] mb-3">
+            Questions and Answers
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1D1D1F]">
             Frequently Asked Questions
           </h2>
         </div>
 
-        <div className="mt-12 divide-y divide-line rounded-2xl border border-line bg-background">
+        <div className="space-y-3">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
-              <div key={i}>
+              <div
+                key={i}
+                className="rounded-2xl border border-black/[0.06] bg-gradient-to-b from-white to-[#FAFBFD] shadow-sm transition-all overflow-hidden"
+              >
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base font-semibold text-foreground">{f.q}</span>
+                  <span className="text-sm font-bold text-[#1D1D1F]">{f.q}</span>
                   <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform ${
-                      isOpen ? "rotate-180" : ""
+                    className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 ${
+                      isOpen ? "rotate-180 text-[#0071E3]" : ""
                     }`}
                   />
                 </button>
@@ -64,7 +69,7 @@ export function FaqSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+                    <p className="px-6 pb-5 text-xs leading-relaxed text-muted-foreground">{f.a}</p>
                   </div>
                 </div>
               </div>

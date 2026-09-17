@@ -7,7 +7,6 @@ export function ExitIntentPopup() {
 
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
-      // Trigger when mouse moves out of the top of the viewport
       if (e.clientY <= 0) {
         if (!sessionStorage.getItem("exit_intent_shown")) {
           setOpen(true);
@@ -22,56 +21,62 @@ export function ExitIntentPopup() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-md border-none bg-transparent p-0 shadow-none">
+      <DialogContent className="w-[calc(100%-2rem)] sm:w-full max-w-md border-none bg-transparent p-0 shadow-none">
         <DialogTitle className="sr-only">Exit Intent Offer</DialogTitle>
-        <DialogDescription className="sr-only">Get the free 1-Page Funnel Checklist before you leave.</DialogDescription>
-        
-        <div className="relative z-10 w-full overflow-hidden rounded-2xl border border-line bg-surface p-8 shadow-2xl">
-          <div className="absolute -inset-px -z-10 rounded-2xl bg-gradient-to-br from-accent/20 via-transparent to-primary/5 opacity-50" />
+        <DialogDescription className="sr-only">
+          Get the free One Page Acquisition Checklist before you leave.
+        </DialogDescription>
+
+        <div className="relative z-10 w-full overflow-hidden rounded-3xl border border-black/[0.06] bg-white p-6 sm:p-8 shadow-2xl">
           <div className="text-center">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10">
-              <Download className="h-7 w-7 text-accent" />
+            <div className="mx-auto flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#0071E3]/10 text-[#0071E3]">
+              <Download className="h-6 w-6 sm:h-7 sm:w-7" />
             </div>
-            <h2 className="mt-5 text-2xl font-bold tracking-tight text-foreground">
+            <h2 className="mt-4 sm:mt-5 text-xl sm:text-2xl font-bold tracking-tight text-[#1D1D1F]">
               Leaving so soon?
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Before you go, download the <strong>1-Page Funnel Checklist</strong>. It reveals the exact architecture we use to patch 90% of revenue leaks in high-ticket coaching businesses.
+            <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed text-muted-foreground">
+              Before you depart, download the <strong>One Page Client Acquisition Checklist</strong>
+              . It reveals the exact framework we use to patch operational revenue leaks in coaching
+              businesses.
             </p>
           </div>
 
-          <form className="mt-8 space-y-4" onSubmit={(e) => {
-             e.preventDefault();
-             setOpen(false); 
-          }}>
+          <form
+            className="mt-6 sm:mt-8 space-y-3 sm:space-y-4"
+            onSubmit={(e) => {
+              e.preventDefault();
+              setOpen(false);
+            }}
+          >
             <div>
               <input
                 type="email"
                 required
-                placeholder="Enter your best email..."
-                className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
+                placeholder="Enter your email address..."
+                className="w-full rounded-xl border border-black/[0.08] bg-[#F5F5F7] px-3.5 py-3 text-xs text-[#1D1D1F] outline-none transition focus:border-[#0071E3] focus:bg-white"
               />
             </div>
             <button
               type="submit"
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-gradient px-4 py-3 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:opacity-90"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#1D1D1F] hover:bg-black px-4 py-3.5 text-xs font-bold text-white transition-all shadow-md"
             >
-              Send Me The Checklist
+              <span>Send Me The Checklist</span>
               <ArrowRight className="h-4 w-4" />
             </button>
           </form>
 
-          <div className="mt-5 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
-            <ShieldCheck className="h-3.5 w-3.5 text-green-500/80" />
-            <span>100% free. No spam.</span>
+          <div className="mt-4 sm:mt-5 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
+            <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
+            <span>Zero spam. Direct download access.</span>
           </div>
-          
-          <button 
+
+          <button
             type="button"
             onClick={() => setOpen(false)}
-            className="mt-6 block w-full text-center text-xs text-muted-foreground hover:text-foreground hover:underline"
+            className="mt-4 block w-full text-center text-xs text-muted-foreground hover:text-foreground hover:underline"
           >
-            No thanks, I'll figure it out myself
+            No thanks, I will manage it manually
           </button>
         </div>
       </DialogContent>

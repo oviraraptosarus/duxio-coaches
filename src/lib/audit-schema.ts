@@ -1,19 +1,25 @@
 import { z } from "zod";
 
 export const biggestChallenges = [
-  "Getting enough qualified leads",
-  "Turning leads into conversations",
-  "Getting people to book calls",
-  "Follow-up",
-  "No-shows",
-  "Sales conversion",
-  "I don't know where the problem is",
+  "Converting inquiries into conversations",
+  "Prospects ghosting direct message booking links",
+  "Unqualified callers who cannot afford the offer",
+  "Discovery call no shows",
+  "Manual follow up inconsistency",
+  "Lack of a unified acquisition system",
 ] as const;
 
 export const auditSchema = z.object({
   firstName: z.string().min(1, "Please enter your first name."),
   email: z.string().email("Please enter a valid email."),
-  website: z.string().optional().or(z.literal("")),
+  websiteUrl: z.string().optional().or(z.literal("")),
+  socialMediaLink: z.string().min(1, "Please enter your social profile handle."),
+  coachingNiche: z.string().min(1, "Please specify your coaching niche."),
+  offerDescription: z.string().min(1, "Please describe your main offer."),
+  offerPrice: z.string().min(1, "Please provide the price for your offer."),
+  monthlyInquiries: z.string().optional().or(z.literal("")),
+  monthlyBookedCalls: z.string().optional().or(z.literal("")),
+  primaryLeadSource: z.string().optional().or(z.literal("")),
   biggestChallenge: z.string().min(1, "Please select your biggest challenge."),
 });
 

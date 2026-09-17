@@ -1,117 +1,157 @@
-import { Magnet, UserPlus, Filter, CalendarCheck, Clock, Handshake, Sprout } from "lucide-react";
+import { Magnet, UserPlus, Sprout, CalendarCheck, Clock, Check, Play } from "lucide-react";
 
 const steps = [
   {
     n: "01",
     title: "ATTRACT",
-    body: "Turn strangers into an audience that actually pays attention to your message.",
+    body: "Transform organic content, referrals, and outreach into qualified buyer attention.",
     icon: Magnet,
-    span: "col-span-1 sm:col-span-2 lg:col-span-2",
   },
   {
     n: "02",
     title: "CAPTURE",
-    body: "Give interested prospects an irresistible reason to hand over their contact info, so you own the audience instead of renting it from an algorithm.",
+    body: "Provide interested prospects an asset based next step instead of relying on manual direct messaging.",
     icon: UserPlus,
-    span: "col-span-1 lg:col-span-1",
   },
   {
     n: "03",
-    title: "QUALIFY",
-    body: "Filter out the tire-kickers so you only spend your time speaking with prospects who have the budget and urgency to buy today.",
-    icon: Filter,
-    span: "col-span-1 lg:col-span-1",
+    title: "NURTURE",
+    body: "Automatically educate and follow up with prospective clients who are not ready to purchase on day one.",
+    icon: Sprout,
   },
   {
     n: "04",
-    title: "BOOK",
-    body: "Eliminate the email back-and-forth and inject qualified prospects directly onto your calendar while you sleep.",
+    title: "QUALIFY AND BOOK",
+    body: "Filter out tire kickers before they reach your calendar and ensure high show up rates.",
     icon: CalendarCheck,
-    span: "col-span-1 sm:col-span-2 lg:col-span-2",
   },
   {
     n: "05",
-    title: "FOLLOW UP",
-    body: "Automate reminders so your show-up rates skyrocket.",
+    title: "FOLLOW UP AND CONVERT",
+    body: "Deploy an automated re-engagement engine for prospects who miss calls or need extended evaluation.",
     icon: Clock,
-    span: "col-span-1 lg:col-span-1",
   },
-  {
-    n: "06",
-    title: "CONVERT",
-    body: "Step into sales conversations with prospects who are already pre-sold, making the close a natural conclusion rather than a hard pitch.",
-    icon: Handshake,
-    span: "col-span-1 lg:col-span-1",
-  },
-  {
-    n: "07",
-    title: "NURTURE",
-    body: "Stay top-of-mind with prospects who aren't ready to buy today, until they are.",
-    icon: Sprout,
-    span: "col-span-1 lg:col-span-1",
-  },
+];
+
+const niches = [
+  "Business Coaches",
+  "Executive Coaches",
+  "Health and Wellness",
+  "Fitness Coaches",
+  "Relationship Coaches",
+  "Career Mentors",
+  "Transformation Coaches",
+  "Sales Coaches",
+];
+
+const qualificationCriteria = [
+  "You already possess an active premium coaching program",
+  "Your offer price ranges from $1,000 to $10,000 or more",
+  "You receive organic audience attention via social channels or referrals",
+  "Interested prospects inquire but frequently fail to book discovery calls",
+  "You manage follow up manually across direct messages and text",
+  "You know high value clients are slipping through operational gaps",
+  "You want a predictable asset instead of constant manual outreach",
 ];
 
 export function SystemSection() {
   return (
-    <section id="system" className="scroll-mt-20 border-t border-line bg-surface transition-colors">
-      <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
-        <div className="max-w-3xl">
-          <span className="section-label">The Mechanism</span>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem]">
-            The 7-Part Client Acquisition System
+    <section id="system" className="scroll-mt-24 border-t border-line bg-surface py-20 px-5 sm:px-8">
+      <div className="mx-auto max-w-5xl">
+        
+        {/* Header */}
+        <div className="mx-auto max-w-2xl text-center mb-14">
+          <span className="section-label">The Solution</span>
+          <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground">
+            The Duxio Acquisition Architecture
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            You don't have a traffic problem; you have a capture problem. Most coaches have fragmented funnels that leak prospects at every step. Here is the exact end-to-end architecture that patches those leaks and guides premium prospects directly to a sales conversation.
+          <p className="mt-3 text-xs sm:text-sm text-muted-foreground">
+            A unified infrastructure from the initial moment of discovery to the closed high ticket enrollment.
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {steps.map((s) => {
+        {/* 5-Step Connected Flow */}
+        <div className="mx-auto max-w-2xl space-y-3">
+          {steps.map((s, idx) => {
             const Icon = s.icon;
             return (
-              <div
-                key={s.n}
-                className={`card-soft border-accent/15 bg-card group relative overflow-hidden p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:border-accent/40 ${s.span}`}
-              >
-                {/* Glow effect on hover */}
-                <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-accent/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                
-                <div className="relative z-10 flex h-full flex-col">
-                  <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-white shadow-sm transition-transform duration-300 group-hover:scale-110">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <span className="font-display text-5xl font-bold text-accent/20 transition-colors group-hover:text-accent/40">
-                      {s.n}
-                    </span>
+              <div key={s.n}>
+                <div className="flex items-start gap-4 card-soft p-5 transition-all hover:shadow-md">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                    <Icon className="h-5 w-5" />
                   </div>
-                  
-                  <div className="mt-auto pt-10">
-                    <h3 className="text-lg font-bold tracking-wide text-foreground">{s.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="rounded bg-accent/10 px-2 py-0.5 font-mono text-[11px] font-bold text-accent">
+                        {s.n}
+                      </span>
+                      <h3 className="text-sm font-bold text-foreground">{s.title}</h3>
+                    </div>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{s.body}</p>
                   </div>
                 </div>
+                {idx < steps.length - 1 && (
+                  <div className="py-1 text-center font-mono text-xs font-bold text-line">↓</div>
+                )}
               </div>
             );
           })}
-          
-          <div
-            className="col-span-1 sm:col-span-2 lg:col-span-3 flex flex-col justify-center rounded-2xl p-8 sm:p-12 transition-all hover:scale-[1.01]"
-            style={{
-              background: "linear-gradient(135deg, var(--accent), color-mix(in oklab, var(--accent) 40%, black))",
-            }}
+        </div>
+
+        <div className="mt-10 text-center">
+          <a
+            href="#vsl"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-gradient px-8 py-3.5 text-xs font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:opacity-95"
           >
-            <div className="max-w-2xl">
-              <p className="text-xl font-semibold leading-snug text-white sm:text-2xl">
-                We don't sell technology.
-              </p>
-              <p className="mt-2 text-xl font-semibold leading-snug text-white/80 sm:text-2xl">
-                We engineer this exact ecosystem around your coaching business.
-              </p>
-            </div>
+            <Play className="h-3.5 w-3.5 fill-current" />
+            Watch the Free Strategic Training
+          </a>
+          <p className="mt-4 text-xs font-medium text-muted-foreground">
+            We do not sell software tools. We architect the client acquisition infrastructure around your business.
+          </p>
+        </div>
+
+        {/* Coaching Niches */}
+        <div className="mt-20 border-t border-line pt-16">
+          <div className="mx-auto max-w-xl text-center mb-8">
+            <span className="section-label">Audience Focus</span>
+            <h3 className="mt-2 text-xl font-bold text-foreground">Coaching Niches We Specialize In</h3>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 text-center">
+            {niches.map((niche) => (
+              <div
+                key={niche}
+                className="card-soft p-4 text-xs font-semibold text-foreground"
+              >
+                {niche}
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* Qualification Gate */}
+        <div className="mt-16 card-elevated p-8 sm:p-10">
+          <span className="section-label block mb-2">
+            Strict Qualification Criteria
+          </span>
+          <h3 className="text-xl font-bold text-foreground mb-6">
+            This Operating System Is Built Specifically For Coaches Who Match These Standards:
+          </h3>
+          <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 text-xs font-medium text-foreground">
+            {qualificationCriteria.map((crit, idx) => (
+              <div key={idx} className="flex items-center gap-2.5">
+                <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-[10px] font-bold text-emerald-700">
+                  <Check className="h-3 w-3" />
+                </span>
+                <span>{crit}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 pt-5 border-t border-line text-[11px] text-muted-foreground">
+            Important Disqualification Notice: This infrastructure is not intended for beginners starting without an existing program offer or audience demand.
+          </p>
+        </div>
+
       </div>
     </section>
   );
