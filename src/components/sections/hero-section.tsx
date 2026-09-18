@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden mesh-hero-glow pt-24 pb-12 sm:pt-28 sm:pb-16">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           
           <span className="eyebrow-chip mb-6 uppercase tracking-wider font-bold">
             <span className="h-2 w-2 rounded-full bg-accent animate-pulse" aria-hidden />
@@ -20,7 +20,7 @@ export function HeroSection() {
           </span>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight text-foreground">
-            Turn Your Coaching Expertise Into a{"\u00A0"}
+            Turn Your Coaching Expertise Into a<br className="hidden sm:inline" />{" "}
             <span className="text-muted-foreground">Predictable Client Acquisition System.</span>
           </h1>
 
