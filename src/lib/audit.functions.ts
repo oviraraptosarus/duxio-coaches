@@ -1,3 +1,7 @@
+// @ts-ignore - Force Vercel NFT to trace tslib missing module exports
+import "tslib/modules/index.js";
+// @ts-ignore
+import "tslib/tslib.es6.mjs";
 import { createServerFn } from "@tanstack/react-start";
 import { auditSchema, type AuditSubmission } from "./audit-schema.server";
 
