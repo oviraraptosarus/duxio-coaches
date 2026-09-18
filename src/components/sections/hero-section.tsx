@@ -20,7 +20,7 @@ export function HeroSection() {
           </span>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight text-foreground">
-            Turn Your Coaching Expertise Into a&nbsp;
+            Turn Your Coaching Expertise Into a{"\u00A0"}
             <span className="text-muted-foreground">Predictable Client Acquisition System.</span>
           </h1>
 
