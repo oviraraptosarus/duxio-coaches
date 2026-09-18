@@ -19,8 +19,8 @@ export function HeroSection() {
             Only For Top Coaches Ready To Win
           </span>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight text-foreground">
-            Turn Your Coaching Expertise Into a <br className="hidden sm:block" />
+          <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight text-foreground text-balance">
+            Turn Your Coaching Expertise Into a{" "}
             <span className="text-muted-foreground">Predictable Client Acquisition System.</span>
           </h1>
 
