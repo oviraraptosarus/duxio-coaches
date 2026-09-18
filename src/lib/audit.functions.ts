@@ -1,7 +1,3 @@
-// @ts-ignore - Force Vercel NFT to trace tslib missing module exports
-import "tslib/modules/index.js";
-// @ts-ignore
-import "tslib/tslib.es6.mjs";
 import { createServerFn } from "@tanstack/react-start";
 import { auditSchema, type AuditSubmission } from "./audit-schema.server";
 
@@ -10,10 +6,10 @@ export const submitAudit = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     // Generate 128-bit cryptographically secure token (NanoID style)
     const secureToken = `dx_${globalThis.crypto.randomUUID().replace(/-/g, "").slice(0, 16)}`;
-    
+
     // Server-only mock logic (in a real app, this would write to a DB)
     console.log("[Duxio Server] Received Audit Submission:", data);
-    
+
     const record: AuditSubmission & { id: string; timestamp: string } = {
       id: secureToken,
       timestamp: new Date().toISOString(),

@@ -14,16 +14,10 @@ export default defineConfig({
   },
   nitro: {
     preset: "vercel",
-    externals: { inline: ["tslib", "@radix-ui/react-dialog"] },
   },
   vite: {
     ssr: {
-      noExternal: ["tslib"],
-    },
-    resolve: {
-      alias: {
-        tslib: "tslib/tslib.es6.js",
-      },
+      noExternal: ['tslib', /@radix-ui\/.*/],
     },
   },
 });
