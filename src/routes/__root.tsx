@@ -123,13 +123,47 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuSeparator,
+  ContextMenuTrigger,
+} from "../components/ui/context-menu";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <ContextMenu>
+        <ContextMenuTrigger asChild>
+          <div className="flex min-h-screen w-full flex-col">
+            <Outlet />
+          </div>
+        </ContextMenuTrigger>
+        <ContextMenuContent className="w-56">
+          <ContextMenuLabel>Quick Navigation</ContextMenuLabel>
+          <ContextMenuSeparator />
+          <ContextMenuItem asChild>
+            <a href="/#" className="cursor-pointer w-full">Top</a>
+          </ContextMenuItem>
+          <ContextMenuItem asChild>
+            <a href="/#leaks" className="cursor-pointer w-full">5 Leaks</a>
+          </ContextMenuItem>
+          <ContextMenuItem asChild>
+            <a href="/#vsl" className="cursor-pointer w-full">The System</a>
+          </ContextMenuItem>
+          <ContextMenuItem asChild>
+            <a href="/#calculator" className="cursor-pointer w-full">ROI Calculator</a>
+          </ContextMenuItem>
+          <ContextMenuSeparator />
+          <ContextMenuItem asChild>
+            <a href="/#audit" className="cursor-pointer w-full font-medium text-brand-primary">Free Audit</a>
+          </ContextMenuItem>
+        </ContextMenuContent>
+      </ContextMenu>
     </QueryClientProvider>
   );
 }
