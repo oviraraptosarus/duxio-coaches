@@ -15,7 +15,7 @@ export default defineConfig({
   nitro: {
     preset: "vercel",
     externals: {
-      inline: ["tslib", "@radix-ui"],
+      inline: ["tslib", /@radix-ui\/.*/],
     },
   },
   vite: {
