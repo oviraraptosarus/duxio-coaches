@@ -3,27 +3,27 @@ import { Target, MonitorPlay, Zap, Megaphone, LineChart } from "lucide-react";
 const components = [
   {
     title: "STRATEGY",
-    description: "Offer positioning, audience research, pain-point research and funnel strategy.",
+    description: "Offer positioning, audience research, core problem research and funnel strategy.",
     icon: Target,
   },
   {
     title: "FUNNEL",
-    description: "Landing page, lead magnet, application page, booking page, thank-you page and sales page where appropriate.",
+    description: "Landing page, lead magnet, application page, booking page, confirmation page and sales page where appropriate.",
     icon: MonitorPlay,
   },
   {
     title: "AUTOMATION",
-    description: "Email follow-up, SMS follow-up, appointment reminders, no-show follow-up, nurturing and re-engagement.",
+    description: "Email follow up, SMS follow up, appointment reminders, missed call follow up, nurturing and reactivation.",
     icon: Zap,
   },
   {
     title: "CONVERSION",
-    description: "Copywriting, CTA strategy, sales messaging, offer positioning and call-booking optimization.",
+    description: "Copywriting, CTA strategy, sales messaging, offer positioning and call booking optimization.",
     icon: Megaphone,
   },
   {
     title: "OPTIMIZATION",
-    description: "Track leads, bookings, show-up rate, close rate and continuously improve the system.",
+    description: "Track leads, bookings, attendance rate, close rate and continuously improve the system.",
     icon: LineChart,
   },
 ];

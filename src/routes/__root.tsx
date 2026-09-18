@@ -160,7 +160,7 @@ function RootComponent() {
           </ContextMenuItem>
           <ContextMenuSeparator />
           <ContextMenuItem asChild>
-            <a href="/#audit" className="cursor-pointer w-full font-medium text-brand-primary">Free Audit</a>
+            <a href="/#audit" className="cursor-pointer w-full font-medium text-brand-primary">Practice Diagnostic</a>
           </ContextMenuItem>
         </ContextMenuContent>
       </ContextMenu>

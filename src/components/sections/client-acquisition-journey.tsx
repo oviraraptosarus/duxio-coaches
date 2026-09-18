@@ -13,7 +13,7 @@ const journeySteps = [
   },
   {
     step: "NURTURE",
-    description: "Email/SMS follow-up keeps prospects engaged when they aren't ready immediately.",
+    description: "Email/SMS follow up keeps prospects engaged when they aren't ready immediately.",
     icon: Sprout,
   },
   {
@@ -28,12 +28,12 @@ const journeySteps = [
   },
   {
     step: "FOLLOW UP",
-    description: "Reminders, no-show follow-up and re-engagement prevent leads from disappearing.",
+    description: "Reminders, missed call follow up and reactivation prevent leads from disappearing.",
     icon: RotateCcw,
   },
   {
     step: "CONVERT",
-    description: "Better messaging, CTAs and sales-process optimization help turn more opportunities into clients.",
+    description: "Better messaging, CTAs and sales process optimization help turn more opportunities into clients.",
     icon: TrendingUp,
   },
 ];
@@ -48,7 +48,7 @@ export function ClientAcquisitionJourney() {
             One system that moves prospects from first touch to sales conversation.
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-muted-foreground">
-            Without relying on manual follow-up or a patchwork of disconnected software.
+            Without relying on manual follow up or a patchwork of disconnected software.
           </p>
         </div>
 

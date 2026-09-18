@@ -81,7 +81,7 @@ const stages = [
     name: "Conversion",
     status: "warning" as const,
     summary:
-      "No pre-call framing assets or show-up sequences. Show rate estimated below sixty percent.",
+      "No pre call framing assets or attendance sequences. Show rate estimated below sixty percent.",
     leak: 25000,
   },
 ];
@@ -91,25 +91,25 @@ const repairs = [
   {
     id: "capture",
     label: "Instant DM Conversational Routing",
-    desc: "Automated asset bridge that pre-sells prospects before they reach your calendar.",
+    desc: "Automated asset bridge that pre sells prospects before they reach your calendar.",
     recoveryPct: 0.25,
   },
   {
     id: "nurture",
     label: "90 Day Automated Educational Nurture",
-    desc: "Multi-touch email and SMS sequence that reactivates delayed buyers on autopilot.",
+    desc: "Multi touch email and SMS sequence that reactivates delayed buyers on autopilot.",
     recoveryPct: 0.33,
   },
   {
     id: "qualify",
     label: "Frictionless Dynamic Intake Filters",
-    desc: "Two step qualification gate filtering non-buyers before they consume calendar slots.",
+    desc: "Two step qualification gate filtering non buyers before they consume calendar slots.",
     recoveryPct: 0.22,
   },
   {
     id: "showup",
-    label: "Show Up Pre-Framing Assets",
-    desc: "Automated pre-call video, reminder sequence, and value anchoring to drive show rates above eighty five percent.",
+    label: "Show Up Pre Framing Assets",
+    desc: "Automated pre call video, reminder sequence, and value anchoring to drive show rates above eighty five percent.",
     recoveryPct: 0.2,
   },
 ];
@@ -133,7 +133,7 @@ const roadmap = [
     deliverables: [
       "90 day educational email and SMS nurture sequences",
       "Dynamic intake qualification filters",
-      "Calendar integration with pre-call framing assets",
+      "Calendar integration with pre call framing assets",
     ],
   },
   {
@@ -417,9 +417,9 @@ function AuditReportPage() {
                 {[
                   "Manual direct messages",
                   "Raw Calendly link drops",
-                  "Zero pre-call qualification",
+                  "Zero pre call qualification",
                   "No automated follow up",
-                  "Unqualified no-shows",
+                  "Unqualified missed calls",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2 text-[11px] text-rose-700">
                     <XCircle className="h-3 w-3 shrink-0" />
@@ -439,8 +439,8 @@ function AuditReportPage() {
                   "Unified conversational lead capture",
                   "Autonomous logic qualifier engine",
                   "Omnichannel 90 day nurture sequences",
-                  "Pre-call framing and show-up assets",
-                  "Qualified high-ticket conversion pipeline",
+                  "Pre call framing and attendance assets",
+                  "Qualified high ticket conversion pipeline",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2 text-[11px] text-accent">
                     <CheckCircle2 className="h-3 w-3 shrink-0" />

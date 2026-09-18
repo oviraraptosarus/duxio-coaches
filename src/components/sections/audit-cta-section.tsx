@@ -28,13 +28,13 @@ export function AuditCtaSection() {
           {/* Left Column */}
           <div className="lg:col-span-2">
             <span className="section-label block mb-3">
-              Free Coach Funnel / Client Acquisition Audit
+              Private Practice Pipeline Diagnostic
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
               Find The Leaks In Your Client Acquisition System
             </h2>
             <p className="mt-4 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-              Get a breakdown of where you're losing leads, bookings and sales across Traffic, Lead Capture, Nurturing, Booking and Follow-Up.
+              Get a breakdown of where you're losing leads, bookings and sales across Traffic, Lead Capture, Nurturing, Booking and Follow Up.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -65,7 +65,7 @@ export function AuditCtaSection() {
                 <div>
                   <h4 className="text-xs font-bold text-foreground">Capacity Limit: 2 Spots Remaining</h4>
                   <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
-                    Due to the bespoke nature of this architecture review, we only onboard 5 coaches per week for deep-dive diagnostics.
+                    Due to the bespoke nature of this architecture review, we only onboard 5 coaches per week for comprehensive diagnostics.
                   </p>
                 </div>
               </div>

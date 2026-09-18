@@ -38,8 +38,8 @@ const leakCards = [
   },
   {
     step: "05",
-    title: "FOLLOW-UP",
-    question: "What happens to leads who don't book, no-show, or don't buy immediately?",
+    title: "FOLLOW UP",
+    question: "What happens to leads who don't book, missed call, or don't buy immediately?",
     description: "If you don't automatically follow up, you are leaving massive amounts of money on the table.",
   },
 ];
@@ -69,7 +69,7 @@ export function ReframeSection() {
         </div>
 
         <p className="mx-auto mb-12 max-w-xl text-center text-xs text-muted-foreground">
-          You can have all the followers in the world and still lose high-ticket clients if your system is broken.
+          You can have all the followers in the world and still lose high ticket clients if your system is broken.
         </p>
 
         {/* 5 Leak Cards */}

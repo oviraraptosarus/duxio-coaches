@@ -135,7 +135,7 @@ export function InteractiveLeakCalculator() {
           {showMethodology && (
             <div className="mt-3 p-4 rounded-2xl bg-surface text-xs leading-relaxed text-muted-foreground space-y-2 animate-in fade-in duration-200">
               <p>
-                <strong>Conversion Improvement (6%):</strong> Represents a conservative bump in overall conversion when an automated, reliable qualification and follow-up system is installed.
+                <strong>Conversion Improvement (6%):</strong> Represents a conservative bump in overall conversion when an automated, reliable qualification and follow up system is installed.
               </p>
               <p>
                 <strong>Formula:</strong> <code>Additional Clients = Inquiries × 0.06</code>.

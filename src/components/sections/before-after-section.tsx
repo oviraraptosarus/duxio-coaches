@@ -5,7 +5,7 @@ import { AuditForm } from "@/components/audit-form";
 const beforePoints = [
   "Traffic",
   "Direct Message",
-  "Manual Follow-Up",
+  "Manual Follow Up",
   "Maybe Booking",
   "Forgotten Lead",
 ];
@@ -14,7 +14,7 @@ const afterPoints = [
   "Attention",
   "Capture & Nurture",
   "Qualify & Book",
-  "Automated Follow-Up",
+  "Automated Follow Up",
   "Sales Conversation",
 ];
 

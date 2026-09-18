@@ -4,11 +4,11 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     q: "Are you just another agency selling generic 'AI Hype'?",
-    a: "Absolutely not. The market is flooded with 'AI Gurus' spamming your inbox with fake promises. We don't sell hype. We sell cold, hard operational outcomes: recovering your missed revenue, slashing your discovery time, and filtering out tire-kickers.",
+    a: "Absolutely not. The market is flooded with 'AI Gurus' spamming your inbox with fake promises. We don't sell hype. We sell cold, hard operational outcomes: recovering your missed revenue, slashing your discovery time, and filtering out non buyers.",
   },
   {
-    q: "My coaching is human-to-human. Will this make me look like a bot?",
-    a: "No. We automate the boring admin work, not the coaching. We use automation to handle the tedious follow-ups and lead qualification. When you finally get on a call, it is 100% human-to-human, and they are fully pre-sold.",
+    q: "My coaching is human to-human. Will this make me look like a bot?",
+    a: "No. We automate the boring admin work, not the coaching. We use automation to handle the tedious follow ups and lead qualification. When you finally get on a call, it is 100% human to-human, and they are fully pre framed.",
   },
   {
     q: "Can AI really replace my judgment and empathy?",

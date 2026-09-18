@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden mesh-hero-glow pt-24 pb-12 sm:pt-28 sm:pb-16">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-3xl text-center">
           
           <span className="eyebrow-chip mb-6 uppercase tracking-wider font-bold">
             <span className="h-2 w-2 rounded-full bg-accent animate-pulse" aria-hidden />
@@ -20,7 +20,7 @@ export function HeroSection() {
           </span>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight text-foreground">
-            Turn Your Coaching Expertise Into a<br className="hidden sm:inline" />{" "}
+            Turn Your Coaching Expertise Into a{"\u00A0"}
             <span className="text-muted-foreground">Predictable Client Acquisition System.</span>
           </h1>
 
@@ -99,7 +99,7 @@ export function HeroSection() {
               ))}
             </div>
 
-            {/* Sub-VSL Diagnostic Callout */}
+            {/* VSL Diagnostic Callout */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-accent/20 bg-accent-soft p-5">
               <div className="text-left">
                 <h4 className="text-sm font-bold text-foreground">Want to see where your specific pipeline is leaking?</h4>

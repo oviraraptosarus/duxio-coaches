@@ -38,7 +38,7 @@ export function ExitIntentPopup() {
               Leaving without your blueprint?
             </h2>
             <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-              Before you depart, <strong>Claim Your Free Client Acquisition Audit</strong>. We will map your entire funnel and show you exactly where you are losing revenue.
+              Before you depart, <strong>Claim Your Pipeline Diagnostic Blueprint</strong>. We will map your entire funnel and show you exactly where you are losing revenue.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-[10px] font-bold text-accent uppercase tracking-wider">
               <span className="relative flex h-2 w-2">

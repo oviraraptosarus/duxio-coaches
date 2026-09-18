@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const biggestChallenges = [
-  "No free funnel or lead magnet to capture leads",
+  "No lead capture funnel or lead magnet to capture leads",
   "Converting inquiries into conversations",
   "Prospects ghosting direct message booking links",
   "Unqualified callers who cannot afford the offer",

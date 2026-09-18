@@ -3,13 +3,13 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "I got the free checkup and they showed me exactly where I was bleeding money. It was so eye-opening I literally paid them the next day to build my entire funnel. Best investment ever.",
+      "I got the diagnostic evaluation and they showed me exactly where I was bleeding money. It was so revealing I literally paid them the next day to build my entire funnel. Best investment ever.",
     author: "Brett Silverman",
     role: "Fitness Coach",
   },
   {
     quote:
-      "The free audit found $10k a month in deals I was losing because I wasn't following up properly. I hired Duxio to build the sales machine for me and it paid for itself in two weeks.",
+      "The diagnostic evaluation found $10k a month in deals I was losing because I wasn't following up properly. I hired Duxio to build the sales machine for me and it paid for itself in two weeks.",
     author: "Jessica Chen",
     role: "Sales Coach",
   },
@@ -33,7 +33,7 @@ export function TestimonialSection() {
             What happens when you plug the leaks
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
-            Real results from coaches who got the free checkup and built the machine.
+            Real results from coaches who got the diagnostic evaluation and built the machine.
           </p>
         </div>
 

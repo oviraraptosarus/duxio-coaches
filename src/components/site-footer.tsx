@@ -38,7 +38,7 @@ export function SiteFooter() {
             <div className="flex flex-col gap-4 text-xs font-semibold uppercase tracking-wider text-foreground">
               <a href="#system" className="hover:text-accent transition-colors">Architecture</a>
               <a href="#faq" className="hover:text-accent transition-colors">FAQ</a>
-              <a href="#audit" className="text-accent hover:underline transition-all">Free Checkup</a>
+              <a href="#audit" className="text-accent hover:underline transition-all">Practice Diagnostic</a>
             </div>
           </div>
         </div>

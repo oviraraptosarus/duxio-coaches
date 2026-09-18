@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Transform your existing attention and inquiries into predictable client revenue. Request your free coach funnel audit.",
+          "Transform your existing attention and inquiries into predictable client revenue. Request your private pipeline diagnostic evaluation.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: PAGE_URL },
