@@ -10,7 +10,7 @@ export const submitAudit = createServerFn({ method: "POST" })
     // Server-only mock logic (in a real app, this would write to a DB)
     console.log("[Duxio Server] Received Audit Submission:", data);
     
-    const record: AuditSubmission = {
+    const record: AuditSubmission & { id: string; timestamp: string } = {
       id: secureToken,
       timestamp: new Date().toISOString(),
       biggestChallenge: data.biggestChallenge,
@@ -28,7 +28,7 @@ export const submitAudit = createServerFn({ method: "POST" })
 
     // 🚀 Automation Webhook (Make.com / Zapier)
     // If you set a WEBHOOK_URL in Vercel, it will automatically blast this lead data to your automation flow.
-    const webhookUrl = process.env.WEBHOOK_URL;
+    const webhookUrl = process.env['WEBHOOK_URL'];
     if (webhookUrl) {
       try {
         await fetch(webhookUrl, {
