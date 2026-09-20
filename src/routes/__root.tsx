@@ -84,8 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       {
         rel: "icon",
-        type: "image/png",
-        href: "/logo-icon.png",
+        type: "image/x-icon",
+        href: "/favicon.ico",
       },
       {
         rel: "stylesheet",
@@ -147,20 +147,30 @@ function RootComponent() {
           <ContextMenuLabel>Quick Navigation</ContextMenuLabel>
           <ContextMenuSeparator />
           <ContextMenuItem asChild>
-            <a href="/#" className="cursor-pointer w-full">Top</a>
+            <a href="/#" className="cursor-pointer w-full">
+              Top
+            </a>
           </ContextMenuItem>
           <ContextMenuItem asChild>
-            <a href="/#leaks" className="cursor-pointer w-full">5 Leaks</a>
+            <a href="/#leaks" className="cursor-pointer w-full">
+              5 Leaks
+            </a>
           </ContextMenuItem>
           <ContextMenuItem asChild>
-            <a href="/#vsl" className="cursor-pointer w-full">The System</a>
+            <a href="/#vsl" className="cursor-pointer w-full">
+              The System
+            </a>
           </ContextMenuItem>
           <ContextMenuItem asChild>
-            <a href="/#calculator" className="cursor-pointer w-full">ROI Calculator</a>
+            <a href="/#calculator" className="cursor-pointer w-full">
+              ROI Calculator
+            </a>
           </ContextMenuItem>
           <ContextMenuSeparator />
           <ContextMenuItem asChild>
-            <a href="/#audit" className="cursor-pointer w-full font-medium text-brand-primary">Practice Diagnostic</a>
+            <a href="/#audit" className="cursor-pointer w-full font-medium text-brand-primary">
+              Practice Diagnostic
+            </a>
           </ContextMenuItem>
         </ContextMenuContent>
       </ContextMenu>
