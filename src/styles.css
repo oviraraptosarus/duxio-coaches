@@ -57,8 +57,12 @@
   --animate-marquee: marquee 40s linear infinite;
 
   @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }
 
@@ -84,7 +88,7 @@
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.27 0 0);
   --muted-foreground: oklch(0.7 0 0); /* zinc-400 */
-  
+
   /* Accent = Vibrant Action Orange */
   --accent: oklch(0.65 0.22 35); /* #FF5500 approx */
   --accent-foreground: oklch(0.985 0 0);
@@ -149,7 +153,9 @@
   background-color: var(--color-card);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-2xl);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 6px 16px -4px rgba(0, 0, 0, 0.03);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.02),
+    0 6px 16px -4px rgba(0, 0, 0, 0.03);
 }
 
 @utility card-elevated {
@@ -163,11 +169,11 @@
 }
 
 @utility bg-brand-gradient {
-  background: linear-gradient(135deg, #FF3300, #FF8C00);
+  background: linear-gradient(135deg, #ff3300, #ff8c00);
 }
 
 @utility text-brand-gradient {
-  background-image: linear-gradient(135deg, #FF3300, #FF8C00);
+  background-image: linear-gradient(135deg, #ff3300, #ff8c00);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -178,7 +184,9 @@
   backdrop-filter: blur(40px) saturate(180%);
   -webkit-backdrop-filter: blur(40px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 @utility liquid-glass-dark {
@@ -186,27 +194,36 @@
   backdrop-filter: blur(32px) saturate(200%);
   -webkit-backdrop-filter: blur(32px) saturate(200%);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.7), inset 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 20px 48px -10px rgba(0, 0, 0, 0.7),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.18);
 }
 
-.glass-pill {
-  background: linear-gradient(180deg, rgba(26, 31, 46, 0.68) 0%, rgba(12, 16, 25, 0.78) 100%);
-  backdrop-filter: blur(28px) saturate(200%) contrast(105%);
-  -webkit-backdrop-filter: blur(28px) saturate(200%) contrast(105%);
+@utility glass-pill {
+  background: rgba(12, 14, 20, 0.62);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3), 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  box-shadow:
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4),
+    0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  isolation: isolate;
+  transform: translateZ(0);
 }
 
-.glass-button {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+@utility glass-button {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  isolation: isolate;
+  transform: translateZ(0);
 }
 
 @utility mesh-hero-glow {
-  background: 
+  background:
     radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 85, 0, 0.12) 0%, transparent 60%),
     radial-gradient(circle at 85% 30%, rgba(255, 60, 0, 0.06) 0%, transparent 40%),
     radial-gradient(circle at 15% 40%, rgba(255, 140, 0, 0.06) 0%, transparent 40%);

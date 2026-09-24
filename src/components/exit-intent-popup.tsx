@@ -27,8 +27,10 @@ export function ExitIntentPopup() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="w-[calc(100%-2rem)] sm:w-full max-w-md border-none bg-transparent p-0 shadow-none">
         <DialogTitle className="sr-only">Exit Intent Offer</DialogTitle>
-        <DialogDescription className="sr-only">Download the Automated Intake Google Sheet Template.</DialogDescription>
-        
+        <DialogDescription className="sr-only">
+          Download the Automated Intake Google Sheet Template.
+        </DialogDescription>
+
         <div className="relative z-10 w-full overflow-hidden card-elevated p-6 sm:p-8">
           <div className="text-center">
             <div className="mx-auto flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-accent/10 text-accent">
@@ -38,7 +40,8 @@ export function ExitIntentPopup() {
               Leaving without your blueprint?
             </h2>
             <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-              Before you depart, <strong>Claim Your Pipeline Diagnostic Blueprint</strong>. We will map your entire funnel and show you exactly where you are losing revenue.
+              Before you depart, <strong>Claim Your Pipeline Diagnostic Blueprint</strong>. We will
+              map your entire funnel and show you exactly where you are losing revenue.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-[10px] font-bold text-accent uppercase tracking-wider">
               <span className="relative flex h-2 w-2">
@@ -49,12 +52,15 @@ export function ExitIntentPopup() {
             </div>
           </div>
 
-          <form className="mt-6 sm:mt-8 space-y-3 sm:space-y-4" onSubmit={(e) => {
-             e.preventDefault();
-             setOpen(false); 
-             // Scroll to audit section
-             document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
-          }}>
+          <form
+            className="mt-6 sm:mt-8 space-y-3 sm:space-y-4"
+            onSubmit={(e) => {
+              e.preventDefault();
+              setOpen(false);
+              // Scroll to audit section
+              document.getElementById("audit")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <button
               type="submit"
               className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gradient px-4 py-3.5 text-xs font-bold text-white transition-all shadow-md hover:opacity-95"
@@ -68,8 +74,8 @@ export function ExitIntentPopup() {
             <ShieldCheck className="h-3.5 w-3.5 text-accent" />
             <span>Strict data privacy. Direct document access.</span>
           </div>
-          
-          <button 
+
+          <button
             type="button"
             onClick={() => setOpen(false)}
             className="mt-4 block w-full text-center text-xs text-muted-foreground hover:text-foreground hover:underline"

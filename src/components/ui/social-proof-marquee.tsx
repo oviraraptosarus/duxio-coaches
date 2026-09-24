@@ -13,7 +13,7 @@ export function SocialProofMarquee() {
     <div className="w-full overflow-hidden border-y border-line bg-surface py-3 relative flex">
       <div className="absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-surface to-transparent sm:w-24"></div>
       <div className="absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-surface to-transparent sm:w-24"></div>
-      
+
       {/* We render two identical marquee containers side by-side that each translate -100% */}
       <div className="flex shrink-0 animate-marquee items-center gap-8 pr-8">
         {metrics.map((metric, idx) => {

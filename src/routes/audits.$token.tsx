@@ -66,8 +66,7 @@ const stages = [
   {
     name: "Nurture",
     status: "critical" as const,
-    summary:
-      "No educational nurture sequence. Delayed buyers evaporate after initial inquiry.",
+    summary: "No educational nurture sequence. Delayed buyers evaporate after initial inquiry.",
     leak: 52000,
   },
   {
@@ -171,7 +170,11 @@ function AuditReportPage() {
   const toggleRepair = (id: string) => {
     setActiveRepairs((prev) => {
       const next = new Set(prev);
-      next.has(id) ? next.delete(id) : next.add(id);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
       return next;
     });
   };
@@ -213,14 +216,17 @@ function AuditReportPage() {
               className="rounded-lg border border-line bg-card p-1.5 text-muted-foreground transition hover:bg-surface-2"
               title="Copy token"
             >
-              {copied ? <Check className="h-3.5 w-3.5 text-emerald-500" /> : <Copy className="h-3.5 w-3.5" />}
+              {copied ? (
+                <Check className="h-3.5 w-3.5 text-emerald-500" />
+              ) : (
+                <Copy className="h-3.5 w-3.5" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
       <main className="mx-auto w-full max-w-5xl space-y-10 px-4 pt-8 pb-20 sm:px-6">
-
         {/* ── 1. HERO SCORECARD ── */}
         <section className="relative overflow-hidden rounded-3xl border border-line bg-card p-8 shadow-[0_1px_3px_rgba(0,0,0,0.02),0_12px_32px_-8px_rgba(0,0,0,0.05)] sm:p-12">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,85,0,0.05),transparent_60%)]" />
@@ -235,11 +241,10 @@ function AuditReportPage() {
                 <span className="text-rose-500">{data.healthScore}%</span> capacity.
               </h1>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Based on your submitted parameters, we identified critical infrastructure gaps across
-                your {data.niche} practice pipeline. Your current system is estimated to leave{" "}
-                <strong className="text-foreground">
-                  ${totalLeak.toLocaleString()} per year
-                </strong>{" "}
+                Based on your submitted parameters, we identified critical infrastructure gaps
+                across your {data.niche} practice pipeline. Your current system is estimated to
+                leave{" "}
+                <strong className="text-foreground">${totalLeak.toLocaleString()} per year</strong>{" "}
                 in unrealized revenue on the table.
               </p>
             </div>
@@ -248,7 +253,15 @@ function AuditReportPage() {
             <div className="flex flex-col items-center gap-2">
               <div className="relative h-36 w-36">
                 <svg viewBox="0 0 120 120" className="h-full w-full -rotate-90">
-                  <circle cx="60" cy="60" r="50" fill="none" stroke="currentColor" opacity="0.1" strokeWidth="10" />
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="50"
+                    fill="none"
+                    stroke="currentColor"
+                    opacity="0.1"
+                    strokeWidth="10"
+                  />
                   <circle
                     cx="60"
                     cy="60"
@@ -275,9 +288,7 @@ function AuditReportPage() {
 
         {/* ── 2. PIPELINE LEAK DIAGNOSTIC ── */}
         <section>
-          <h2 className="mb-4 text-lg font-bold tracking-[-0.03em]">
-            Pipeline Leak Diagnostic
-          </h2>
+          <h2 className="mb-4 text-lg font-bold tracking-[-0.03em]">Pipeline Leak Diagnostic</h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-5">
             {stages.map((stage) => (
               <div
@@ -367,9 +378,7 @@ function AuditReportPage() {
                   >
                     <div
                       className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md border ${
-                        active
-                          ? "border-accent bg-accent"
-                          : "border-white/20 bg-card/5"
+                        active ? "border-accent bg-accent" : "border-white/20 bg-card/5"
                       }`}
                     >
                       {active && <Check className="h-3 w-3 text-white" />}
@@ -454,9 +463,7 @@ function AuditReportPage() {
 
         {/* ── 5. IMPLEMENTATION ROADMAP ── */}
         <section className="rounded-3xl border border-line bg-background p-6 sm:p-8">
-          <h2 className="mb-5 text-lg font-bold tracking-[-0.03em]">
-            Implementation Roadmap
-          </h2>
+          <h2 className="mb-5 text-lg font-bold tracking-[-0.03em]">Implementation Roadmap</h2>
           <div className="space-y-4">
             {roadmap.map((p) => (
               <div key={p.phase} className="rounded-2xl border border-line bg-card p-5">
@@ -464,12 +471,17 @@ function AuditReportPage() {
                   <span className="rounded-full border border-accent/20 bg-accent/10 px-2.5 py-0.5 text-[10px] font-bold text-accent">
                     {p.phase}
                   </span>
-                  <span className="text-[10px] font-semibold text-muted-foreground">{p.timeline}</span>
+                  <span className="text-[10px] font-semibold text-muted-foreground">
+                    {p.timeline}
+                  </span>
                 </div>
                 <h3 className="mb-2 text-sm font-bold tracking-[-0.02em]">{p.title}</h3>
                 <ul className="space-y-1">
                   {p.deliverables.map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-[11px] text-muted-foreground">
+                    <li
+                      key={d}
+                      className="flex items-start gap-2 text-[11px] text-muted-foreground"
+                    >
                       <CheckCircle2 className="mt-0.5 h-3 w-3 shrink-0 text-emerald-500" />
                       <span>{d}</span>
                     </li>
@@ -505,7 +517,6 @@ function AuditReportPage() {
             <span>Confidential. Your diagnostic data is encrypted end to end.</span>
           </div>
         </section>
-
       </main>
 
       <SiteFooter />

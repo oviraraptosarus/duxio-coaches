@@ -28,12 +28,14 @@ const journeySteps = [
   },
   {
     step: "FOLLOW UP",
-    description: "Reminders, missed call follow up and reactivation prevent leads from disappearing.",
+    description:
+      "Reminders, missed call follow up and reactivation prevent leads from disappearing.",
     icon: RotateCcw,
   },
   {
     step: "CONVERT",
-    description: "Better messaging, CTAs and sales process optimization help turn more opportunities into clients.",
+    description:
+      "Better messaging, CTAs and sales process optimization help turn more opportunities into clients.",
     icon: TrendingUp,
   },
 ];
@@ -61,13 +63,17 @@ export function ClientAcquisitionJourney() {
               const Icon = s.icon;
               const isEven = idx % 2 === 0;
               return (
-                <div key={s.step} className={`relative flex items-center ${isEven ? "sm:flex-row-reverse" : "sm:flex-row"} flex-row group`}>
-                  
+                <div
+                  key={s.step}
+                  className={`relative flex items-center ${isEven ? "sm:flex-row-reverse" : "sm:flex-row"} flex-row group`}
+                >
                   {/* Content Box */}
                   <div className={`ml-16 sm:ml-0 sm:w-1/2 ${isEven ? "sm:pl-10" : "sm:pr-10"}`}>
                     <div className="card-elevated p-5 transition-transform group-hover:-translate-y-1">
                       <h3 className="text-sm font-bold text-foreground mb-1">{s.step}</h3>
-                      <p className="text-xs leading-relaxed text-muted-foreground">{s.description}</p>
+                      <p className="text-xs leading-relaxed text-muted-foreground">
+                        {s.description}
+                      </p>
                     </div>
                   </div>
 
@@ -80,7 +86,6 @@ export function ClientAcquisitionJourney() {
             })}
           </div>
         </div>
-
       </div>
     </section>
   );

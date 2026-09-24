@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+      .leaks-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 1500px;
+        z-index: 10;
+      }
+      .leak-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 24px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 360px;
+        border-color: var(--accent);
+        background: linear-gradient(180deg, rgba(255, 85, 0, 0.12) 0%, var(--surface) 100%);
+        box-shadow: 0 0 35px rgba(255, 85, 0, 0.12);
+      }
+      .leak-num {
+        font-size: 14px;
+        font-weight: 800;
+        color: var(--muted);
+      }
+      .leak-h {
+        font-size: 20px;
+        font-weight: 800;
+        margin: 10px 0 8px 0;
+      }
+      .leak-desc {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+      .leak-status {
+        margin-top: auto;
+        padding: 8px 12px;
+        background: rgba(255, 85, 0, 0.15);
+        color: var(--accent);
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="scene-2"
+      data-width="1920"
+      data-height="1080"
+      data-duration="4.7"
+      data-fps="30"
+      class="scene-wrapper"
+    >
+      <div class="glow-orb"></div>
+      <div class="bg-grid"></div>
+      <div
+        id="content"
+        style="display: flex; flex-direction: column; align-items: center; width: 100%"
+      >
+        <div class="badge-pill"><span class="badge-dot"></span>Diagnostic Pipeline Radar</div>
+        <h1 class="hero-title" style="font-size: 56px">Where Is Your System Leaking Money?</h1>
+        <p class="hero-sub" style="margin-bottom: 24px">
+          Most coaches don't have one big problem. They have 5 compounding leaks.
+        </p>
+        <div class="leaks-grid">
+          <div class="leak-card">
+            <div>
+              <div class="leak-num">LEAK 01</div>
+              <div class="leak-h">Traffic Quality</div>
+              <div class="leak-desc">Views from non-buyers who can't afford $3k+ coaching.</div>
+            </div>
+            <div class="leak-status">Targeting Solved</div>
+          </div>
+          <div class="leak-card">
+            <div>
+              <div class="leak-num">LEAK 02</div>
+              <div class="leak-h">Lead Capture</div>
+              <div class="leak-desc">
+                Dropping booking links directly in DMs before establishing value.
+              </div>
+            </div>
+            <div class="leak-status">2-Step VSL Capture</div>
+          </div>
+          <div class="leak-card">
+            <div>
+              <div class="leak-num">LEAK 03</div>
+              <div class="leak-h">30-90d Nurture</div>
+              <div class="leak-desc">90% of buyers buy later. Without nurture, they vanish.</div>
+            </div>
+            <div class="leak-status">Automated Cadence</div>
+          </div>
+          <div class="leak-card">
+            <div>
+              <div class="leak-num">LEAK 04</div>
+              <div class="leak-h">Call Booking</div>
+              <div class="leak-desc">
+                Unqualified calendars where broke people waste 45 minutes.
+              </div>
+            </div>
+            <div class="leak-status">Filter Gate</div>
+          </div>
+          <div class="leak-card">
+            <div>
+              <div class="leak-num">LEAK 05</div>
+              <div class="leak-h">Follow-Up</div>
+              <div class="leak-desc">
+                Zero automated reactivation for no-shows and undecided leads.
+              </div>
+            </div>
+            <div class="leak-status">Loss Aversion Loops</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline();
+      tl.from("#content", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" });
+      window.__timelines["scene-2"] = tl;
+    </script>
+  </body>
+</html>

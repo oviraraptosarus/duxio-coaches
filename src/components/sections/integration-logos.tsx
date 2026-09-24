@@ -19,7 +19,10 @@ export function IntegrationLogos() {
           {integrations.map((Integration, idx) => {
             const Icon = Integration.icon;
             return (
-              <div key={idx} className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
+              <div
+                key={idx}
+                className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+              >
                 <Icon className="h-5 w-5" />
                 <span className="text-sm font-bold tracking-tight">{Integration.name}</span>
               </div>

@@ -29,8 +29,9 @@ export const submitAudit = createServerFn({ method: "POST" })
 
     // 🗄️ Supabase Database Storage (Option A)
     const supabaseUrl = process.env["SUPABASE_URL"];
-    const supabaseKey = process.env["SUPABASE_SERVICE_ROLE_KEY"] || process.env["SUPABASE_ANON_KEY"];
-    
+    const supabaseKey =
+      process.env["SUPABASE_SERVICE_ROLE_KEY"] || process.env["SUPABASE_ANON_KEY"];
+
     if (supabaseUrl && supabaseKey) {
       try {
         const supabase = createClient(supabaseUrl, supabaseKey);

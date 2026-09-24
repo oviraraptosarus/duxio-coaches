@@ -8,22 +8,26 @@ const components = [
   },
   {
     title: "FUNNEL",
-    description: "Landing page, lead magnet, application page, booking page, confirmation page and sales page where appropriate.",
+    description:
+      "Landing page, lead magnet, application page, booking page, confirmation page and sales page where appropriate.",
     icon: MonitorPlay,
   },
   {
     title: "AUTOMATION",
-    description: "Email follow up, SMS follow up, appointment reminders, missed call follow up, nurturing and reactivation.",
+    description:
+      "Email follow up, SMS follow up, appointment reminders, missed call follow up, nurturing and reactivation.",
     icon: Zap,
   },
   {
     title: "CONVERSION",
-    description: "Copywriting, CTA strategy, sales messaging, offer positioning and call booking optimization.",
+    description:
+      "Copywriting, CTA strategy, sales messaging, offer positioning and call booking optimization.",
     icon: Megaphone,
   },
   {
     title: "OPTIMIZATION",
-    description: "Track leads, bookings, attendance rate, close rate and continuously improve the system.",
+    description:
+      "Track leads, bookings, attendance rate, close rate and continuously improve the system.",
     icon: LineChart,
   },
 ];
@@ -37,7 +41,8 @@ export function WhatWeBuildSection() {
             What's Inside Your Client Acquisition System
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-muted-foreground max-w-2xl mx-auto">
-            This is not a generic menu of disconnected services. It is one unified product made of interconnected components engineered to turn attention into clients.
+            This is not a generic menu of disconnected services. It is one unified product made of
+            interconnected components engineered to turn attention into clients.
           </p>
         </div>
 
@@ -45,7 +50,10 @@ export function WhatWeBuildSection() {
           {components.map((c, idx) => {
             const Icon = c.icon;
             return (
-              <div key={idx} className="card-soft p-6 flex flex-col items-center text-center hover:border-accent/50 transition-colors">
+              <div
+                key={idx}
+                className="card-soft p-6 flex flex-col items-center text-center hover:border-accent/50 transition-colors"
+              >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent mb-4">
                   <Icon className="h-6 w-6" />
                 </div>

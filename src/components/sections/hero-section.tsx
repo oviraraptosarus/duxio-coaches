@@ -1,5 +1,11 @@
 import { Play, ArrowRight, ShieldCheck, Triangle, Hexagon, Circle, Square } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { AuditForm } from "@/components/audit-form";
 
 const vslTakeaways = [
@@ -13,7 +19,6 @@ export function HeroSection() {
     <section className="relative overflow-hidden mesh-hero-glow pt-24 pb-12 sm:pt-28 sm:pb-16">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          
           <span className="eyebrow-chip mb-6 uppercase tracking-wider font-bold">
             <span className="h-2 w-2 rounded-full bg-accent animate-pulse" aria-hidden />
             Only For Top Coaches Ready To Win
@@ -25,7 +30,9 @@ export function HeroSection() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-sm sm:text-base leading-relaxed text-muted-foreground">
-            Turn the attention and leads you're already generating into more qualified conversations, booked calls, and potential clients with a system that captures, nurtures, qualifies, books, and follows up automatically.
+            Turn the attention and leads you're already generating into more qualified
+            conversations, booked calls, and potential clients with a system that captures,
+            nurtures, qualifies, books, and follows up automatically.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3.5 sm:flex-row sm:justify-center">
@@ -38,16 +45,16 @@ export function HeroSection() {
             </a>
             <Dialog>
               <DialogTrigger asChild>
-                <button
-                  className="group inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-line bg-surface-2 px-8 py-3.5 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-surface sm:w-auto"
-                >
+                <button className="group inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-line bg-surface-2 px-8 py-3.5 text-xs font-bold text-foreground shadow-sm transition-colors hover:bg-surface sm:w-auto">
                   Claim My Diagnostic
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </button>
               </DialogTrigger>
               <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">
                 <DialogTitle className="sr-only">Pipeline Diagnostic Evaluation</DialogTitle>
-                <DialogDescription className="sr-only">Submit your details to request an architecture evaluation.</DialogDescription>
+                <DialogDescription className="sr-only">
+                  Submit your details to request an architecture evaluation.
+                </DialogDescription>
                 <AuditForm />
               </DialogContent>
             </Dialog>
@@ -92,7 +99,10 @@ export function HeroSection() {
             {/* Takeaway Chips */}
             <div className="my-6 grid grid-cols-1 gap-3 text-xs font-medium text-foreground sm:grid-cols-3">
               {vslTakeaways.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2 rounded-xl border border-line bg-surface p-3.5 text-left">
+                <div
+                  key={idx}
+                  className="flex items-center gap-2 rounded-xl border border-line bg-surface p-3.5 text-left"
+                >
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                   <span>{item}</span>
                 </div>
@@ -102,8 +112,12 @@ export function HeroSection() {
             {/* VSL Diagnostic Callout */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-accent/20 bg-accent-soft p-5">
               <div className="text-left">
-                <h4 className="text-sm font-bold text-foreground">Want to see where your specific pipeline is leaking?</h4>
-                <p className="text-xs text-muted-foreground">Submit your business metrics and we will map your exact customer journey.</p>
+                <h4 className="text-sm font-bold text-foreground">
+                  Want to see where your specific pipeline is leaking?
+                </h4>
+                <p className="text-xs text-muted-foreground">
+                  Submit your business metrics and we will map your exact customer journey.
+                </p>
               </div>
               <Dialog>
                 <DialogTrigger asChild>
@@ -114,16 +128,15 @@ export function HeroSection() {
                 </DialogTrigger>
                 <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">
                   <DialogTitle className="sr-only">Pipeline Diagnostic Evaluation</DialogTitle>
-                  <DialogDescription className="sr-only">Submit your details to request an architecture evaluation.</DialogDescription>
+                  <DialogDescription className="sr-only">
+                    Submit your details to request an architecture evaluation.
+                  </DialogDescription>
                   <AuditForm />
                 </DialogContent>
               </Dialog>
             </div>
           </div>
         </div>
-
-
-
       </div>
     </section>
   );

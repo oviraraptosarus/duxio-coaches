@@ -1,5 +1,11 @@
 import { XCircle, CheckCircle2, ArrowRight } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { AuditForm } from "@/components/audit-form";
 
 const beforePoints = [
@@ -25,7 +31,9 @@ export function BeforeAfterSection() {
         <div className="mx-auto max-w-2xl text-center mb-14">
           <span className="section-label">The Transformation</span>
           <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground">
-            Stop Managing Prospects.<br />Build The System That Manages The Journey.
+            Stop Managing Prospects.
+            <br />
+            Build The System That Manages The Journey.
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-muted-foreground">
             A fragmented process leaks money. A connected system prints it.
@@ -46,7 +54,10 @@ export function BeforeAfterSection() {
             </h3>
             <ul className="space-y-4">
               {beforePoints.map((point, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm font-medium text-muted-foreground">
+                <li
+                  key={i}
+                  className="flex items-start gap-3 text-sm font-medium text-muted-foreground"
+                >
                   <span className="mt-0.5 text-destructive/70 shrink-0">✕</span>
                   <span>{point}</span>
                 </li>
@@ -86,12 +97,13 @@ export function BeforeAfterSection() {
             </DialogTrigger>
             <DialogContent className="max-w-xl border-none bg-transparent p-0 shadow-none">
               <DialogTitle className="sr-only">Pipeline Diagnostic Evaluation</DialogTitle>
-              <DialogDescription className="sr-only">Submit your details to request an architecture evaluation.</DialogDescription>
+              <DialogDescription className="sr-only">
+                Submit your details to request an architecture evaluation.
+              </DialogDescription>
               <AuditForm />
             </DialogContent>
           </Dialog>
         </div>
-
       </div>
     </section>
   );

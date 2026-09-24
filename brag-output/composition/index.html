@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0" />
+    <title>Duxio — The Client Acquisition OS for Coaches</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  </head>
+  <body style="margin: 0; background: #09090b">
+    <div
+      id="root"
+      data-composition-id="main"
+      data-width="1920"
+      data-height="1080"
+      data-duration="20"
+      data-fps="30"
+    >
+      <audio id="bgm" src="assets/music/music.mp3" data-start="0" data-volume="0.85"></audio>
+      <audio id="sfx-pop" src="assets/sfx/pop.ogg" data-start="4.5" data-volume="0.6"></audio>
+      <audio id="sfx-switch" src="assets/sfx/switch.ogg" data-start="9.2" data-volume="0.7"></audio>
+      <audio id="sfx-chime" src="assets/sfx/chime.ogg" data-start="14.8" data-volume="0.8"></audio>
+
+      <div
+        id="host-scene-1"
+        class="clip"
+        data-composition-id="scene-1"
+        data-composition-src="scenes/scene-1.html"
+        data-start="0"
+        data-duration="4.5"
+      ></div>
+      <div
+        id="host-scene-2"
+        class="clip"
+        data-composition-id="scene-2"
+        data-composition-src="scenes/scene-2.html"
+        data-start="4.5"
+        data-duration="4.7"
+      ></div>
+      <div
+        id="host-scene-3"
+        class="clip"
+        data-composition-id="scene-3"
+        data-composition-src="scenes/scene-3.html"
+        data-start="9.2"
+        data-duration="5.6"
+      ></div>
+      <div
+        id="host-scene-4"
+        class="clip"
+        data-composition-id="scene-4"
+        data-composition-src="scenes/scene-4.html"
+        data-start="14.8"
+        data-duration="5.2"
+      ></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

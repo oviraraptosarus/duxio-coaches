@@ -9,7 +9,7 @@ const niches = [
   "Relationship Experts",
   "Life & Mindset Coaches",
   "Spiritual & Holistic Mentors",
-  "Transformation Consultants"
+  "Transformation Consultants",
 ];
 
 const qualificationCriteria = [
@@ -18,7 +18,7 @@ const qualificationCriteria = [
   "You receive steady audience engagement or inbound inquiries",
   "You lack a predictable system to turn inquiries into booked calls",
   "You handle lead follow ups manually or inconsistently",
-  "You want to focus on coaching rather than chasing leads"
+  "You want to focus on coaching rather than chasing leads",
 ];
 
 export function SystemSection() {
@@ -33,13 +33,10 @@ export function SystemSection() {
               Built For Coaches Who Have A Proven Offer And Need A Systematic Engine To Scale It.
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 text-center">
             {niches.map((niche) => (
-              <div
-                key={niche}
-                className="card-soft p-4 text-xs font-semibold text-foreground"
-              >
+              <div key={niche} className="card-soft p-4 text-xs font-semibold text-foreground">
                 {niche}
               </div>
             ))}
@@ -48,9 +45,7 @@ export function SystemSection() {
 
         {/* Qualification Gate */}
         <div className="mt-16 card-elevated p-8 sm:p-10">
-          <span className="section-label block mb-2">
-            Strict Qualification Criteria
-          </span>
+          <span className="section-label block mb-2">Strict Qualification Criteria</span>
           <h3 className="text-xl font-bold text-foreground mb-6">
             This Operating System Is Built Specifically For Coaches Who Match These Standards:
           </h3>
@@ -65,10 +60,10 @@ export function SystemSection() {
             ))}
           </div>
           <p className="mt-6 pt-5 border-t border-line text-[11px] font-bold text-destructive/80">
-            DO NOT APPLY IF: You are a beginner without a real offer or an audience. We only scale established winners.
+            DO NOT APPLY IF: You are a beginner without a real offer or an audience. We only scale
+            established winners.
           </p>
         </div>
-
       </div>
     </section>
   );

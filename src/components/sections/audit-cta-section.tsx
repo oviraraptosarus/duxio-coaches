@@ -24,17 +24,15 @@ export function AuditCtaSection() {
     <section id="audit" className="scroll-mt-24 border-t border-line bg-surface py-20 px-5 sm:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-14 lg:grid-cols-5 lg:gap-12 items-start">
-          
           {/* Left Column */}
           <div className="lg:col-span-2">
-            <span className="section-label block mb-3">
-              Private Practice Pipeline Diagnostic
-            </span>
+            <span className="section-label block mb-3">Private Practice Pipeline Diagnostic</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground leading-tight">
               Find The Leaks In Your Client Acquisition System
             </h2>
             <p className="mt-4 text-xs sm:text-sm leading-relaxed text-muted-foreground">
-              Get a breakdown of where you're losing leads, bookings and sales across Traffic, Lead Capture, Nurturing, Booking and Follow Up.
+              Get a breakdown of where you're losing leads, bookings and sales across Traffic, Lead
+              Capture, Nurturing, Booking and Follow Up.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -49,13 +47,15 @@ export function AuditCtaSection() {
                     </span>
                     <div>
                       <h4 className="text-xs font-bold text-foreground">{s.title}</h4>
-                      <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">{s.body}</p>
+                      <p className="mt-0.5 text-xs text-muted-foreground leading-relaxed">
+                        {s.body}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            
+
             <div className="mt-10 space-y-6 border-t border-line pt-8">
               {/* Scarcity */}
               <div className="flex items-start gap-3 p-4 rounded-xl bg-accent/5 border border-accent/10">
@@ -63,9 +63,12 @@ export function AuditCtaSection() {
                   <span className="text-[10px] font-bold">2</span>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-foreground">Capacity Limit: 2 Spots Remaining</h4>
+                  <h4 className="text-xs font-bold text-foreground">
+                    Capacity Limit: 2 Spots Remaining
+                  </h4>
                   <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
-                    Due to the bespoke nature of this architecture review, we only onboard 5 coaches per week for comprehensive diagnostics.
+                    Due to the bespoke nature of this architecture review, we only onboard 5 coaches
+                    per week for comprehensive diagnostics.
                   </p>
                 </div>
               </div>
@@ -74,9 +77,13 @@ export function AuditCtaSection() {
               <div className="flex items-start gap-3 p-4 rounded-xl bg-surface-2 border border-line">
                 <ShieldCheck className="h-5 w-5 shrink-0 text-emerald-500 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold text-foreground">Zero Sales Pressure Guarantee</h4>
+                  <h4 className="text-xs font-bold text-foreground">
+                    Zero Sales Pressure Guarantee
+                  </h4>
                   <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
-                    This is a diagnostic architecture review, not a pitch fest. If we aren't a mutual fit, you walk away with the exact blueprint to fix your leaks yourself. No obligations.
+                    This is a diagnostic architecture review, not a pitch fest. If we aren't a
+                    mutual fit, you walk away with the exact blueprint to fix your leaks yourself.
+                    No obligations.
                   </p>
                 </div>
               </div>
@@ -87,7 +94,6 @@ export function AuditCtaSection() {
           <div className="lg:col-span-3">
             <AuditForm />
           </div>
-
         </div>
       </div>
     </section>

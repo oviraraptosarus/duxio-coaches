@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+      .comparison-cards {
+        display: flex;
+        gap: 32px;
+        width: 100%;
+        max-width: 1200px;
+        z-index: 10;
+      }
+      .comp-box {
+        flex: 1;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      }
+      .comp-box.bad {
+        border-color: rgba(239, 68, 68, 0.4);
+        background: linear-gradient(180deg, rgba(239, 68, 68, 0.06) 0%, rgba(24, 24, 27, 0.8) 100%);
+      }
+      .comp-box.good {
+        border-color: rgba(255, 85, 0, 0.4);
+        background: linear-gradient(180deg, rgba(255, 85, 0, 0.08) 0%, rgba(24, 24, 27, 0.8) 100%);
+        box-shadow: 0 20px 60px rgba(255, 85, 0, 0.12);
+      }
+      .comp-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .step-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 12px 18px;
+        background: rgba(39, 39, 42, 0.5);
+        border-radius: 12px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="scene-1"
+      data-width="1920"
+      data-height="1080"
+      data-duration="4.5"
+      data-fps="30"
+      class="scene-wrapper"
+    >
+      <div class="glow-orb"></div>
+      <div class="bg-grid"></div>
+      <div
+        id="content"
+        style="display: flex; flex-direction: column; align-items: center; width: 100%"
+      >
+        <div class="badge-pill">
+          <span class="badge-dot"></span>The Reality of High-Ticket Coaching
+        </div>
+        <h1 class="hero-title">Likes Don't Pay Bills.<br />Stop Losing Leads to Manual DMs.</h1>
+        <p class="hero-sub">
+          Coaching programs priced $1,000 to $10,000+ lose 40% of their pipeline to slow follow-ups.
+        </p>
+        <div class="comparison-cards">
+          <div class="comp-box bad">
+            <div class="comp-title" style="color: #f87171">✕ The Fragmented Way</div>
+            <div class="step-item">
+              <span style="color: #f87171; font-weight: 800">✕</span> Social Followers & Views
+            </div>
+            <div class="step-item">
+              <span style="color: #f87171; font-weight: 800">✕</span> Manual Instagram / LinkedIn
+              DMs
+            </div>
+            <div class="step-item">
+              <span style="color: #f87171; font-weight: 800">✕</span> Slow Follow-Ups & Ghosted
+              Links
+            </div>
+          </div>
+          <div class="comp-box good">
+            <div class="comp-title" style="color: var(--accent)">✓ The Duxio System</div>
+            <div class="step-item">
+              <span style="color: var(--accent); font-weight: 800">✓</span> Automated 2-Step VSL
+              Capture
+            </div>
+            <div class="step-item">
+              <span style="color: var(--accent); font-weight: 800">✓</span> Sub-30s Speed-to-Lead
+              Triage
+            </div>
+            <div class="step-item">
+              <span style="color: var(--accent); font-weight: 800">✓</span> 3-Touch Case Study
+              Nurture (85%+ Show-up)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline();
+      tl.from("#content", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" });
+      window.__timelines["scene-1"] = tl;
+    </script>
+  </body>
+</html>

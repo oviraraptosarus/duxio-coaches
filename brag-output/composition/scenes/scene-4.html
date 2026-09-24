@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+      .outro-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        padding: 56px 80px;
+        text-align: center;
+        max-width: 1200px;
+        box-shadow: 0 30px 80px rgba(255, 85, 0, 0.15);
+        z-index: 10;
+      }
+      .cta-btn {
+        display: inline-block;
+        margin-top: 36px;
+        background: var(--accent);
+        color: #fafafa;
+        padding: 18px 44px;
+        border-radius: 14px;
+        font-size: 22px;
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 0 50px rgba(255, 85, 0, 0.5);
+      }
+      .pillars-strip {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 32px;
+      }
+      .pillar-chip {
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="scene-4"
+      data-width="1920"
+      data-height="1080"
+      data-duration="5.2"
+      data-fps="30"
+      class="scene-wrapper"
+    >
+      <div class="glow-orb"></div>
+      <div class="bg-grid"></div>
+      <div id="content" class="outro-card">
+        <div class="badge-pill" style="margin-bottom: 16px">
+          <span class="badge-dot"></span>The Turnkey Acquisition Engine
+        </div>
+        <h1 class="hero-title" style="font-size: 56px; margin-bottom: 16px">
+          Stop Managing Prospects.<br />Build The System That Manages The Journey.
+        </h1>
+        <p class="hero-sub" style="font-size: 22px; margin-bottom: 0px">
+          We install the complete client acquisition backend for established coaching programs.
+        </p>
+        <div class="pillars-strip">
+          <div class="pillar-chip">Attract</div>
+          <div class="pillar-chip">Capture</div>
+          <div class="pillar-chip">Nurture</div>
+          <div class="pillar-chip">Qualify</div>
+          <div class="pillar-chip">Book</div>
+          <div class="pillar-chip">Convert</div>
+        </div>
+        <div>
+          <a href="https://duxioaudit.vercel.app/" class="cta-btn">
+            Get Your Free Diagnostic Audit → duxioaudit.vercel.app
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline();
+      tl.from("#content", { scale: 0.95, opacity: 0, duration: 0.6, ease: "power2.out" });
+      window.__timelines["scene-4"] = tl;
+    </script>
+  </body>
+</html>

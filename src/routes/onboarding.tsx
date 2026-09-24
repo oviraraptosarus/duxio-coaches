@@ -10,7 +10,8 @@ export const Route = createFileRoute("/onboarding")({
       { title: "DUXIO | Client Onboarding Portal" },
       {
         name: "description",
-        content: "Client acquisition operating system deployment intake for established coaching practices.",
+        content:
+          "Client acquisition operating system deployment intake for established coaching practices.",
       },
     ],
   }),
@@ -37,7 +38,6 @@ function ClientOnboardingPage() {
 
       <main className="flex-1 pt-28 pb-20 px-5 sm:px-8 mesh-hero-glow">
         <div className="mx-auto max-w-3xl">
-          
           {/* Header */}
           <div className="text-center mb-10">
             <span className="eyebrow-chip mb-3">
@@ -48,7 +48,8 @@ function ClientOnboardingPage() {
               DUXIO Client Onboarding Portal
             </h1>
             <p className="mt-2 text-xs sm:text-sm text-muted-foreground max-w-xl mx-auto">
-              Welcome to your client acquisition operating system installation. Please submit your practice parameters and calendar credentials below to initiate deployment.
+              Welcome to your client acquisition operating system installation. Please submit your
+              practice parameters and calendar credentials below to initiate deployment.
             </p>
           </div>
 
@@ -61,7 +62,9 @@ function ClientOnboardingPage() {
                 Onboarding Parameters Received
               </h2>
               <p className="mt-2 text-xs sm:text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
-                Your practice profile has been queued for infrastructure installation. Our systems engineering team will configure your client acquisition ecosystem within seventy two hours.
+                Your practice profile has been queued for infrastructure installation. Our systems
+                engineering team will configure your client acquisition ecosystem within seventy two
+                hours.
               </p>
               <div className="mt-8 pt-6 border-t border-line">
                 <a
@@ -75,7 +78,6 @@ function ClientOnboardingPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="card-elevated p-6 sm:p-10 text-left space-y-6">
-              
               {/* Progress Indicator */}
               <div className="flex items-center justify-between border-b border-line pb-4">
                 <div>
@@ -83,7 +85,9 @@ function ClientOnboardingPage() {
                     Deployment Stage {step} of 2
                   </span>
                   <h3 className="text-base font-bold text-foreground mt-0.5">
-                    {step === 1 ? "Program and Pricing Structure" : "Calendar Credentials and Brand Parameters"}
+                    {step === 1
+                      ? "Program and Pricing Structure"
+                      : "Calendar Credentials and Brand Parameters"}
                   </h3>
                 </div>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 font-mono text-xs font-bold text-accent">
@@ -95,7 +99,9 @@ function ClientOnboardingPage() {
                 <div className="space-y-4 text-xs">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
-                      <label className="mb-1 block font-semibold text-foreground">Principal Consultant Name *</label>
+                      <label className="mb-1 block font-semibold text-foreground">
+                        Principal Consultant Name *
+                      </label>
                       <input
                         type="text"
                         required
@@ -104,7 +110,9 @@ function ClientOnboardingPage() {
                       />
                     </div>
                     <div>
-                      <label className="mb-1 block font-semibold text-foreground">Corporate Email Address *</label>
+                      <label className="mb-1 block font-semibold text-foreground">
+                        Corporate Email Address *
+                      </label>
                       <input
                         type="email"
                         required
@@ -116,7 +124,9 @@ function ClientOnboardingPage() {
 
                   <div className="grid gap-4 sm:grid-cols-3">
                     <div>
-                      <label className="mb-1 block font-semibold text-foreground">Coaching Niche *</label>
+                      <label className="mb-1 block font-semibold text-foreground">
+                        Coaching Niche *
+                      </label>
                       <input
                         type="text"
                         required
@@ -125,7 +135,9 @@ function ClientOnboardingPage() {
                       />
                     </div>
                     <div>
-                      <label className="mb-1 block font-semibold text-foreground">Flagship Offer Name *</label>
+                      <label className="mb-1 block font-semibold text-foreground">
+                        Flagship Offer Name *
+                      </label>
                       <input
                         type="text"
                         required
@@ -134,7 +146,9 @@ function ClientOnboardingPage() {
                       />
                     </div>
                     <div>
-                      <label className="mb-1 block font-semibold text-foreground">Offer Price Point *</label>
+                      <label className="mb-1 block font-semibold text-foreground">
+                        Offer Price Point *
+                      </label>
                       <input
                         type="text"
                         required
@@ -145,7 +159,9 @@ function ClientOnboardingPage() {
                   </div>
 
                   <div>
-                    <label className="mb-1 block font-semibold text-foreground">Primary Audience Transformation Statement *</label>
+                    <label className="mb-1 block font-semibold text-foreground">
+                      Primary Audience Transformation Statement *
+                    </label>
                     <textarea
                       required
                       rows={3}
@@ -167,7 +183,9 @@ function ClientOnboardingPage() {
                 <div className="space-y-4 text-xs animate-in fade-in duration-200">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
-                      <label className="mb-1 block font-semibold text-foreground">Scheduling Calendar URL *</label>
+                      <label className="mb-1 block font-semibold text-foreground">
+                        Scheduling Calendar URL *
+                      </label>
                       <input
                         type="url"
                         required
@@ -176,7 +194,9 @@ function ClientOnboardingPage() {
                       />
                     </div>
                     <div>
-                      <label className="mb-1 block font-semibold text-foreground">Official Website or Landing Page URL</label>
+                      <label className="mb-1 block font-semibold text-foreground">
+                        Official Website or Landing Page URL
+                      </label>
                       <input
                         type="url"
                         placeholder="https://vancecoaching.com"
@@ -187,7 +207,9 @@ function ClientOnboardingPage() {
 
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
-                      <label className="mb-1 block font-semibold text-foreground">Primary Social Profile Handle *</label>
+                      <label className="mb-1 block font-semibold text-foreground">
+                        Primary Social Profile Handle *
+                      </label>
                       <input
                         type="text"
                         required
@@ -196,7 +218,9 @@ function ClientOnboardingPage() {
                       />
                     </div>
                     <div>
-                      <label className="mb-1 block font-semibold text-foreground">Target Monthly Client Enrollments *</label>
+                      <label className="mb-1 block font-semibold text-foreground">
+                        Target Monthly Client Enrollments *
+                      </label>
                       <input
                         type="text"
                         required
@@ -207,7 +231,9 @@ function ClientOnboardingPage() {
                   </div>
 
                   <div>
-                    <label className="mb-1 block font-semibold text-foreground">Asset Drive or Brand Folder Link</label>
+                    <label className="mb-1 block font-semibold text-foreground">
+                      Asset Drive or Brand Folder Link
+                    </label>
                     <input
                       type="url"
                       placeholder="https://drive.google.com/..."
@@ -250,7 +276,6 @@ function ClientOnboardingPage() {
               </div>
             </form>
           )}
-
         </div>
       </main>
 

@@ -1,1 +1,0 @@
-import{r as e}from"./useRouter-CaaNYmzk.js";import{n as t}from"./index-BBiGLjtR.js";var n=e(),r=()=>(0,n.jsx)(t,{to:`/coach-client-acquisition`});export{r as component};

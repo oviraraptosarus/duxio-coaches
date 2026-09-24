@@ -35,9 +35,7 @@ export function FaqSection() {
     <section id="faq" className="scroll-mt-24 border-t border-line py-20 px-5 sm:px-8">
       <div className="mx-auto max-w-3xl">
         <div className="text-center mb-12">
-          <span className="section-label block mb-3">
-            Questions and Answers
-          </span>
+          <span className="section-label block mb-3">Questions and Answers</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground">
             Frequently Asked Questions
           </h2>
@@ -47,10 +45,7 @@ export function FaqSection() {
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
-              <div
-                key={i}
-                className="card-soft overflow-hidden transition-all"
-              >
+              <div key={i} className="card-soft overflow-hidden transition-all">
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"

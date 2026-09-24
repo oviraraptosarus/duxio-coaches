@@ -2,13 +2,16 @@ import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CheckCircle2, Loader2, AlertCircle, ShieldCheck, ArrowRight, ExternalLink } from "lucide-react";
-import { submitAudit } from "@/lib/audit.functions";
 import {
-  auditSchema,
-  biggestChallenges,
-  type AuditFormValues,
-} from "@/lib/audit-schema";
+  CheckCircle2,
+  Loader2,
+  AlertCircle,
+  ShieldCheck,
+  ArrowRight,
+  ExternalLink,
+} from "lucide-react";
+import { submitAudit } from "@/lib/audit.functions";
+import { auditSchema, biggestChallenges, type AuditFormValues } from "@/lib/audit-schema";
 
 export function AuditForm() {
   const submit = useServerFn(submitAudit);
@@ -44,16 +47,14 @@ export function AuditForm() {
   }
 
   return (
-    <form 
-      onSubmit={onSubmit} 
-      noValidate 
+    <form
+      onSubmit={onSubmit}
+      noValidate
       className="relative z-10 w-full overflow-hidden card-elevated p-6 sm:p-9 text-left"
     >
       <div className="mb-6 flex items-center justify-between border-b border-line pb-4">
         <div>
-          <span className="eyebrow-chip mb-1">
-            Diagnostic Step {step} of 2
-          </span>
+          <span className="eyebrow-chip mb-1">Diagnostic Step {step} of 2</span>
           <h3 className="text-base font-bold text-foreground mt-1">
             {step === 1 ? "Identify Your Primary Bottleneck" : "Coaching Business Details"}
           </h3>
@@ -65,9 +66,9 @@ export function AuditForm() {
 
       {/* Progress Bar (Zeigarnik Effect) */}
       <div className="mb-8 h-1.5 w-full rounded-full bg-surface-2 overflow-hidden">
-        <div 
+        <div
           className="h-full bg-accent transition-all duration-500 ease-in-out"
-          style={{ width: step === 1 ? '50%' : '100%' }}
+          style={{ width: step === 1 ? "50%" : "100%" }}
         />
       </div>
 
@@ -93,7 +94,7 @@ export function AuditForm() {
               ))}
             </select>
           </Field>
-          
+
           <button
             type="button"
             onClick={async () => {
@@ -105,7 +106,7 @@ export function AuditForm() {
             <span>Proceed to Step 2</span>
             <ArrowRight className="h-3.5 w-3.5" />
           </button>
-          
+
           <div className="mt-4 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
             <ShieldCheck className="h-3.5 w-3.5 text-accent" />
             <span>Confidential diagnostic. No spam.</span>
@@ -262,11 +263,10 @@ function SuccessCard({ reportUrl }: { reportUrl: string | null }) {
       <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-white shadow-md">
         <CheckCircle2 className="h-6 w-6" />
       </div>
-      <h3 className="mt-4 text-xl font-bold text-foreground">
-        Diagnostic Audit Generated
-      </h3>
+      <h3 className="mt-4 text-xl font-bold text-foreground">Diagnostic Audit Generated</h3>
       <p className="mx-auto mt-2 max-w-md text-xs text-muted-foreground leading-relaxed">
-        We have mapped your complete client journey and identified your primary revenue leakage points.
+        We have mapped your complete client journey and identified your primary revenue leakage
+        points.
       </p>
 
       <div className="mt-6">
