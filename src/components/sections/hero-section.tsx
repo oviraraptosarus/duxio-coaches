@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Play, ArrowRight, ShieldCheck, Triangle, Hexagon, Circle, Square } from "lucide-react";
 import {
   Dialog,
@@ -15,6 +16,7 @@ const vslTakeaways = [
 ];
 
 export function HeroSection() {
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <section className="relative overflow-hidden mesh-hero-glow pt-24 pb-12 sm:pt-28 sm:pb-16">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
@@ -84,16 +86,42 @@ export function HeroSection() {
               </p>
             </div>
 
-            {/* Obsidian Theater */}
-            <div className="group relative aspect-video cursor-pointer overflow-hidden rounded-2xl liquid-glass-dark flex flex-col items-center justify-center text-center p-6 shadow-2xl">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-2xl transition-transform duration-300 group-hover:scale-105 sm:h-20 sm:w-20">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gradient pl-1 shadow-lg text-white">
-                  <Play className="h-5 w-5 fill-current" />
-                </div>
-              </div>
-              <div className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-[11px] font-medium text-white/80 backdrop-blur-md">
-                Video Walkthrough · 8 Minutes
-              </div>
+            {/* Obsidian Theater / Video Player */}
+            <div className="relative aspect-video overflow-hidden rounded-2xl liquid-glass-dark shadow-2xl border border-white/10 bg-black">
+              {isPlaying ? (
+                <iframe
+                  className="absolute inset-0 h-full w-full border-0"
+                  src="https://www.youtube-nocookie.com/embed/cpwY7WMkjkQ?autoplay=1&rel=0&modestbranding=1&playsinline=1"
+                  title="Duxio Client Acquisition System Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setIsPlaying(true)}
+                  aria-label="Watch the video"
+                  className="group relative flex h-full w-full cursor-pointer flex-col items-center justify-center p-6 text-center focus:outline-none"
+                >
+                  <img
+                    src="/vsl-thumbnail.jpg"
+                    alt="Video Preview"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30 transition-colors duration-300 group-hover:from-black/70 group-hover:via-black/30 group-hover:to-black/20" />
+
+                  <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-2xl transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-gradient pl-1 shadow-lg text-white">
+                      <Play className="h-5 w-5 fill-current" />
+                    </div>
+                  </div>
+
+                  <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2 rounded-full border border-white/15 bg-black/70 px-3.5 py-1.5 text-[11px] font-medium text-white backdrop-blur-md transition-colors group-hover:bg-black/80">
+                    <Play className="h-3 w-3 fill-accent text-accent" />
+                    <span>Watch the Video</span>
+                  </div>
+                </button>
+              )}
             </div>
 
             {/* Takeaway Chips */}

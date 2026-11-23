@@ -9,6 +9,8 @@ import {
   ShieldCheck,
   ArrowRight,
   ExternalLink,
+  Instagram,
+  Facebook,
 } from "lucide-react";
 import { submitAudit } from "@/lib/audit.functions";
 import { auditSchema, biggestChallenges, type AuditFormValues } from "@/lib/audit-schema";
@@ -56,7 +58,7 @@ export function AuditForm() {
         <div>
           <span className="eyebrow-chip mb-1">Diagnostic Step {step} of 2</span>
           <h3 className="text-base font-bold text-foreground mt-1">
-            {step === 1 ? "Identify Your Primary Bottleneck" : "Coaching Business Details"}
+            {step === 1 ? "Identify Your Primary Bottleneck" : "Where Should We Send Your Diagnostic?"}
           </h3>
         </div>
         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 font-mono text-xs font-bold text-accent">
@@ -119,7 +121,7 @@ export function AuditForm() {
               <input
                 type="text"
                 autoComplete="given-name"
-                placeholder="Alex"
+                placeholder="e.g. Alex"
                 className={inputCls(!!errors.firstName)}
                 {...register("firstName")}
               />
@@ -129,94 +131,33 @@ export function AuditForm() {
               <input
                 type="email"
                 autoComplete="email"
-                placeholder="alex@coaching.com"
+                placeholder="e.g. alex@gmail.com"
                 className={inputCls(!!errors.email)}
                 {...register("email")}
               />
             </Field>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="Website URL" error={errors.websiteUrl?.message}>
-              <input
-                type="url"
-                placeholder="https://..."
-                className={inputCls(!!errors.websiteUrl)}
-                {...register("websiteUrl")}
-              />
-            </Field>
-
-            <Field
-              label="Instagram or Social Profile"
-              required
-              error={errors.socialMediaLink?.message}
-            >
+          <Field
+            label="Instagram Profile / Handle"
+            required
+            error={errors.socialMediaLink?.message}
+          >
+            <div className="relative">
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground font-semibold">
+                @
+              </span>
               <input
                 type="text"
-                placeholder="@handle or profile URL"
-                className={inputCls(!!errors.socialMediaLink)}
+                placeholder="yourhandle (or profile URL)"
+                className={`${inputCls(!!errors.socialMediaLink)} pl-8`}
                 {...register("socialMediaLink")}
               />
-            </Field>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-3">
-            <Field label="Coaching Niche" required error={errors.coachingNiche?.message}>
-              <input
-                type="text"
-                placeholder="Executive or Fitness"
-                className={inputCls(!!errors.coachingNiche)}
-                {...register("coachingNiche")}
-              />
-            </Field>
-
-            <Field label="Main Program Offer" required error={errors.offerDescription?.message}>
-              <input
-                type="text"
-                placeholder="12 Week Mastery"
-                className={inputCls(!!errors.offerDescription)}
-                {...register("offerDescription")}
-              />
-            </Field>
-
-            <Field label="Offer Price" required error={errors.offerPrice?.message}>
-              <input
-                type="text"
-                placeholder="$3,000"
-                className={inputCls(!!errors.offerPrice)}
-                {...register("offerPrice")}
-              />
-            </Field>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-3">
-            <Field label="Approx Monthly Inquiries" error={errors.monthlyInquiries?.message}>
-              <input
-                type="text"
-                placeholder="30 to 50 inquiries"
-                className={inputCls(!!errors.monthlyInquiries)}
-                {...register("monthlyInquiries")}
-              />
-            </Field>
-
-            <Field label="Monthly Booked Calls" error={errors.monthlyBookedCalls?.message}>
-              <input
-                type="text"
-                placeholder="5 to 10 calls"
-                className={inputCls(!!errors.monthlyBookedCalls)}
-                {...register("monthlyBookedCalls")}
-              />
-            </Field>
-
-            <Field label="Primary Traffic Source" error={errors.primaryLeadSource?.message}>
-              <input
-                type="text"
-                placeholder="Instagram or Referrals"
-                className={inputCls(!!errors.primaryLeadSource)}
-                {...register("primaryLeadSource")}
-              />
-            </Field>
-          </div>
+            </div>
+            <p className="mt-1 text-[11px] text-muted-foreground">
+              We&apos;ll send your personalized diagnostic breakdown here.
+            </p>
+          </Field>
 
           {serverError && (
             <div className="flex items-center gap-2 rounded-xl bg-destructive/10 p-3 text-xs text-destructive border border-destructive/20">
@@ -259,27 +200,85 @@ export function AuditForm() {
 
 function SuccessCard({ reportUrl }: { reportUrl: string | null }) {
   return (
-    <div className="card-elevated p-8 text-center">
-      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-white shadow-md">
-        <CheckCircle2 className="h-6 w-6" />
+    <div className="card-elevated p-6 sm:p-9 text-center animate-in fade-in duration-300">
+      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-500 ring-8 ring-emerald-500/5 shadow-inner">
+        <CheckCircle2 className="h-7 w-7" />
       </div>
-      <h3 className="mt-4 text-xl font-bold text-foreground">Diagnostic Audit Generated</h3>
-      <p className="mx-auto mt-2 max-w-md text-xs text-muted-foreground leading-relaxed">
-        We have mapped your complete client journey and identified your primary revenue leakage
-        points.
+
+      <span className="eyebrow-chip mt-4 uppercase tracking-wider font-bold">
+        Submission Received
+      </span>
+
+      <h3 className="mt-2 text-xl sm:text-2xl font-bold text-foreground tracking-tight">
+        Your Diagnostic is on the Way
+      </h3>
+
+      <p className="mx-auto mt-2 max-w-md text-xs sm:text-sm text-muted-foreground leading-relaxed">
+        We&apos;re reviewing your bottleneck right now. For the fastest response or to send us screenshots of your current DM setup, connect directly with our team:
       </p>
 
-      <div className="mt-6">
+      {/* Social Action Cards */}
+      <div className="mt-6 flex flex-col gap-3">
         <a
-          href={reportUrl || "/"}
+          href="https://www.instagram.com/duxio.ai/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-brand-gradient px-6 py-3 text-xs font-bold text-white shadow-md transition-all hover:scale-[1.02]"
+          className="group relative flex items-center justify-between gap-3 rounded-2xl border border-accent/30 bg-gradient-to-r from-accent/15 via-accent/5 to-transparent p-4 text-left transition-all hover:scale-[1.01] hover:border-accent hover:shadow-lg"
         >
-          <span>View Your Personalized Diagnostic Report</span>
-          <ExternalLink className="h-3.5 w-3.5" />
+          <div className="flex items-center gap-3.5">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white shadow-md">
+              <Instagram className="h-5 w-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h4 className="text-xs font-bold text-foreground">Message Us on Instagram</h4>
+                <span className="rounded-full bg-accent/20 px-2 py-0.5 text-[10px] font-bold text-accent">
+                  Fastest
+                </span>
+              </div>
+              <p className="text-[11px] text-muted-foreground">
+                DM <span className="font-semibold text-foreground">@duxio.ai</span> &quot;AUDIT&quot; for instant priority review
+              </p>
+            </div>
+          </div>
+          <ArrowRight className="h-4 w-4 shrink-0 text-accent transition-transform group-hover:translate-x-1" />
+        </a>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61590379213702"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center justify-between gap-3 rounded-2xl border border-line bg-surface p-4 text-left transition-all hover:scale-[1.01] hover:bg-surface-2"
+        >
+          <div className="flex items-center gap-3.5">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#1877F2] text-white shadow-md">
+              <Facebook className="h-5 w-5" />
+            </div>
+            <div>
+              <h4 className="text-xs font-bold text-foreground">Connect on Facebook</h4>
+              <p className="text-[11px] text-muted-foreground">
+                Follow Duxio on Facebook for coaching system breakdowns
+              </p>
+            </div>
+          </div>
+          <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
         </a>
       </div>
+
+      {/* Secondary Link to Auto-Generated Report */}
+      {reportUrl && (
+        <div className="mt-6 pt-4 border-t border-line/60">
+          <a
+            href={reportUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <span>View preliminary automated report</span>
+            <ArrowRight className="h-3 w-3" />
+          </a>
+        </div>
+      )}
     </div>
   );
 }

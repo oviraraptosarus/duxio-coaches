@@ -28,17 +28,12 @@ export function FloatingDock() {
         className={`fixed top-4 inset-x-0 z-50 flex justify-center px-3 sm:px-6 transition-all duration-300 pointer-events-none ${scrolled ? "translate-y-0" : "translate-y-0"}`}
       >
         <div className="glass-pill pointer-events-auto flex h-[64px] sm:h-[68px] max-w-5xl w-full items-center justify-between gap-4 rounded-full px-5 sm:px-7">
-          {/* Logo with Metallic Icon + DUXIO Wordmark */}
-          <Link to="/" className="flex items-center gap-3 group shrink-0" aria-label="Duxio Home">
+          {/* DUXIO AI Logo */}
+          <Link to="/" className="flex items-center group shrink-0" aria-label="Duxio Home">
             <img
-              src="/logo-icon.png"
-              alt="Duxio Icon"
-              className="h-8 w-8 sm:h-9 sm:w-9 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] transition-transform duration-200 group-hover:scale-105"
-            />
-            <img
-              src="/logo-text.png"
-              alt="DUXIO"
-              className="h-4 sm:h-[18px] w-auto object-contain brightness-110 contrast-125"
+              src="/duxio-ai-logo.png"
+              alt="DUXIO AI"
+              className="h-6 sm:h-7 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
             />
           </Link>
 

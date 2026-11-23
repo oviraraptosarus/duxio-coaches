@@ -58,10 +58,10 @@ export const Route = createFileRoute("/")({
           name: "The Client Acquisition Operating System for Coaches",
           description:
             "Strategic training: discover the 5 places coaches lose potential clients and how to build a system that turns attention into predictable client revenue.",
-          thumbnailUrl: `${PAGE_URL}/vsl-thumbnail.jpg`,
+          thumbnailUrl: `${PAGE_URL}vsl-thumbnail.jpg`,
           uploadDate: "2026-01-01",
-          duration: "PT8M",
-          contentUrl: PAGE_URL,
+          contentUrl: "https://www.youtube.com/watch?v=cpwY7WMkjkQ",
+          embedUrl: "https://www.youtube-nocookie.com/embed/cpwY7WMkjkQ",
         }),
       },
       {

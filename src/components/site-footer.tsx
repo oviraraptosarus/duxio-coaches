@@ -29,7 +29,7 @@ export function SiteFooter() {
           </div>
 
           {/* Links */}
-          <div className="grid grid-cols-2 gap-8 sm:gap-16 text-left w-full md:w-auto max-w-sm md:max-w-none mx-auto md:mx-0">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-12 text-left w-full md:w-auto max-w-sm md:max-w-none mx-auto md:mx-0">
             <div className="flex flex-col gap-4 text-xs font-semibold uppercase tracking-wider text-foreground">
               <a href="#vsl" className="hover:text-accent transition-colors">
                 Briefing
@@ -50,6 +50,24 @@ export function SiteFooter() {
               </a>
               <a href="#audit" className="text-accent hover:underline transition-all">
                 Practice Diagnostic
+              </a>
+            </div>
+            <div className="flex flex-col gap-4 text-xs font-semibold uppercase tracking-wider text-foreground">
+              <a
+                href="https://www.instagram.com/duxio.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61590379213702"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
+                Facebook
               </a>
             </div>
           </div>
