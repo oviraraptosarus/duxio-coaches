@@ -1,9 +1,36 @@
-import { n as __require, r as __toESM, t as __commonJSMin } from "../../_runtime.mjs";
-import { r as parseHref } from "../tanstack__history.mjs";
+import { i as __toESM, r as __require, t as __commonJSMin } from "../../_runtime.mjs";
 import { l as require_react_dom, u as require_react } from "../@floating-ui/react-dom+[...].mjs";
+import { r as parseHref } from "../tanstack__history.mjs";
 import { a as require_jsx_runtime } from "../@radix-ui/react-collection+[...].mjs";
 import { PassThrough, Readable } from "node:stream";
 import { ReadableStream as ReadableStream$1 } from "node:stream/web";
+//#region node_modules/@tanstack/react-router/dist/esm/utils.js
+var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
+/**
+* React.use if available (React 19+), undefined otherwise.
+* Use dynamic lookup to avoid Webpack compilation errors with React 18.
+*/
+var reactUse = import_react.use;
+typeof window !== "undefined" ? import_react.useLayoutEffect : import_react.useEffect;
+/**
+* React hook to take a `React.ForwardedRef` and returns a `ref` that can be used on a DOM element.
+*
+* @param ref - The forwarded ref
+* @returns The inner ref returned by `useRef`
+* @example
+* ```tsx
+* const MyComponent = React.forwardRef((props, ref) => {
+*  const innerRef = useForwardedRef(ref)
+*  return <div ref={innerRef} />
+* })
+* ```
+*/
+function useForwardedRef(ref) {
+	const innerRef = import_react.useRef(null);
+	import_react.useImperativeHandle(ref, () => innerRef.current, []);
+	return innerRef;
+}
+//#endregion
 //#region node_modules/@tanstack/router-core/dist/esm/utils.js
 /**
 * Return the last element of an array.
@@ -3557,33 +3584,6 @@ var BaseRootRoute = class extends BaseRoute {
 //#region node_modules/@tanstack/router-core/dist/esm/ssr/constants.js
 var GLOBAL_TSR = "$_TSR";
 var TSR_SCRIPT_BARRIER_ID = "$tsr-stream-barrier";
-//#endregion
-//#region node_modules/@tanstack/react-router/dist/esm/utils.js
-var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
-/**
-* React.use if available (React 19+), undefined otherwise.
-* Use dynamic lookup to avoid Webpack compilation errors with React 18.
-*/
-var reactUse = import_react.use;
-typeof window !== "undefined" ? import_react.useLayoutEffect : import_react.useEffect;
-/**
-* React hook to take a `React.ForwardedRef` and returns a `ref` that can be used on a DOM element.
-*
-* @param ref - The forwarded ref
-* @returns The inner ref returned by `useRef`
-* @example
-* ```tsx
-* const MyComponent = React.forwardRef((props, ref) => {
-*  const innerRef = useForwardedRef(ref)
-*  return <div ref={innerRef} />
-* })
-* ```
-*/
-function useForwardedRef(ref) {
-	const innerRef = import_react.useRef(null);
-	import_react.useImperativeHandle(ref, () => innerRef.current, []);
-	return innerRef;
-}
 //#endregion
 //#region node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js
 var import_jsx_runtime = require_jsx_runtime();

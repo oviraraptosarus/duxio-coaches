@@ -1,4 +1,4 @@
-import { r as __toESM } from "../_runtime.mjs";
+import { i as __toESM } from "../_runtime.mjs";
 import { u as require_react } from "./@floating-ui/react-dom+[...].mjs";
 //#region node_modules/lucide-react/dist/esm/shared/src/utils/mergeClasses.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
@@ -506,6 +506,16 @@ var Eye = createLucideIcon("eye", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Facebook = createLucideIcon("facebook", [["path", {
+	d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
+	key: "1jg4f8"
+}]]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Funnel = createLucideIcon("funnel", [["path", {
 	d: "M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z",
 	key: "sc7q7i"
@@ -530,6 +540,34 @@ var Info = createLucideIcon("info", [
 	["path", {
 		d: "M12 8h.01",
 		key: "e9boi3"
+	}]
+]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var Instagram = createLucideIcon("instagram", [
+	["rect", {
+		width: "20",
+		height: "20",
+		x: "2",
+		y: "2",
+		rx: "5",
+		ry: "5",
+		key: "2e1cvw"
+	}],
+	["path", {
+		d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z",
+		key: "9exkf1"
+	}],
+	["line", {
+		x1: "17.5",
+		x2: "17.51",
+		y1: "6.5",
+		y2: "6.5",
+		key: "r4j83e"
 	}]
 ]);
 /**
@@ -881,4 +919,4 @@ var Zap = createLucideIcon("zap", [["path", {
 	key: "1xq2db"
 }]]);
 //#endregion
-export { CircleX as A, CalendarCheck as B, Eye as C, Copy as D, CreditCard as E, ChevronRight as F, ArrowRight as H, ChevronDown as I, Check as L, CircleCheck as M, CircleAlert as N, Clock as O, ChevronUp as P, ChartLine as R, Funnel as S, Download as T, Calculator as V, Megaphone as _, TriangleAlert as a, Layers as b, Star as c, ShieldCheck as d, ShieldAlert as f, MessageSquare as g, MonitorPlay as h, UserPlus as i, CircleQuestionMark as j, Circle as k, Sprout as l, Play as m, X as n, TrendingUp as o, RotateCcw as p, Video as r, Target as s, Zap as t, Sparkles as u, Mail as v, ExternalLink as w, Info as x, LoaderCircle as y, Calendar as z };
+export { Clock as A, ChartLine as B, Funnel as C, Download as D, ExternalLink as E, CircleAlert as F, CalendarCheck as H, ChevronUp as I, ChevronRight as L, CircleX as M, CircleQuestionMark as N, CreditCard as O, CircleCheck as P, ChevronDown as R, Info as S, Eye as T, Calculator as U, Calendar as V, ArrowRight as W, Megaphone as _, TriangleAlert as a, Layers as b, Star as c, ShieldCheck as d, ShieldAlert as f, MessageSquare as g, MonitorPlay as h, UserPlus as i, Circle as j, Copy as k, Sprout as l, Play as m, X as n, TrendingUp as o, RotateCcw as p, Video as r, Target as s, Zap as t, Sparkles as u, Mail as v, Facebook as w, Instagram as x, LoaderCircle as y, Check as z };
